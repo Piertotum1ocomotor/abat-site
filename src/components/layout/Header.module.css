@@ -1,0 +1,605 @@
+.header {
+  position: relative;
+  z-index: 10;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 2px;
+}
+
+.brandName {
+  color: var(--color-secondary);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.brandDescription {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.desktopNavigation,
+.desktopAction {
+  display: none;
+}
+
+.mobileNavigation {
+  margin-left: auto;
+}
+
+/* Кнопки открытия и закрытия мобильного меню */
+
+.menuButton,
+.closeButton {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-button);
+}
+
+.menuButton:hover,
+.closeButton:hover {
+  background: var(--color-surface-soft);
+  border-color: var(--color-secondary);
+}
+
+.menuButton:focus-visible,
+.closeButton:focus-visible {
+  border-color: var(--color-secondary);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.menuIcon {
+  width: 20px;
+  display: grid;
+  gap: 4px;
+}
+
+.menuIcon span {
+  width: 100%;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Мобильное меню */
+
+.dialog {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: transparent;
+  border: 0;
+}
+
+.dialog::backdrop {
+  background: var(--color-overlay);
+}
+
+.mobilePanel {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin-left: auto;
+  padding: max(24px, env(safe-area-inset-top)) var(--container-padding)
+    max(32px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--color-surface);
+  box-shadow: -12px 0 32px rgb(16 35 61 / 8%);
+  animation: panel-in var(--motion-normal) var(--motion-easing);
+}
+
+.mobilePanelHeader {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mobileTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.closeButton {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.mobileLinks {
+  margin-top: 32px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.mobileLink {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.mobileLink:hover {
+  color: var(--color-secondary);
+}
+
+.mobileAction {
+  min-height: 48px;
+  margin-top: auto;
+  padding: 0 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-button);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.mobileAction:hover {
+  background: var(--color-primary-hover);
+}
+
+@keyframes panel-in {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Desktop dropdown */
+
+.navigationGroup {
+  position: relative;
+  display: flex;
+}
+
+.groupButton {
+  min-height: 44px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: transparent;
+  color: var(--color-text);
+  border: 0;
+  border-radius: var(--radius-button);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.groupButton:hover {
+  color: var(--color-secondary);
+  background: var(--color-surface-soft);
+}
+
+.groupButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.chevronOpen {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 20;
+  min-width: 300px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 12px 32px rgb(16 35 61 / 10%);
+}
+
+.dropdownLink {
+  min-height: 44px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  border-radius: var(--radius-button);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dropdownLink:hover {
+  color: var(--color-secondary);
+  background: var(--color-surface-soft);
+}
+
+/* Мобильные accordion-группы */
+
+.mobileGroup {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileGroupButton {
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  color: var(--color-text);
+  border: 0;
+  border-radius: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.mobileGroupButton:hover {
+  color: var(--color-secondary);
+}
+
+.mobileGroupButton:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.mobileChevron {
+  width: 9px;
+  height: 9px;
+  margin-right: 4px;
+  flex: 0 0 auto;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.mobileChevronOpen {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.mobileGroupPanel {
+  padding: 0 0 12px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileGroupPanel[hidden] {
+  display: none;
+}
+
+.mobileSubLink {
+  min-height: 44px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  border-radius: var(--radius-button);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.mobileSubLink:hover {
+  color: var(--color-secondary);
+  background: var(--color-surface-soft);
+}
+
+/* Общие стили desktop-ссылок и CTA */
+
+.navLink {
+  min-height: 44px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color var(--motion-fast) var(--motion-easing);
+}
+
+.navLink:hover {
+  color: var(--color-secondary);
+}
+
+.desktopAction {
+  min-height: 44px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-button);
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.desktopAction:hover {
+  background: var(--color-primary-hover);
+}
+
+/* С ширины 480px мобильное меню становится боковой панелью */
+
+/* С ширины 480px мобильное меню становится боковой панелью */
+
+@media (min-width: 480px) {
+  .mobilePanel {
+    width: min(100%, 420px);
+  }
+}
+
+/* 440–767px: логотип, компактная CTA и burger */
+
+@media (min-width: 440px) and (max-width: 767px) {
+  .inner {
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: 8px;
+  }
+
+  .desktopAction {
+    min-height: 44px;
+    padding: 0 10px;
+    display: inline-flex;
+    justify-self: end;
+    font-size: 12px;
+  }
+
+  .mobileNavigation {
+    margin-left: 0;
+    justify-self: end;
+  }
+}
+
+/* 768–899px: три основные группы, CTA и burger */
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .inner {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: 8px;
+  }
+
+  .mediumNavigation {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 6px;
+  }
+
+  .mediumNavigation .groupButton,
+  .mediumNavigation .navLink {
+    padding-inline: 5px;
+    font-size: 13.5px;
+  }
+
+  .mediumNavigation .groupButton {
+    gap: 6px;
+  }
+
+  .compactNavigation,
+  .fullNavigation {
+    display: none;
+  }
+
+  .desktopAction {
+    min-height: 44px;
+    padding: 0 10px;
+    display: inline-flex;
+    justify-self: end;
+    font-size: 12px;
+  }
+
+  .mobileNavigation {
+    margin-left: 0;
+    justify-self: end;
+  }
+
+  .mediumMenuHidden {
+    display: none;
+  }
+}
+
+/* 900–1023px: те же пункты с более свободными отступами */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .inner {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: 10px;
+  }
+
+  .mediumNavigation {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 8px;
+  }
+
+  .mediumNavigation .groupButton,
+  .mediumNavigation .navLink {
+    padding-inline: 6px;
+    font-size: 14px;
+  }
+
+  .mediumNavigation .groupButton {
+    gap: 7px;
+  }
+
+  .compactNavigation,
+  .fullNavigation {
+    display: none;
+  }
+
+  .desktopAction {
+    min-height: 44px;
+    padding: 0 14px;
+    display: inline-flex;
+    justify-self: end;
+    font-size: 13px;
+  }
+
+  .mobileNavigation {
+    margin-left: 0;
+    justify-self: end;
+  }
+
+  .mediumMenuHidden {
+    display: none;
+  }
+}
+
+/* 1024–1199px: три группы, Контакты, CTA и burger */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .inner {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    gap: 10px;
+  }
+
+  .mediumNavigation,
+  .fullNavigation {
+    display: none;
+  }
+
+  .compactNavigation {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 8px;
+  }
+
+  .compactNavigation .groupButton,
+  .compactNavigation .navLink {
+    padding-inline: 6px;
+    font-size: 14px;
+  }
+
+  .compactNavigation .groupButton {
+    gap: 7px;
+  }
+
+  .desktopAction {
+    min-height: 44px;
+    padding: 0 14px;
+    display: inline-flex;
+    justify-self: end;
+    font-size: 13px;
+  }
+
+  .mobileNavigation {
+    margin-left: 0;
+    justify-self: end;
+  }
+
+  .compactMenuHidden {
+    display: none;
+  }
+}
+
+/* От 1200px: полная desktop-шапка */
+
+@media (min-width: 1200px) {
+  .inner {
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .brand {
+    justify-self: start;
+  }
+
+  .mediumNavigation,
+  .compactNavigation {
+    display: none;
+  }
+
+  .fullNavigation {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 4px;
+  }
+
+  .desktopAction {
+    display: inline-flex;
+    justify-self: end;
+  }
+
+  .mobileNavigation {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobilePanel {
+    animation: none;
+  }
+}
