@@ -3,27 +3,54 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-import type {
-  HeaderNavigationItem,
-  NavigationItem,
-  SiteAction,
-} from "@/types/site";
+import type { HeaderContacts, NavigationItem } from "@/types/site";
 
 import styles from "./Header.module.css";
 
 type MobileNavigationProps = {
   homeLink: NavigationItem;
-  navigation: readonly HeaderNavigationItem[];
-  action: SiteAction;
+  navigation: readonly NavigationItem[];
+  services: readonly NavigationItem[];
+  secondaryNavigation: readonly NavigationItem[];
+  contacts: HeaderContacts;
 };
+
+type MobileSubmenuItemProps = {
+  item: NavigationItem;
+  onNavigate: () => void;
+};
+
+function MobileSubmenuItem({ item, onNavigate }: MobileSubmenuItemProps) {
+  if (item.isPlaceholder) {
+    return (
+      <span
+        className={`${styles.mobileSubLink} ${styles.mobilePlaceholderLink}`}
+        aria-disabled="true"
+      >
+        {item.label}
+      </span>
+    );
+  }
+
+  return (
+    <Link
+      href={item.href}
+      className={styles.mobileSubLink}
+      onClick={onNavigate}
+    >
+      {item.label}
+    </Link>
+  );
+}
 
 export function MobileNavigation({
   homeLink,
   navigation,
-  action,
+  services,
+  secondaryNavigation,
+  contacts,
 }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [openGroupIndex, setOpenGroupIndex] = useState<number | null>(null);
 
   const dialogRef = useRef<HTMLDialogElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -58,12 +85,9 @@ export function MobileNavigation({
     const desktopMedia = window.matchMedia("(min-width: 1200px)");
 
     function handleDesktopChange(event: MediaQueryListEvent) {
-      if (!event.matches) {
-        return;
+      if (event.matches) {
+        setIsOpen(false);
       }
-
-      setIsOpen(false);
-      setOpenGroupIndex(null);
     }
 
     desktopMedia.addEventListener("change", handleDesktopChange);
@@ -75,7 +99,6 @@ export function MobileNavigation({
 
   function closeMenu() {
     setIsOpen(false);
-    setOpenGroupIndex(null);
   }
 
   return (
@@ -84,7 +107,7 @@ export function MobileNavigation({
         ref={triggerRef}
         type="button"
         className={styles.menuButton}
-        aria-label="Открыть меню"
+        aria-label="Открыть полное меню"
         aria-expanded={isOpen}
         aria-controls="mobile-navigation"
         onClick={() => setIsOpen(true)}
@@ -107,11 +130,8 @@ export function MobileNavigation({
         }}
         onClose={() => {
           setIsOpen(false);
-          setOpenGroupIndex(null);
 
-          const isDesktop = window.matchMedia("(min-width: 1200px)").matches;
-
-          if (!isDesktop) {
+          if (!window.matchMedia("(min-width: 1200px)").matches) {
             triggerRef.current?.focus();
           }
         }}
@@ -137,91 +157,100 @@ export function MobileNavigation({
             </button>
           </div>
 
-          <nav className={styles.mobileLinks} aria-label="Мобильная навигация">
+          <nav className={styles.mobileMenu} aria-label="Полное меню сайта">
             <Link
               href={homeLink.href}
-              className={`${styles.mobileLink} ${styles.mediumMenuHidden} ${styles.compactMenuHidden}`}
+              className={styles.mobileHomeLink}
               onClick={closeMenu}
             >
               {homeLink.label}
             </Link>
 
-            {navigation.map((item, index) => {
-              const menuVisibilityClassName = [
-                item.showInMediumHeader ? styles.mediumMenuHidden : "",
-                item.showInCompactHeader ? styles.compactMenuHidden : "",
-              ]
-                .filter(Boolean)
-                .join(" ");
+            <section
+              className={styles.mobileSection}
+              aria-labelledby="mobile-construction-title"
+            >
+              <h2
+                id="mobile-construction-title"
+                className={styles.mobileSectionTitle}
+              >
+                Строительство
+              </h2>
 
-              if (item.type === "link") {
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`${styles.mobileLink} ${menuVisibilityClassName}`}
-                    onClick={closeMenu}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              }
+              <div className={styles.mobileSectionLinks}>
+                {navigation.map((item) => (
+                  <MobileSubmenuItem
+                    key={item.label}
+                    item={item}
+                    onNavigate={closeMenu}
+                  />
+                ))}
+              </div>
+            </section>
 
-              const isGroupOpen = openGroupIndex === index;
-              const panelId = `mobile-navigation-group-${index}`;
+            <section
+              className={styles.mobileSection}
+              aria-labelledby="mobile-services-title"
+            >
+              <h2
+                id="mobile-services-title"
+                className={styles.mobileSectionTitle}
+              >
+                Услуги
+              </h2>
 
-              return (
-                <div
-                  key={item.label}
-                  className={`${styles.mobileGroup} ${menuVisibilityClassName}`}
+              <div className={styles.mobileSectionLinks}>
+                {services.map((item) => (
+                  <MobileSubmenuItem
+                    key={item.label}
+                    item={item}
+                    onNavigate={closeMenu}
+                  />
+                ))}
+              </div>
+            </section>
+
+            <div className={styles.mobileStandaloneLinks}>
+              {secondaryNavigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={styles.mobileStandaloneLink}
+                  onClick={closeMenu}
                 >
-                  <button
-                    type="button"
-                    className={styles.mobileGroupButton}
-                    aria-expanded={isGroupOpen}
-                    aria-controls={panelId}
-                    onClick={() => {
-                      setOpenGroupIndex(isGroupOpen ? null : index);
-                    }}
-                  >
-                    <span>{item.label}</span>
-
-                    <span
-                      className={`${styles.mobileChevron} ${
-                        isGroupOpen ? styles.mobileChevronOpen : ""
-                      }`}
-                      aria-hidden="true"
-                    />
-                  </button>
-
-                  <div
-                    id={panelId}
-                    className={styles.mobileGroupPanel}
-                    hidden={!isGroupOpen}
-                  >
-                    {item.items.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className={styles.mobileSubLink}
-                        onClick={closeMenu}
-                      >
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              );
-            })}
+                  {item.label}
+                </Link>
+              ))}
+            </div>
           </nav>
 
-          <Link
-            href={action.href}
-            className={styles.mobileAction}
-            onClick={closeMenu}
-          >
-            {action.label}
-          </Link>
+          <div className={styles.mobileContacts}>
+            <span className={styles.mobileLocation}>{contacts.location}</span>
+
+            <div className={styles.mobileMessengers}>
+              {contacts.messengers.map((messenger) =>
+                messenger.href ? (
+                  <a key={messenger.label} href={messenger.href}>
+                    {messenger.label}
+                  </a>
+                ) : (
+                  <span key={messenger.label} aria-disabled="true">
+                    {messenger.label}
+                  </span>
+                ),
+              )}
+            </div>
+
+            {contacts.phoneHref ? (
+              <a href={contacts.phoneHref} className={styles.mobilePhone}>
+                {contacts.phone}
+              </a>
+            ) : (
+              <span className={styles.mobilePhone} aria-disabled="true">
+                {contacts.phone}
+              </span>
+            )}
+          </div>
         </div>
       </dialog>
     </div>

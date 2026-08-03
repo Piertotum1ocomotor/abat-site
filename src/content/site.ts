@@ -1,6 +1,6 @@
 import type { SiteConfig } from "@/types/site";
 
-export const siteConfig = {
+export const siteConfig: SiteConfig = {
   key: "abat",
   name: "Абат",
   locale: "ru-RU",
@@ -12,112 +12,78 @@ export const siteConfig = {
 
   headerNavigation: [
     {
-      type: "group",
-      label: "Строительство",
-      showInMediumHeader: true,
-      showInCompactHeader: true,
-      items: [
-        {
-          label: "Ангары",
-          href: "/stroitelstvo-angarov",
-        },
-        {
-          label: "Склады",
-          href: "/stroitelstvo-skladov",
-        },
-        {
-          label: "Быстровозводимые здания",
-          href: "/bystrovozvodimye-zdaniya",
-        },
-        {
-          label: "Здания из металлоконструкций",
-          href: "/zdaniya-iz-metallokonstrukciy",
-        },
-        {
-          label: "Здания из сэндвич-панелей",
-          href: "/zdaniya-iz-sendvich-paneley",
-        },
-      ],
+      label: "Ангары",
+      href: "/stroitelstvo-angarov",
     },
     {
-      type: "group",
-      label: "Услуги",
-      showInMediumHeader: true,
-      showInCompactHeader: true,
-      items: [
-        {
-          label: "Проектирование",
-          href: "/uslugi/proektirovanie",
-        },
-        {
-          label: "Изготовление металлоконструкций",
-          href: "/uslugi/izgotovlenie-metallokonstrukciy",
-        },
-        {
-          label: "Монтаж металлоконструкций",
-          href: "/uslugi/montazh-metallokonstrukciy",
-        },
-        {
-          label: "Монтаж сэндвич-панелей",
-          href: "/uslugi/montazh-sendvich-paneley",
-        },
-      ],
+      label: "Склады",
+      href: "/stroitelstvo-skladov",
     },
     {
-      type: "group",
-      label: "Объекты",
-      showInMediumHeader: true,
-      showInCompactHeader: true,
-      items: [
-        {
-          label: "Для склада",
-          href: "/obekty#dlya-sklada",
-        },
-        {
-          label: "Для производства",
-          href: "/obekty#dlya-proizvodstva",
-        },
-        {
-          label: "Для техники",
-          href: "/obekty#dlya-tehniki",
-        },
-        {
-          label: "Для СТО",
-          href: "/obekty#dlya-sto",
-        },
-        {
-          label: "Для сельского хозяйства",
-          href: "/obekty#dlya-selskogo-hozyaystva",
-        },
-      ],
+      label: "Быстровозводимые здания",
+      href: "/bystrovozvodimye-zdaniya",
     },
     {
-      type: "link",
-      label: "Проекты",
-      href: "/proekty",
+      label: "Здания из металлоконструкций",
+      href: "/zdaniya-iz-metallokonstrukciy",
     },
     {
-      type: "link",
-      label: "Цены",
-      href: "/ceny",
+      label: "Здания из сэндвич-панелей",
+      href: "/zdaniya-iz-sendvich-paneley",
     },
     {
-      type: "link",
+      label: "Промышленные здания и производственные цеха",
+      href: "#",
+      isPlaceholder: true,
+    },
+  ],
+
+  headerServices: [
+    {
+      label: "Проектирование",
+      href: "/uslugi/proektirovanie",
+    },
+    {
+      label: "Изготовление металлоконструкций",
+      href: "/uslugi/izgotovlenie-metallokonstrukciy",
+    },
+    {
+      label: "Монтаж металлоконструкций",
+      href: "/uslugi/montazh-metallokonstrukciy",
+    },
+    {
+      label: "Монтаж сэндвич-панелей",
+      href: "/uslugi/montazh-sendvich-paneley",
+    },
+  ],
+
+  headerSecondaryNavigation: [
+    {
       label: "О компании",
       href: "/o-kompanii",
     },
     {
-      type: "link",
+      label: "Построенные объекты",
+      href: "/proekty",
+    },
+    {
       label: "Контакты",
       href: "/kontakty",
-      showInCompactHeader: true,
     },
   ],
 
-  headerAction: {
-    label: "Рассчитать стоимость",
-    href: "/#cost-estimate",
+  headerContacts: {
+    location: "Санкт-Петербург",
+    phone: "+7 (___) ___-__-__",
+    messengers: [
+      {
+        label: "Telegram",
+      },
+      {
+        label: "WhatsApp",
+      },
+    ],
   },
 
   contacts: {},
-} satisfies SiteConfig;
+};

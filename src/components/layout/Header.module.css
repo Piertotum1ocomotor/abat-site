@@ -1,48 +1,189 @@
-.header {
+.preHeader {
   position: relative;
-  z-index: 10;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  z-index: 20;
+  color: var(--color-text);
 }
 
-.inner {
+.utilityBar,
+.secondaryBar {
+  background: rgb(255 255 255 / 86%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.utilityBar {
+  border-bottom: 1px solid rgb(16 35 61 / 4%);
+}
+
+.secondaryBar {
+  border-bottom: 1px solid rgb(16 35 61 / 7%);
+}
+
+.utilityInner {
+  min-height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.location,
+.utilityContacts,
+.messengerList {
+  display: flex;
+  align-items: center;
+}
+
+.location {
+  gap: 7px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.location svg {
+  flex: 0 0 auto;
+  color: var(--color-secondary);
+}
+
+.utilityContacts {
+  min-width: 0;
+  gap: 20px;
+}
+
+.messengerList {
+  gap: 14px;
+}
+
+.messengerList a,
+.messengerList span,
+.phone {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.messengerList a:hover,
+.phone:hover {
+  color: var(--color-secondary);
+}
+
+.messengerList span[aria-disabled="true"],
+.phone[aria-disabled="true"] {
+  opacity: 0.68;
+}
+
+.secondaryBar {
+  display: none;
+}
+
+.secondaryNavigation {
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 28px;
+}
+
+.secondaryNavigation a {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  transition: color var(--motion-fast) var(--motion-easing);
+}
+
+.secondaryNavigation a:hover {
+  color: var(--color-secondary);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--color-secondary);
+  border-bottom: 1px solid rgb(255 255 255 / 12%);
+  box-shadow: 0 8px 24px rgb(16 35 61 / 12%);
+}
+
+.primaryInner {
   min-height: 64px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .brand {
-  display: inline-flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  gap: 2px;
-}
-
-.brandName {
-  color: var(--color-secondary);
+  flex: 0 0 auto;
+  color: white;
   font-size: 24px;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
 }
 
-.brandDescription {
-  color: var(--color-text-muted);
-  font-size: 11px;
-  line-height: 1.2;
-}
+/* Основная навигация */
 
-.desktopNavigation,
-.desktopAction {
+.desktopNavigation {
   display: none;
+  width: 100%;
+  min-width: 0;
+  align-items: stretch;
+  justify-content: center;
 }
+
+.navLink {
+  min-width: 0;
+  min-height: 72px;
+  padding: 0 7px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  color: white;
+  border-radius: var(--radius-button);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.18;
+  text-align: center;
+  text-wrap: balance;
+  white-space: normal;
+  transition:
+    background var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing);
+}
+
+.navLabel {
+  width: 100%;
+  min-height: 3.54em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink:hover {
+  background: rgb(255 255 255 / 10%);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.placeholderLink {
+  cursor: default;
+}
+
+.placeholderLink:hover {
+  background: transparent;
+}
+
+/* Кнопки меню */
 
 .mobileNavigation {
   margin-left: auto;
 }
-
-/* Кнопки открытия и закрытия мобильного меню */
 
 .menuButton,
 .closeButton {
@@ -52,14 +193,28 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  flex: 0 0 auto;
   background: transparent;
-  color: var(--color-text);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-button);
 }
 
-.menuButton:hover,
+.menuButton {
+  color: white;
+  border: 1px solid rgb(255 255 255 / 34%);
+}
+
+.menuButton:hover {
+  background: rgb(255 255 255 / 10%);
+  border-color: rgb(255 255 255 / 58%);
+}
+
+.closeButton {
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-size: 30px;
+  line-height: 1;
+}
+
 .closeButton:hover {
   background: var(--color-surface-soft);
   border-color: var(--color-secondary);
@@ -67,7 +222,6 @@
 
 .menuButton:focus-visible,
 .closeButton:focus-visible {
-  border-color: var(--color-secondary);
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;
 }
@@ -82,9 +236,10 @@
   width: 100%;
   height: 2px;
   background: currentColor;
+  border-radius: 999px;
 }
 
-/* Мобильное меню */
+/* Полное меню */
 
 .dialog {
   width: 100%;
@@ -115,7 +270,7 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   background: var(--color-surface);
-  box-shadow: -12px 0 32px rgb(16 35 61 / 8%);
+  box-shadow: -12px 0 32px rgb(16 35 61 / 12%);
   animation: panel-in var(--motion-normal) var(--motion-easing);
 }
 
@@ -132,51 +287,121 @@
   font-weight: 700;
 }
 
-.closeButton {
-  font-size: 30px;
-  line-height: 1;
+/* Ссылки полного меню */
+
+.mobileMenu {
+  margin-top: 28px;
 }
 
-.mobileLinks {
-  margin-top: 32px;
-  padding-bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--color-border);
-}
-
-.mobileLink {
-  min-height: 56px;
+.mobileHomeLink,
+.mobileStandaloneLink {
+  min-height: 52px;
   display: flex;
   align-items: center;
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-border);
-  font-size: 17px;
-  font-weight: 600;
+  color: var(--color-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.mobileLink:hover {
+.mobileHomeLink {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileHomeLink:hover,
+.mobileStandaloneLink:hover {
+  color: var(--color-text);
+}
+
+.mobileSection {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mobileSectionTitle {
+  margin: 0 0 10px;
+  color: var(--color-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.mobileSectionLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobileSubLink {
+  min-height: 40px;
+  padding: 7px 0;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.mobileSubLink:hover {
   color: var(--color-secondary);
 }
 
-.mobileAction {
-  min-height: 48px;
-  margin-top: auto;
-  padding: 0 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  border-radius: var(--radius-button);
-  font-size: 15px;
-  font-weight: 700;
-  text-align: center;
+.mobilePlaceholderLink {
+  cursor: default;
 }
 
-.mobileAction:hover {
-  background: var(--color-primary-hover);
+.mobileStandaloneLinks {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobileStandaloneLink {
+  min-height: 50px;
+}
+
+/* Контакты полного меню */
+
+.mobileContacts {
+  margin-top: 28px;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-top: 1px solid var(--color-border);
+}
+
+.mobileLocation {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.mobileMessengers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.mobileMessengers a,
+.mobileMessengers span,
+.mobilePhone {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mobileMessengers a:hover,
+.mobilePhone:hover {
+  color: var(--color-secondary);
+}
+
+.mobileMessengers span[aria-disabled="true"],
+.mobilePhone[aria-disabled="true"] {
+  opacity: 0.68;
 }
 
 @keyframes panel-in {
@@ -191,410 +416,228 @@
   }
 }
 
-/* Desktop dropdown */
-
-.navigationGroup {
-  position: relative;
-  display: flex;
-}
-
-.groupButton {
-  min-height: 44px;
-  padding: 0 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: transparent;
-  color: var(--color-text);
-  border: 0;
-  border-radius: var(--radius-button);
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.groupButton:hover {
-  color: var(--color-secondary);
-  background: var(--color-surface-soft);
-}
-
-.groupButton:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
-}
-
-.chevron {
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
-  transition: transform var(--motion-fast) var(--motion-easing);
-}
-
-.chevronOpen {
-  transform: rotate(225deg) translate(-1px, -1px);
-}
-
-.dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  z-index: 20;
-  min-width: 300px;
-  padding: 8px;
-  display: flex;
-  flex-direction: column;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
-  box-shadow: 0 12px 32px rgb(16 35 61 / 10%);
-}
-
-.dropdownLink {
-  min-height: 44px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  color: var(--color-text);
-  border-radius: var(--radius-button);
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.dropdownLink:hover {
-  color: var(--color-secondary);
-  background: var(--color-surface-soft);
-}
-
-/* Мобильные accordion-группы */
-
-.mobileGroup {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.mobileGroupButton {
-  width: 100%;
-  min-height: 56px;
-  padding: 12px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  background: transparent;
-  color: var(--color-text);
-  border: 0;
-  border-radius: 0;
-  font-size: 18px;
-  font-weight: 600;
-  text-align: left;
-}
-
-.mobileGroupButton:hover {
-  color: var(--color-secondary);
-}
-
-.mobileGroupButton:focus-visible {
-  outline: 2px solid var(--color-focus);
-  outline-offset: 2px;
-}
-
-.mobileChevron {
-  width: 9px;
-  height: 9px;
-  margin-right: 4px;
-  flex: 0 0 auto;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg) translateY(-2px);
-  transition: transform var(--motion-fast) var(--motion-easing);
-}
-
-.mobileChevronOpen {
-  transform: rotate(225deg) translate(-1px, -1px);
-}
-
-.mobileGroupPanel {
-  padding: 0 0 12px 12px;
-  display: flex;
-  flex-direction: column;
-}
-
-.mobileGroupPanel[hidden] {
-  display: none;
-}
-
-.mobileSubLink {
-  min-height: 44px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  color: var(--color-text-muted);
-  border-radius: var(--radius-button);
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.mobileSubLink:hover {
-  color: var(--color-secondary);
-  background: var(--color-surface-soft);
-}
-
-/* Общие стили desktop-ссылок и CTA */
-
-.navLink {
-  min-height: 44px;
-  padding: 0 8px;
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-text);
-  font-size: 14px;
-  font-weight: 600;
-  white-space: nowrap;
-  transition: color var(--motion-fast) var(--motion-easing);
-}
-
-.navLink:hover {
-  color: var(--color-secondary);
-}
-
-.desktopAction {
-  min-height: 44px;
-  padding: 0 20px;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-  border-radius: var(--radius-button);
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.desktopAction:hover {
-  background: var(--color-primary-hover);
-}
-
-/* С ширины 480px мобильное меню становится боковой панелью */
-
-/* С ширины 480px мобильное меню становится боковой панелью */
+/* Боковая панель вместо полноэкранного меню */
 
 @media (min-width: 480px) {
   .mobilePanel {
-    width: min(100%, 420px);
+    width: min(100%, 440px);
   }
 }
 
-/* 440–767px: логотип, компактная CTA и burger */
+/* Контактная строка */
 
-@media (min-width: 440px) and (max-width: 767px) {
-  .inner {
-    min-height: 68px;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 8px;
+@media (min-width: 768px) {
+  .messengerList {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .messengerList {
+    display: none;
   }
 
-  .desktopAction {
-    min-height: 44px;
-    padding: 0 10px;
-    display: inline-flex;
-    justify-self: end;
+  .utilityContacts {
+    gap: 0;
+  }
+
+  .location,
+  .phone {
+    font-size: 11px;
+  }
+}
+
+/* 650–767px: четыре направления и бургер */
+
+@media (min-width: 650px) {
+  .primaryInner {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .compactNavigation {
+    display: flex;
+    gap: 10px;
+  }
+
+  .compactNavigation .navLink {
+    padding-inline: 1px;
     font-size: 12px;
   }
 
-  .mobileNavigation {
-    margin-left: 0;
-    justify-self: end;
+  .compactNavigation .navLabel {
+    min-height: 2.36em;
+  }
+
+  .compactNavigation .navLink:nth-child(3) {
+    max-width: 124px;
+  }
+
+  .compactNavigation .navLink:nth-child(4) {
+    display: inline-flex;
+    max-width: 146px;
   }
 }
 
-/* 768–899px: три основные группы, CTA и burger */
+/* 768–899px: четыре направления с более свободной компоновкой */
 
-@media (min-width: 768px) and (max-width: 899px) {
-  .inner {
-    min-height: 72px;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 8px;
+@media (min-width: 768px) {
+  .compactNavigation {
+    gap: 12px;
+  }
+
+  .compactNavigation .navLink {
+    padding-inline: 3px;
+    font-size: 12.5px;
+  }
+
+  .compactNavigation .navLink:nth-child(3) {
+    max-width: 136px;
+  }
+
+  .compactNavigation .navLink:nth-child(4) {
+    max-width: 156px;
+  }
+}
+
+/* 900–959px: четыре направления */
+
+@media (min-width: 900px) {
+  .primaryInner {
+    gap: 16px;
+  }
+
+  .compactNavigation {
+    gap: 14px;
+  }
+
+  .compactNavigation .navLink {
+    padding-inline: 4px;
+    font-size: 13px;
+  }
+
+  .compactNavigation .navLink:nth-child(3) {
+    max-width: 142px;
+  }
+
+  .compactNavigation .navLink:nth-child(4) {
+    max-width: 164px;
+  }
+}
+
+/* 960–1023px: четыре направления, служебный уровень и бургер */
+
+@media (min-width: 960px) {
+  .secondaryBar {
+    display: block;
+  }
+
+  .primaryInner {
+    gap: 18px;
+  }
+
+  .compactNavigation {
+    gap: 12px;
+  }
+
+  .compactNavigation .navLink {
+    padding-inline: 4px;
+    font-size: 13px;
+  }
+
+  .compactNavigation .navLabel {
+    width: 100%;
+    min-height: 2.36em;
+    white-space: normal;
+  }
+
+  .compactNavigation .navLink:nth-child(3) {
+    max-width: 142px;
+  }
+
+  .compactNavigation .navLink:nth-child(4) {
+    max-width: 164px;
+  }
+}
+
+/* 1024–1199px: пять направлений и бургер */
+
+@media (min-width: 1024px) {
+  .compactNavigation {
+    display: none;
   }
 
   .mediumNavigation {
     display: flex;
-    align-items: center;
-    justify-self: center;
-    gap: 6px;
+    gap: clamp(10px, 1.2vw, 18px);
   }
 
-  .mediumNavigation .groupButton,
   .mediumNavigation .navLink {
     padding-inline: 5px;
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
-  .mediumNavigation .groupButton {
-    gap: 6px;
+  .mediumNavigation .navLink:nth-child(3) {
+    max-width: 142px;
   }
 
-  .compactNavigation,
-  .fullNavigation {
-    display: none;
-  }
-
-  .desktopAction {
-    min-height: 44px;
-    padding: 0 10px;
-    display: inline-flex;
-    justify-self: end;
-    font-size: 12px;
-  }
-
-  .mobileNavigation {
-    margin-left: 0;
-    justify-self: end;
-  }
-
-  .mediumMenuHidden {
-    display: none;
+  .mediumNavigation .navLink:nth-child(4),
+  .mediumNavigation .navLink:nth-child(5) {
+    max-width: 164px;
   }
 }
 
-/* 900–1023px: те же пункты с более свободными отступами */
+/* От 1200px: все шесть направлений */
 
-@media (min-width: 900px) and (max-width: 1023px) {
-  .inner {
-    min-height: 72px;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 10px;
+@media (min-width: 1200px) {
+  .primaryInner {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 26px;
   }
 
   .mediumNavigation {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    gap: 8px;
-  }
-
-  .mediumNavigation .groupButton,
-  .mediumNavigation .navLink {
-    padding-inline: 6px;
-    font-size: 14px;
-  }
-
-  .mediumNavigation .groupButton {
-    gap: 7px;
-  }
-
-  .compactNavigation,
-  .fullNavigation {
     display: none;
   }
 
-  .desktopAction {
-    min-height: 44px;
-    padding: 0 14px;
-    display: inline-flex;
-    justify-self: end;
-    font-size: 13px;
+  .fullNavigation {
+    display: flex;
+    gap: clamp(14px, 1.45vw, 24px);
+  }
+
+  .fullNavigation .navLink:nth-child(3) {
+    max-width: 145px;
+  }
+
+  .fullNavigation .navLink:nth-child(4),
+  .fullNavigation .navLink:nth-child(5) {
+    max-width: 165px;
+  }
+
+  .fullNavigation .navLink:nth-child(6) {
+    max-width: 215px;
   }
 
   .mobileNavigation {
-    margin-left: 0;
-    justify-self: end;
-  }
-
-  .mediumMenuHidden {
     display: none;
   }
 }
 
-/* 1024–1199px: три группы, Контакты, CTA и burger */
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .inner {
-    min-height: 72px;
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto auto;
-    gap: 10px;
-  }
-
-  .mediumNavigation,
+@media (min-width: 1366px) {
   .fullNavigation {
-    display: none;
+    gap: clamp(18px, 1.6vw, 28px);
   }
 
-  .compactNavigation {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    gap: 8px;
-  }
-
-  .compactNavigation .groupButton,
-  .compactNavigation .navLink {
-    padding-inline: 6px;
-    font-size: 14px;
-  }
-
-  .compactNavigation .groupButton {
-    gap: 7px;
-  }
-
-  .desktopAction {
-    min-height: 44px;
-    padding: 0 14px;
-    display: inline-flex;
-    justify-self: end;
-    font-size: 13px;
-  }
-
-  .mobileNavigation {
-    margin-left: 0;
-    justify-self: end;
-  }
-
-  .compactMenuHidden {
-    display: none;
+  .fullNavigation .navLink {
+    padding-inline: 8px;
+    font-size: 13.5px;
   }
 }
 
-/* От 1200px: полная desktop-шапка */
-
-@media (min-width: 1200px) {
-  .inner {
-    min-height: 80px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 24px;
-  }
-
-  .brand {
-    justify-self: start;
-  }
-
-  .mediumNavigation,
-  .compactNavigation {
-    display: none;
-  }
-
-  .fullNavigation {
-    display: flex;
-    align-items: center;
-    justify-self: center;
-    gap: 4px;
-  }
-
-  .desktopAction {
-    display: inline-flex;
-    justify-self: end;
-  }
-
-  .mobileNavigation {
-    display: none;
+@media (min-width: 1440px) {
+  .fullNavigation .navLink {
+    font-size: 14px;
   }
 }
 

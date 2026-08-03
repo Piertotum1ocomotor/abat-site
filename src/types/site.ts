@@ -1,27 +1,26 @@
 export type NavigationItem = {
   label: string;
   href: string;
+  isPlaceholder?: boolean;
 };
 
-export type HeaderNavigationItem =
-  | {
-      type: "link";
-      label: string;
-      href: string;
-      showInMediumHeader?: boolean;
-      showInCompactHeader?: boolean;
-    }
-  | {
-      type: "group";
-      label: string;
-      items: readonly NavigationItem[];
-      showInMediumHeader?: boolean;
-      showInCompactHeader?: boolean;
-    };
+export type HeaderNavigationItem = NavigationItem;
 
 export type SiteAction = {
   label: string;
   href: string;
+};
+
+export type HeaderMessenger = {
+  label: string;
+  href?: string;
+};
+
+export type HeaderContacts = {
+  location: string;
+  phone: string;
+  phoneHref?: string;
+  messengers: readonly HeaderMessenger[];
 };
 
 export type ContactInfo = {
@@ -50,8 +49,11 @@ export type SiteConfig = {
   locale: "ru-RU";
 
   homeLink: NavigationItem;
-  headerNavigation: readonly HeaderNavigationItem[];
 
-  headerAction: SiteAction;
+  headerNavigation: readonly NavigationItem[];
+  headerServices: readonly NavigationItem[];
+  headerSecondaryNavigation: readonly NavigationItem[];
+  headerContacts: HeaderContacts;
+
   contacts: ContactInfo;
 };
