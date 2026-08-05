@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import type { HeroContent } from "@/types/home";
 
@@ -43,24 +42,6 @@ export function Hero({ content }: HeroProps) {
             </h1>
 
             <p className={styles.description}>{content.description}</p>
-
-            <div className={styles.actions}>
-              <Link
-                href={content.primaryAction.href}
-                className={styles.primaryAction}
-              >
-                {content.primaryAction.label}
-              </Link>
-
-              {content.secondaryAction ? (
-                <Link
-                  href={content.secondaryAction.href}
-                  className={styles.secondaryAction}
-                >
-                  {content.secondaryAction.label}
-                </Link>
-              ) : null}
-            </div>
           </div>
         </div>
       </div>

@@ -8,7 +8,7 @@
   position: relative;
   width: 100%;
   min-width: 0;
-  min-height: clamp(560px, 64svh, 680px);
+  min-height: clamp(500px, 58svh, 620px);
   display: flex;
   overflow: hidden;
   isolation: isolate;
@@ -25,11 +25,6 @@
   object-position: 60% center;
 }
 
-/*
- * Полноразмерный стально-голубой слой:
- * начинается от левого края баннера,
- * занимает всю высоту и плавно исчезает справа.
- */
 .overlay {
   position: absolute;
   inset: 0;
@@ -60,7 +55,7 @@
 .content {
   width: min(100%, 700px);
   min-width: 0;
-  padding-block: clamp(56px, 7vw, 88px);
+  padding-block: clamp(56px, 7vw, 84px);
 }
 
 .eyebrow {
@@ -91,59 +86,6 @@
   line-height: 1.6;
 }
 
-.actions {
-  margin-top: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.primaryAction,
-.secondaryAction {
-  width: 220px;
-  min-height: 52px;
-  padding: 0 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 auto;
-  border-radius: var(--radius-button);
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 1.25;
-  text-align: center;
-  transition:
-    background-color var(--motion-fast) var(--motion-easing),
-    border-color var(--motion-fast) var(--motion-easing),
-    color var(--motion-fast) var(--motion-easing);
-}
-
-.primaryAction {
-  background: var(--color-primary);
-  color: var(--color-on-primary);
-}
-
-.primaryAction:hover {
-  background: var(--color-primary-hover);
-}
-
-.primaryAction:active {
-  background: var(--color-primary-active);
-}
-
-.secondaryAction {
-  background: rgb(255 255 255 / 78%);
-  color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
-  backdrop-filter: blur(4px);
-}
-
-.secondaryAction:hover {
-  background: var(--color-secondary-soft);
-  border-color: var(--color-secondary-hover);
-  color: var(--color-secondary-hover);
-}
-
 /* Описание немного контрастнее от планшета и выше */
 
 @media (min-width: 768px) {
@@ -156,7 +98,7 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .banner {
-    min-height: clamp(470px, 54svh, 540px);
+    min-height: clamp(440px, 50svh, 510px);
   }
 
   .image {
@@ -180,13 +122,7 @@
 
   .content {
     width: min(100%, 640px);
-    padding-block: 52px;
-  }
-
-  .primaryAction,
-  .secondaryAction {
-    width: 220px;
-    min-height: 50px;
+    padding-block: 50px;
   }
 }
 
@@ -194,7 +130,7 @@
 
 @media (max-width: 767px) {
   .banner {
-    min-height: clamp(540px, 70svh, 620px);
+    min-height: clamp(470px, 64svh, 560px);
   }
 
   .image {
@@ -203,10 +139,6 @@
     transform-origin: 68% 28%;
   }
 
-  /*
-   * На мобильных сохраняем прежнюю вертикальную форму градиента,
-   * но используем тот же стально-голубой цвет.
-   */
   .overlay {
     background: linear-gradient(
       180deg,
@@ -224,51 +156,10 @@
 
   .content {
     width: 100%;
-    padding-block: 44px 52px;
+    padding-block: 40px 44px;
   }
 
   .description {
     margin-top: 20px;
-  }
-
-  .actions {
-    margin-top: 28px;
-    gap: 10px;
-  }
-}
-
-/* Средние мобильные экраны */
-
-@media (min-width: 480px) and (max-width: 767px) {
-  .primaryAction,
-  .secondaryAction {
-    width: 208px;
-    min-height: 48px;
-    padding-inline: 12px;
-    font-size: 14px;
-  }
-}
-
-/* Узкие мобильные экраны */
-
-@media (max-width: 479px) {
-  .actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .primaryAction,
-  .secondaryAction {
-    width: 210px;
-    min-height: 46px;
-    padding-inline: 12px;
-    font-size: 14px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .primaryAction,
-  .secondaryAction {
-    transition: none;
   }
 }

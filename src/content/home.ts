@@ -8,16 +8,6 @@ export const heroContent = {
   description:
     "Ангары, склады, производственные и быстровозводимые здания. Проектирование, изготовление, доставка и монтаж.",
 
-  primaryAction: {
-    label: "Рассчитать стоимость",
-    href: "/#cost-estimate",
-  },
-
-  secondaryAction: {
-    label: "Посмотреть проекты",
-    href: "/proekty",
-  },
-
   image: {
     src: "/images/hero/hero-building-v2.jpg",
     alt: "Промышленное здание из металлоконструкций",
