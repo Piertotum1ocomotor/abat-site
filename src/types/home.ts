@@ -6,3 +6,15 @@ export type HeroContent = {
   description: string;
   image: MediaAsset | null;
 };
+
+export type TurnkeyProcessStep = {
+  label: string;
+  iconSrc: string;
+};
+
+export type TurnkeyProcessContent = {
+  title: string;
+  description: string;
+  illustrationSrc: string;
+  steps: readonly TurnkeyProcessStep[];
+};
