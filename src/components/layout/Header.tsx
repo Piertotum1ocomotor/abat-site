@@ -41,10 +41,7 @@ export function Header() {
             </span>
 
             <div className={styles.utilityContacts}>
-              <div
-                className={styles.messengerList}
-                aria-label="Мессенджеры"
-              >
+              <div className={styles.messengerList} aria-label="Мессенджеры">
                 {siteConfig.headerContacts.messengers.map((messenger) =>
                   messenger.href ? (
                     <a key={messenger.label} href={messenger.href}>
@@ -113,7 +110,9 @@ export function Header() {
             homeLink={siteConfig.homeLink}
             navigation={siteConfig.headerNavigation}
             services={siteConfig.headerServices}
-            secondaryNavigation={siteConfig.headerSecondaryNavigation}
+            secondaryNavigation={siteConfig.headerSecondaryNavigation.filter(
+              (item) => item.label !== "Услуги",
+            )}
             contacts={siteConfig.headerContacts}
           />
         </div>

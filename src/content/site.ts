@@ -33,8 +33,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       label: "Промышленные здания и производственные цеха",
-      href: "#",
-      isPlaceholder: true,
+      href: "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
     },
   ],
 
@@ -59,12 +58,16 @@ export const siteConfig: SiteConfig = {
 
   headerSecondaryNavigation: [
     {
-      label: "О компании",
-      href: "/o-kompanii",
+      label: "Услуги",
+      href: "/#uslugi",
     },
     {
       label: "Построенные объекты",
       href: "/proekty",
+    },
+    {
+      label: "О компании",
+      href: "/o-kompanii",
     },
     {
       label: "Контакты",
@@ -74,7 +77,7 @@ export const siteConfig: SiteConfig = {
 
   headerContacts: {
     location: "Санкт-Петербург",
-    phone: "+7 (___) ___-__-__",
+    phone: "+7 (***) ***-**-**",
     messengers: [
       {
         label: "Telegram",

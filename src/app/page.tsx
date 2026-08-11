@@ -1,7 +1,14 @@
 import { Header } from "@/components/layout/Header";
+import { Advantages } from "@/components/sections/Advantages";
+import { DirectionsServices } from "@/components/sections/DirectionsServices";
 import { Hero } from "@/components/sections/Hero";
 import { TurnkeyProcess } from "@/components/sections/TurnkeyProcess";
-import { heroContent, turnkeyProcessContent } from "@/content/home";
+import {
+  advantagesContent,
+  directionsServicesContent,
+  heroContent,
+  turnkeyProcessContent,
+} from "@/content/home";
 
 export default function HomePage() {
   return (
@@ -11,6 +18,8 @@ export default function HomePage() {
       <main>
         <Hero content={heroContent} />
         <TurnkeyProcess content={turnkeyProcessContent} />
+        <DirectionsServices content={directionsServicesContent} />
+        <Advantages content={advantagesContent} />
       </main>
     </>
   );

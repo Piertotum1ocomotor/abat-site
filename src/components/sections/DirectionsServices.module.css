@@ -1,0 +1,730 @@
+.section {
+  width: 100%;
+  padding-block: var(--section-gap);
+}
+
+.heading {
+  max-width: 760px;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Directions */
+
+.directionsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: repeat(2, minmax(198px, 1fr)) auto;
+  gap: 16px;
+}
+
+.directionCard {
+  position: relative;
+  min-width: 0;
+  min-height: 198px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-container);
+  background: var(--color-secondary);
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    transform var(--motion-normal) var(--motion-easing),
+    box-shadow var(--motion-normal) var(--motion-easing);
+}
+
+a.directionCard {
+  cursor: pointer;
+}
+
+.directionCard_primary {
+  min-height: 412px;
+  grid-row: span 2;
+}
+
+.directionCard_secondary {
+  min-height: 198px;
+}
+
+.directionCard_accent {
+  min-height: 148px;
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    115deg,
+    var(--color-secondary-hover) 0%,
+    var(--color-secondary) 100%
+  );
+}
+
+.directionCard_accent::before,
+.directionCard_accent::after {
+  position: absolute;
+  right: -3%;
+  z-index: 1;
+  width: 46%;
+  pointer-events: none;
+  content: "";
+}
+
+.directionCard_accent::before {
+  top: -45%;
+  height: 190%;
+  opacity: 0.2;
+  transform: skewX(-18deg);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 32px,
+    rgb(215 229 241 / 72%) 32px 35px,
+    transparent 35px 68px
+  );
+}
+
+.directionCard_accent::after {
+  inset-block: -40%;
+  height: 180%;
+  opacity: 0.14;
+  background:
+    repeating-linear-gradient(
+      38deg,
+      transparent 0 54px,
+      rgb(255 255 255 / 78%) 54px 58px,
+      transparent 58px 112px
+    ),
+    repeating-linear-gradient(
+      142deg,
+      transparent 0 70px,
+      rgb(215 229 241 / 66%) 70px 73px,
+      transparent 73px 140px
+    );
+}
+
+.directionCardPlaceholder {
+  cursor: default;
+}
+
+.directionImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.directionImage img {
+  object-fit: cover;
+  transition: transform 420ms var(--motion-easing);
+}
+
+.directionCard_primary .directionImage img {
+  object-position: 52% center;
+}
+
+.directionCard_secondary .directionImage img {
+  object-position: center;
+}
+
+.directionOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(7 22 39 / 82%) 0%,
+    rgb(7 22 39 / 62%) 44%,
+    rgb(7 22 39 / 23%) 78%,
+    rgb(7 22 39 / 8%) 100%
+  );
+}
+
+.directionCard_accent .directionOverlay {
+  background: linear-gradient(
+    100deg,
+    rgb(16 35 61 / 18%) 0%,
+    rgb(16 35 61 / 2%) 100%
+  );
+}
+
+.directionContent {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 470px);
+  min-height: 100%;
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.directionCard_primary .directionContent {
+  justify-content: flex-end;
+  padding: clamp(28px, 3.5vw, 42px);
+}
+
+.directionCard_secondary .directionContent {
+  justify-content: flex-end;
+}
+
+.directionCard_accent .directionContent {
+  width: 100%;
+  max-width: none;
+  min-height: 148px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 6px;
+}
+
+.directionIconCircle {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-secondary-hover);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 14%);
+}
+
+.directionIconCircle img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.directionCard_accent .directionIconCircle {
+  grid-row: 1 / 3;
+  margin: 0;
+  background: rgb(255 255 255 / 14%);
+  box-shadow: none;
+}
+
+.directionTitle {
+  max-width: 430px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(23px, 2vw, 31px);
+  font-weight: 800;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.directionCard_secondary .directionTitle {
+  font-size: clamp(20px, 1.7vw, 26px);
+}
+
+.directionCard_accent .directionTitle {
+  align-self: end;
+}
+
+.directionDescription {
+  max-width: 430px;
+  margin: 10px 0 0;
+  color: rgb(255 255 255 / 84%);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.directionCard_accent .directionDescription {
+  grid-column: 2;
+  align-self: start;
+  margin-top: 0;
+}
+
+.directionLinkText {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.directionCard_accent .directionLinkText {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin: 0;
+  align-self: center;
+}
+
+.directionArrow {
+  width: 22px;
+  display: inline-flex;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.directionArrow svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Компактные фото-карточки без потери содержимого */
+
+@media (min-width: 1100px) {
+  .directionCard_secondary .directionContent {
+    padding: 26px;
+  }
+
+  .directionCard_secondary .directionIconCircle {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  .directionCard_secondary .directionIconCircle img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .directionCard_secondary .directionTitle {
+    font-size: clamp(20px, 1.55vw, 23px);
+  }
+
+  .directionCard_secondary .directionDescription {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .directionCard_secondary .directionLinkText {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+}
+
+/* Services */
+
+.servicesBlock {
+  margin-top: clamp(36px, 4vw, 52px);
+  scroll-margin-top: 96px;
+}
+
+.servicesHeading {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.servicesTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(23px, 2vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.servicesAccent {
+  width: 44px;
+  height: 3px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.serviceCard {
+  min-width: 0;
+  min-height: 96px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    box-shadow var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
+}
+
+.serviceImageIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.serviceMaskIcon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: var(--color-secondary);
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.serviceTitle {
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.serviceArrow {
+  width: 20px;
+  display: inline-flex;
+  color: var(--color-secondary);
+  transition:
+    transform var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing);
+}
+
+.serviceArrow svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover */
+
+@media (hover: hover) and (pointer: fine) {
+  a.directionCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgb(16 35 61 / 14%);
+  }
+
+  a.directionCard:hover .directionImage img {
+    transform: scale(1.025);
+  }
+
+  a.directionCard:hover .directionArrow {
+    transform: translateX(4px);
+  }
+
+  .serviceCard:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 22px rgb(16 35 61 / 8%);
+    transform: translateY(-2px);
+  }
+
+  .serviceCard:hover .serviceArrow {
+    color: var(--color-primary);
+    transform: translateX(3px);
+  }
+}
+
+/* Keyboard focus */
+
+a.directionCard:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.serviceCard:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(196 81 7 / 16%);
+}
+
+/* Tablet */
+
+@media (max-width: 1099px) {
+  .directionsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .directionCard_primary {
+    min-height: 344px;
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .directionCard_secondary {
+    min-height: 220px;
+  }
+
+  .directionCard_accent {
+    min-height: 140px;
+  }
+
+  .directionCard_accent .directionContent {
+    min-height: 140px;
+  }
+
+  .directionCard_secondary .directionContent {
+    padding: 22px;
+  }
+
+  .directionCard_secondary .directionIconCircle {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 12px;
+  }
+
+  .directionCard_secondary .directionIconCircle img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .directionCard_secondary .directionTitle {
+    font-size: 21px;
+  }
+
+  .directionCard_secondary .directionDescription {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .directionCard_secondary .directionLinkText {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*
+ * На небольших планшетах длинный заголовок синей карточки
+ * уже не помещается в горизонтальную desktop-композицию.
+ */
+
+@media (max-width: 820px) {
+  .directionCard_accent {
+    min-height: auto;
+  }
+
+  .directionCard_accent .directionContent {
+    width: 100%;
+    min-height: 210px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .directionCard_accent .directionIconCircle {
+    margin: 0 0 18px;
+  }
+
+  .directionCard_accent .directionTitle {
+    align-self: auto;
+  }
+
+  .directionCard_accent .directionDescription {
+    margin-top: 10px;
+  }
+
+  .directionCard_accent .directionLinkText {
+    margin-top: 18px;
+    align-self: auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .section {
+    padding-block: var(--section-gap);
+  }
+
+  .heading {
+    margin-bottom: 26px;
+  }
+
+  .headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .description {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  .directionsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .directionCard_primary,
+  .directionCard_secondary,
+  .directionCard_accent {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .directionCard_primary,
+  .directionCard_secondary {
+    min-height: 300px;
+  }
+
+  .directionCard_accent {
+    min-height: auto;
+  }
+
+  .directionContent,
+  .directionCard_primary .directionContent,
+  .directionCard_secondary .directionContent {
+    min-height: inherit;
+    padding: 24px;
+    justify-content: flex-end;
+  }
+
+  .directionCard_accent .directionContent {
+    width: 100%;
+    min-height: 210px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .directionCard_accent::before,
+  .directionCard_accent::after {
+    right: -14%;
+    width: 58%;
+    opacity: 0.08;
+  }
+
+  .directionCard_accent .directionIconCircle {
+    margin: 0 0 18px;
+  }
+
+  .directionCard_accent .directionTitle {
+    align-self: auto;
+  }
+
+  .directionCard_accent .directionDescription {
+    margin-top: 10px;
+  }
+
+  .directionCard_accent .directionLinkText {
+    margin-top: 18px;
+    align-self: auto;
+  }
+
+  .directionIconCircle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+
+  .directionIconCircle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .directionTitle,
+  .directionCard_secondary .directionTitle {
+    font-size: 24px;
+  }
+
+  .directionDescription,
+  .directionCard_secondary .directionDescription {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .directionCard_secondary .directionLinkText {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+
+  .servicesBlock {
+    margin-top: 36px;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .serviceCard {
+    min-height: 84px;
+    padding: 15px 16px;
+  }
+}
+
+/* Narrow mobile */
+
+@media (max-width: 379px) {
+  .directionContent,
+  .directionCard_primary .directionContent,
+  .directionCard_secondary .directionContent,
+  .directionCard_accent .directionContent {
+    padding: 20px;
+  }
+
+  .directionCard_primary,
+  .directionCard_secondary {
+    min-height: 290px;
+  }
+
+  .directionCard_accent .directionContent {
+    min-height: 220px;
+  }
+
+  .directionTitle,
+  .directionCard_secondary .directionTitle {
+    font-size: 22px;
+  }
+
+  .serviceCard {
+    grid-template-columns: 40px minmax(0, 1fr) 20px;
+    gap: 12px;
+  }
+
+  .serviceImageIcon,
+  .serviceMaskIcon {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -18,3 +18,49 @@ export type TurnkeyProcessContent = {
   illustrationSrc: string;
   steps: readonly TurnkeyProcessStep[];
 };
+
+export type DirectionCardVariant = "primary" | "secondary" | "accent";
+
+export type DirectionCard = {
+  title: string;
+  description: string;
+  href: string;
+  isPlaceholder?: boolean;
+  imageSrc?: string;
+  iconSrc: string;
+  variant: DirectionCardVariant;
+};
+
+export type ServiceCard = {
+  title: string;
+  href: string;
+  iconSrc: string;
+  iconMode?: "image" | "mask";
+};
+
+export type DirectionsServicesContent = {
+  title: string;
+  description?: string;
+  directions: readonly DirectionCard[];
+  servicesTitle: string;
+  services: readonly ServiceCard[];
+};
+
+export type NumericAdvantage = {
+  value: string;
+  label: string;
+  description: string;
+  imageSrc: string;
+};
+
+export type DetailAdvantage = {
+  title: string;
+  description: string;
+  iconSrc: string;
+};
+
+export type AdvantagesContent = {
+  title: string;
+  numeric: readonly NumericAdvantage[];
+  details: readonly DetailAdvantage[];
+};
