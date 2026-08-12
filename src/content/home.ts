@@ -3,6 +3,7 @@ import type {
   AdvantagesContent,
   DirectionsServicesContent,
   HeroContent,
+  ProjectsShowcaseContent,
   TurnkeyProcessContent,
 } from "@/types/home";
 import type { NavigationItem } from "@/types/site";
@@ -206,3 +207,80 @@ export const advantagesContent = {
     },
   ],
 } satisfies AdvantagesContent;
+
+/*
+ * Временные данные для визуальной разработки. Перед публикацией или передачей
+ * клиенту заменить факты об объектах на проверенные данные заказчика.
+ */
+export const projectsShowcaseContent = {
+  title: "Построенные объекты",
+  allProjectsHref: "/proekty",
+  projects: [
+    {
+      id: "warehouse",
+      number: "01",
+      title: "Складской комплекс",
+      location: "Санкт-Петербург",
+      area: "2 400 м²",
+      works: ["Проектирование", "Изготовление", "Монтаж"],
+      images: [
+        {
+          src: "/images/projects/warehouse/01.jpg",
+          alt: "Монтаж стеновых панелей складского комплекса",
+        },
+        {
+          src: "/images/projects/warehouse/02.jpg",
+          alt: "Каркас складского комплекса на строительной площадке",
+        },
+        {
+          src: "/images/projects/warehouse/03.jpg",
+          alt: "Узел металлического каркаса складского комплекса",
+        },
+      ],
+    },
+    {
+      id: "hangar",
+      number: "02",
+      title: "Ангар для хранения",
+      location: "Московская область",
+      area: "1 800 м²",
+      works: ["Изготовление металлоконструкций", "Монтаж"],
+      images: [
+        {
+          src: "/images/projects/hangar/01.jpg",
+          alt: "Готовый ангар для хранения на строительной площадке",
+        },
+        {
+          src: "/images/projects/hangar/02.jpg",
+          alt: "Монтаж металлоконструкций ангара для хранения",
+        },
+        {
+          src: "/images/projects/hangar/03.jpg",
+          alt: "Монтаж конструкций ангара с подъёмной техникой",
+        },
+      ],
+    },
+    {
+      id: "production",
+      number: "03",
+      title: "Производственный корпус",
+      location: "Ленинградская область",
+      area: "3 200 м²",
+      works: ["Проектирование", "Изготовление", "Монтаж"],
+      images: [
+        {
+          src: "/images/projects/production/01.jpg",
+          alt: "Металлический каркас производственного корпуса",
+        },
+        {
+          src: "/images/projects/production/02.jpg",
+          alt: "Фасад производственного корпуса",
+        },
+        {
+          src: "/images/projects/production/03.jpg",
+          alt: "Внутреннее пространство производственного корпуса",
+        },
+      ],
+    },
+  ],
+} satisfies ProjectsShowcaseContent;

@@ -1,0 +1,593 @@
+.section {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.heading {
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.showcase {
+  min-width: 0;
+  height: clamp(410px, 34vw, 460px);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 32%) minmax(0, 68%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-secondary-hover);
+}
+
+.infoPanel {
+  min-width: 0;
+  padding: clamp(28px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-secondary-hover);
+  color: var(--color-on-secondary);
+}
+
+.numberRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.projectNumber {
+  color: var(--color-on-secondary);
+  font-size: clamp(62px, 6vw, 86px);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.055em;
+}
+
+.progress {
+  padding-top: 4px;
+  color: rgb(255 255 255 / 58%);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.projectDetails {
+  min-width: 0;
+}
+
+.projectTitle {
+  max-width: 330px;
+  margin: 0;
+  color: var(--color-on-secondary);
+  font-size: clamp(25px, 2.35vw, 34px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.projectTitle::after {
+  width: 42px;
+  height: 3px;
+  margin-top: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary-accent);
+  content: "";
+}
+
+.meta {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  color: rgb(255 255 255 / 76%);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.meta strong {
+  color: var(--color-on-secondary);
+  font-size: clamp(20px, 1.8vw, 25px);
+  font-weight: 800;
+}
+
+.works {
+  margin: 20px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  color: rgb(255 255 255 / 84%);
+  font-size: 13px;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.works li {
+  position: relative;
+  padding-left: 11px;
+}
+
+.works li::before {
+  position: absolute;
+  top: 0.67em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-primary-accent);
+  content: "";
+}
+
+.mediaPanel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-text);
+}
+
+.mainImageButton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  touch-action: pan-y;
+}
+
+.mainImageButton::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgb(7 22 39 / 58%), transparent);
+  content: "";
+}
+
+.mainImage {
+  object-fit: cover;
+  animation: imageReveal var(--motion-normal) var(--motion-easing);
+  transition: transform 420ms var(--motion-easing);
+}
+
+.nextProjectButton,
+.lightboxArrow,
+.lightboxClose {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 44%);
+  border-radius: 50%;
+  background: rgb(16 35 61 / 78%);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    background-color var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
+}
+
+.nextProjectButton {
+  position: absolute;
+  top: 50%;
+  right: clamp(18px, 2.4vw, 32px);
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  padding: 15px;
+  transform: translateY(-50%);
+}
+
+.nextProjectButton svg,
+.lightboxArrow svg,
+.allProjectsLink svg {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnails {
+  position: absolute;
+  bottom: clamp(18px, 2.2vw, 28px);
+  left: clamp(18px, 2.4vw, 32px);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnailButton {
+  position: relative;
+  width: clamp(66px, 7.2vw, 92px);
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid rgb(255 255 255 / 62%);
+  border-radius: var(--radius-image);
+  background: var(--color-secondary-hover);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  opacity: 0.76;
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    opacity var(--motion-fast) var(--motion-easing);
+}
+
+.thumbnailButtonActive {
+  border-color: var(--color-primary-accent);
+  opacity: 1;
+}
+
+.thumbnailImage {
+  object-fit: cover;
+}
+
+.allProjectsRow {
+  margin-top: clamp(20px, 2.3vw, 28px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.allProjectsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-secondary-hover);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.allProjectsLink svg {
+  width: 26px;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.lightboxBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: clamp(16px, 3vw, 40px);
+  display: grid;
+  place-items: center;
+  background: rgb(4 12 21 / 94%);
+}
+
+.lightboxContent {
+  width: min(100%, 1440px);
+  height: min(92vh, 900px);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 14px;
+  color: #ffffff;
+}
+
+.lightboxHeader {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: rgb(255 255 255 / 78%);
+  font-size: 14px;
+}
+
+.lightboxClose {
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  flex: 0 0 auto;
+}
+
+.lightboxClose svg {
+  width: 100%;
+  height: 100%;
+}
+
+.lightboxImageFrame {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.lightboxImage {
+  object-fit: contain;
+  animation: imageReveal var(--motion-normal) var(--motion-easing);
+}
+
+.lightboxArrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  transform: translateY(-50%);
+}
+
+.lightboxArrowPrevious {
+  left: 10px;
+}
+
+.lightboxArrowNext {
+  right: 10px;
+}
+
+.arrowLeft {
+  transform: rotate(180deg);
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0.62;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .mainImageButton:hover .mainImage {
+    transform: scale(1.025);
+  }
+
+  .nextProjectButton:hover,
+  .lightboxArrow:hover,
+  .lightboxClose:hover {
+    border-color: var(--color-primary-accent);
+    background: var(--color-secondary-hover);
+  }
+
+  .nextProjectButton:hover {
+    transform: translateY(-50%) translateX(2px);
+  }
+
+  .thumbnailButton:hover {
+    opacity: 1;
+  }
+
+  .allProjectsLink:hover {
+    color: var(--color-primary);
+  }
+
+  .allProjectsLink:hover svg {
+    transform: translateX(4px);
+  }
+}
+
+.mainImageButton:focus-visible,
+.nextProjectButton:focus-visible,
+.thumbnailButton:focus-visible,
+.lightboxArrow:focus-visible,
+.lightboxClose:focus-visible {
+  outline: 3px solid var(--color-primary-accent);
+  outline-offset: -4px;
+}
+
+.allProjectsLink:focus-visible {
+  outline-color: var(--color-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .showcase {
+    height: clamp(390px, 46vw, 440px);
+    grid-template-columns: minmax(0, 38%) minmax(0, 62%);
+  }
+
+  .infoPanel {
+    padding: clamp(24px, 3vw, 32px);
+  }
+
+  .projectNumber {
+    font-size: clamp(54px, 7vw, 72px);
+  }
+
+  .projectTitle {
+    font-size: clamp(23px, 2.8vw, 29px);
+  }
+
+  .projectTitle::after {
+    margin-top: 14px;
+  }
+
+  .meta,
+  .works {
+    margin-top: 15px;
+  }
+
+  .nextProjectButton {
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading {
+    margin-bottom: 26px;
+  }
+
+  .headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .showcase {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(260px, 54vw);
+  }
+
+  .infoPanel {
+    min-height: 226px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: minmax(90px, 0.32fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 22px;
+  }
+
+  .numberRow {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .projectNumber {
+    font-size: clamp(58px, 12vw, 78px);
+  }
+
+  .progress {
+    padding: 0;
+  }
+
+  .projectTitle {
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  .projectTitle::after {
+    margin-top: 12px;
+  }
+
+  .meta {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .meta strong {
+    font-size: 20px;
+  }
+
+  .works {
+    margin-top: 12px;
+    gap: 2px 14px;
+    font-size: 12px;
+  }
+
+  .nextProjectButton {
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    padding: 13px;
+  }
+
+  .thumbnails {
+    bottom: 16px;
+    left: 16px;
+    gap: 8px;
+  }
+
+  .thumbnailButton {
+    width: clamp(62px, 17vw, 86px);
+  }
+
+  .allProjectsRow {
+    justify-content: flex-start;
+  }
+
+  .lightboxBackdrop {
+    padding: 12px;
+  }
+
+  .lightboxContent {
+    height: 94vh;
+  }
+
+  .lightboxHeader {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .lightboxArrow {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+  }
+
+  .lightboxArrowPrevious {
+    left: 4px;
+  }
+
+  .lightboxArrowNext {
+    right: 4px;
+  }
+}
+
+@media (max-width: 499px) {
+  .showcase {
+    grid-template-rows: auto minmax(248px, 68vw);
+  }
+
+  .infoPanel {
+    min-height: 234px;
+    padding: 20px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .projectNumber {
+    font-size: 58px;
+  }
+
+  .projectTitle {
+    font-size: 22px;
+  }
+
+  .works {
+    display: grid;
+    gap: 1px;
+  }
+
+  .nextProjectButton {
+    top: 42%;
+    width: 44px;
+    height: 44px;
+    padding: 11px;
+  }
+
+  .thumbnailButton {
+    width: clamp(58px, 18vw, 72px);
+  }
+}
+
+@media (max-width: 379px) {
+  .infoPanel {
+    padding: 18px;
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .projectNumber {
+    font-size: 52px;
+  }
+
+  .projectTitle {
+    font-size: 20px;
+  }
+}

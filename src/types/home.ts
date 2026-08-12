@@ -64,3 +64,24 @@ export type AdvantagesContent = {
   numeric: readonly NumericAdvantage[];
   details: readonly DetailAdvantage[];
 };
+
+export type ProjectShowcaseImage = {
+  src: string;
+  alt: string;
+};
+
+export type ProjectShowcaseItem = {
+  id: string;
+  number: string;
+  title: string;
+  location: string;
+  area: string;
+  works: readonly string[];
+  images: readonly ProjectShowcaseImage[];
+};
+
+export type ProjectsShowcaseContent = {
+  title: string;
+  allProjectsHref: string;
+  projects: readonly ProjectShowcaseItem[];
+};
