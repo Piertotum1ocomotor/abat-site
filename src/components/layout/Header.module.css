@@ -315,6 +315,8 @@ a.phone:focus-visible {
 }
 
 .mobileTitle {
+  margin-top: 16px;
+  display: block;
   font-size: 20px;
   font-weight: 700;
 }
@@ -322,7 +324,7 @@ a.phone:focus-visible {
 /* Ссылки полного меню */
 
 .mobileMenu {
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .mobileHomeLink,
@@ -419,21 +421,54 @@ a.phone:focus-visible {
 }
 
 .mobileMessengers a,
-.mobileMessengers span,
-.mobilePhone {
+.mobileMessengers span {
   color: var(--color-text-muted);
   font-size: 14px;
   font-weight: 600;
 }
 
-.mobileMessengers a:hover,
-.mobilePhone:hover {
+.mobileMessengers a:hover {
   color: var(--color-secondary);
 }
 
-.mobileMessengers span[aria-disabled="true"],
-.mobilePhone[aria-disabled="true"] {
+.mobileMessengers span[aria-disabled="true"] {
   opacity: 0.68;
+}
+
+.mobilePhone {
+  width: fit-content;
+  min-height: 46px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-button);
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+  transition:
+    background var(--motion-fast) var(--motion-easing),
+    border-color var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing);
+}
+
+a.mobilePhone:hover {
+  color: var(--color-text);
+  background: var(--color-surface-soft);
+  border-color: var(--color-primary-hover);
+}
+
+a.mobilePhone:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.mobilePhone[aria-disabled="true"] {
+  opacity: 1;
 }
 
 @keyframes panel-in {
