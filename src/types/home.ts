@@ -4,6 +4,7 @@ export type HeroContent = {
   eyebrow?: string;
   title: string;
   description: string;
+  highlights?: readonly string[];
   image: MediaAsset | null;
 };
 
