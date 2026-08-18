@@ -42,6 +42,16 @@ export function Hero({ content }: HeroProps) {
             </h1>
 
             <p className={styles.description}>{content.description}</p>
+
+            {content.highlights?.length ? (
+              <ul className={styles.highlights}>
+                {content.highlights.map((highlight) => (
+                  <li key={highlight} className={styles.highlight}>
+                    {highlight}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
           </div>
         </div>
       </div>
