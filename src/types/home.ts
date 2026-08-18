@@ -71,13 +71,19 @@ export type ProjectShowcaseImage = {
   alt: string;
 };
 
+export type ProjectDetail = {
+  label: string;
+  value: string;
+};
+
 export type ProjectShowcaseItem = {
   id: string;
+  slug: string;
   number: string;
   title: string;
-  location: string;
-  area: string;
-  works: readonly string[];
+  summary: string;
+  description: string;
+  details: readonly ProjectDetail[];
   images: readonly ProjectShowcaseImage[];
 };
 
