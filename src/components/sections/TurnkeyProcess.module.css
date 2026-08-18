@@ -147,17 +147,17 @@
 
 @media (max-width: 767.98px) {
   .card {
-    gap: 24px;
+    gap: 20px;
   }
 
   .intro {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 14px;
   }
 
   .illustration {
-    width: 96px;
-    height: 96px;
+    width: 116px;
+    height: 116px;
   }
 
   .title {
@@ -176,7 +176,7 @@
    * Никакого absolute positioning.
    */
   .steps {
-    padding-top: 24px;
+    padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
@@ -192,23 +192,23 @@
   .step {
     width: 100%;
     display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns: 66px minmax(0, 1fr);
     grid-template-rows: auto;
     align-items: center;
     justify-items: start;
-    gap: 22px;
+    gap: 18px;
     text-align: left;
   }
 
   .stepIcon {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     justify-self: center;
   }
 
   .stepLabel {
     max-width: none;
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
   }
 
@@ -220,7 +220,7 @@
   .arrow {
     position: static;
     width: 22px;
-    margin: 18px 0 18px 25px;
+    margin: 15px 0 15px 22px;
     transform: rotate(90deg);
   }
 }
@@ -229,40 +229,13 @@
 
 @media (max-width: 479px) {
   .intro {
-    grid-template-columns: 96px minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .illustration {
-    width: 96px;
-    height: 96px;
-  }
-
-  .step {
-    grid-template-columns: 68px minmax(0, 1fr);
-    gap: 18px;
-  }
-
-  .arrow {
-    margin-left: 23px;
-  }
-}
-
-/* Очень узкие телефоны */
-
-@media (max-width: 379px) {
-  .intro {
-    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-columns: 116px minmax(0, 1fr);
     gap: 14px;
   }
 
   .illustration {
-    width: 82px;
-    height: 82px;
-  }
-
-  .title {
-    font-size: 21px;
+    width: 116px;
+    height: 116px;
   }
 
   .step {
@@ -270,13 +243,40 @@
     gap: 16px;
   }
 
+  .arrow {
+    margin-left: 21px;
+  }
+}
+
+/* Очень узкие телефоны */
+
+@media (max-width: 379px) {
+  .intro {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .illustration {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 21px;
+  }
+
+  .step {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 14px;
+  }
+
   .stepIcon {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 
   .arrow {
     width: 20px;
-    margin: 18px 0 18px 22px;
+    margin: 15px 0 15px 20px;
   }
 }

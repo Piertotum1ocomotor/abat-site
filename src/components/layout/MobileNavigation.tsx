@@ -143,9 +143,15 @@ export function MobileNavigation({
       >
         <div className={styles.mobilePanel}>
           <div className={styles.mobilePanelHeader}>
-            <span id="mobile-navigation-title" className={styles.mobileTitle}>
-              Меню
-            </span>
+            {contacts.phoneHref ? (
+              <a href={contacts.phoneHref} className={styles.mobilePhone}>
+                {contacts.phone}
+              </a>
+            ) : (
+              <span className={styles.mobilePhone} aria-disabled="true">
+                {contacts.phone}
+              </span>
+            )}
 
             <button
               type="button"
@@ -156,6 +162,10 @@ export function MobileNavigation({
               <span aria-hidden="true">×</span>
             </button>
           </div>
+
+          <span id="mobile-navigation-title" className={styles.mobileTitle}>
+            Меню
+          </span>
 
           <nav className={styles.mobileMenu} aria-label="Полное меню сайта">
             <Link
@@ -241,15 +251,6 @@ export function MobileNavigation({
               )}
             </div>
 
-            {contacts.phoneHref ? (
-              <a href={contacts.phoneHref} className={styles.mobilePhone}>
-                {contacts.phone}
-              </a>
-            ) : (
-              <span className={styles.mobilePhone} aria-disabled="true">
-                {contacts.phone}
-              </span>
-            )}
           </div>
         </div>
       </dialog>
