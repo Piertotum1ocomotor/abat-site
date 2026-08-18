@@ -215,16 +215,16 @@ export function ProjectsShowcase({ content }: ProjectsShowcaseProps) {
             <div className={styles.projectDetails}>
               <h3 className={styles.projectTitle}>{activeProject.title}</h3>
 
-              <div className={styles.meta}>
-                <span>{activeProject.location}</span>
-                <strong>{activeProject.area}</strong>
-              </div>
+              <p className={styles.summary}>{activeProject.summary}</p>
 
-              <ul className={styles.works} aria-label="Выполненные работы">
-                {activeProject.works.map((work) => (
-                  <li key={work}>{work}</li>
+              <dl className={styles.details} aria-label="Характеристики объекта">
+                {activeProject.details.slice(0, 3).map((detail) => (
+                  <div className={styles.detail} key={detail.label}>
+                    <dt>{detail.label}</dt>
+                    <dd>{detail.value}</dd>
+                  </div>
                 ))}
-              </ul>
+              </dl>
             </div>
           </div>
 
