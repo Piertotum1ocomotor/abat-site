@@ -52,7 +52,11 @@ export function ContactCTA() {
   );
 
   return (
-    <section className={styles.section} aria-labelledby="contact-cta-title">
+    <section
+      className={styles.section}
+      id="contacts"
+      aria-labelledby="contact-cta-title"
+    >
       <div className="container">
         <span className={styles.accent} aria-hidden="true" />
 
