@@ -19,6 +19,8 @@
   font-weight: 800;
   line-height: 1.06;
   letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+  hyphens: auto;
   text-wrap: balance;
 }
 
