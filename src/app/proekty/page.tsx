@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PageIntro } from "@/components/layout/PageIntro";
 import { ProjectsList } from "@/components/projects/ProjectsList";
+import { ContactCTA } from "@/components/sections/ContactCTA";
 import { projects } from "@/content/projects";
 
 import styles from "./ProjectsPage.module.css";
@@ -27,6 +28,7 @@ export default function ProjectsPage() {
         description="Реализованные объекты АБАТ: здания из металлоконструкций, ангары, промышленные объекты и крановые системы."
       />
       <ProjectsList projects={projects} />
+      <ContactCTA />
     </main>
   );
 }

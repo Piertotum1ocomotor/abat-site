@@ -1,0 +1,281 @@
+.section {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.card {
+  min-width: 0;
+  min-height: 320px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) minmax(340px, 0.72fr);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.decorativeStrip {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  padding-top: 34px;
+  display: flex;
+  justify-content: center;
+  isolation: isolate;
+  background:
+    linear-gradient(rgb(41 77 109 / 84%), rgb(16 35 61 / 94%)),
+    url("/images/directions/building.jpg") 55% center / cover no-repeat;
+}
+
+.decorativeStrip::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-secondary);
+  mix-blend-mode: color;
+  content: "";
+}
+
+.decorativeIcon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  opacity: 0.94;
+}
+
+.mainContent {
+  min-width: 0;
+  padding: clamp(30px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.accent {
+  width: 48px;
+  height: 3px;
+  margin-bottom: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.title {
+  max-width: 560px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.description {
+  max-width: 570px;
+  margin: 20px 0 0;
+  color: var(--color-text-muted);
+  font-size: clamp(16px, 1.5vw, 18px);
+  line-height: 1.65;
+}
+
+.location {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.location svg {
+  flex: 0 0 auto;
+  color: var(--color-secondary);
+}
+
+.contactPanel {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  border-left: 1px solid var(--color-border);
+  background: var(--color-surface-soft);
+}
+
+.contactRow {
+  min-width: 0;
+  padding: 18px clamp(24px, 2.6vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--color-text);
+  background: rgb(255 255 255 / 58%);
+  font-size: 16px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.contactRow + .contactRow {
+  border-top: 1px solid var(--color-border);
+}
+
+.rowText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneRow {
+  background: var(--color-surface);
+}
+
+.rowLabel {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.phone {
+  margin-top: 6px;
+  color: var(--color-text);
+  font-size: clamp(19px, 1.8vw, 23px);
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.arrow {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.contactLink {
+  transition:
+    background-color var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing);
+}
+
+.contactLink:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline-color: var(--color-primary);
+  outline-offset: -4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contactLink:hover {
+    background: var(--color-surface);
+    color: var(--color-primary-hover);
+  }
+
+  .contactLink:hover .arrow {
+    transform: translateX(4px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .card {
+    min-height: 310px;
+    grid-template-columns: 78px minmax(0, 1fr) minmax(280px, 0.85fr);
+  }
+
+  .mainContent {
+    padding: clamp(24px, 2.8vw, 34px);
+    gap: 24px;
+  }
+
+  .title {
+    font-size: clamp(28px, 3vw, 36px);
+  }
+
+  .description {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .contactPanel {
+    grid-column: 3;
+  }
+
+  .contactRow {
+    padding: 16px clamp(18px, 2.4vw, 28px);
+    gap: 14px;
+    font-size: 15px;
+  }
+
+  .phone {
+    font-size: clamp(18px, 2vw, 22px);
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    min-height: 0;
+    grid-template-columns: clamp(56px, 16vw, 68px) minmax(0, 1fr);
+  }
+
+  .decorativeStrip {
+    grid-row: 1 / span 2;
+    padding-top: 28px;
+    background-position: 55% center;
+  }
+
+  .decorativeIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .mainContent {
+    grid-column: 2;
+    min-height: 0;
+    padding: clamp(24px, 6vw, 32px) clamp(18px, 5vw, 28px);
+    gap: 30px;
+  }
+
+  .accent {
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: clamp(27px, 7vw, 34px);
+  }
+
+  .description {
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .location {
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .contactPanel {
+    grid-column: 2;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .contactRow {
+    min-height: 74px;
+    padding: 16px clamp(18px, 5vw, 28px);
+    gap: 14px;
+    font-size: 15px;
+  }
+
+  .phone {
+    font-size: 18px;
+  }
+}

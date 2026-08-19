@@ -1,4 +1,5 @@
 import { Advantages } from "@/components/sections/Advantages";
+import { ContactCTA } from "@/components/sections/ContactCTA";
 import { DirectionsServices } from "@/components/sections/DirectionsServices";
 import { Hero } from "@/components/sections/Hero";
 import { ProjectsShowcase } from "@/components/sections/ProjectsShowcase";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <DirectionsServices content={directionsServicesContent} />
       <Advantages content={advantagesContent} />
       <ProjectsShowcase content={projectsShowcaseContent} />
+      <ContactCTA />
     </main>
   );
 }
