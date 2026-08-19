@@ -1,4 +1,3 @@
-import { Header } from "@/components/layout/Header";
 import { Advantages } from "@/components/sections/Advantages";
 import { DirectionsServices } from "@/components/sections/DirectionsServices";
 import { Hero } from "@/components/sections/Hero";
@@ -14,16 +13,12 @@ import {
 
 export default function HomePage() {
   return (
-    <>
-      <Header />
-
-      <main>
-        <Hero content={heroContent} />
-        <TurnkeyProcess content={turnkeyProcessContent} />
-        <DirectionsServices content={directionsServicesContent} />
-        <Advantages content={advantagesContent} />
-        <ProjectsShowcase content={projectsShowcaseContent} />
-      </main>
-    </>
+    <main>
+      <Hero content={heroContent} />
+      <TurnkeyProcess content={turnkeyProcessContent} />
+      <DirectionsServices content={directionsServicesContent} />
+      <Advantages content={advantagesContent} />
+      <ProjectsShowcase content={projectsShowcaseContent} />
+    </main>
   );
 }
