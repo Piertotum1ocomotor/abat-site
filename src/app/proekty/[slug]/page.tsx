@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { PageIntro } from "@/components/layout/PageIntro";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
+import { ContactCTA } from "@/components/sections/ContactCTA";
 import { projects } from "@/content/projects";
 
 import styles from "./ProjectPage.module.css";
@@ -91,6 +92,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </dl>
         </section>
       </div>
+      <ContactCTA />
     </main>
   );
 }
