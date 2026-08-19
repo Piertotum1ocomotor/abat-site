@@ -1,4 +1,5 @@
 import type { MediaAsset } from "@/types/site";
+import type { Project } from "@/types/projects";
 
 export type HeroContent = {
   eyebrow?: string;
@@ -66,29 +67,8 @@ export type AdvantagesContent = {
   details: readonly DetailAdvantage[];
 };
 
-export type ProjectShowcaseImage = {
-  src: string;
-  alt: string;
-};
-
-export type ProjectDetail = {
-  label: string;
-  value: string;
-};
-
-export type ProjectShowcaseItem = {
-  id: string;
-  slug: string;
-  number: string;
-  title: string;
-  summary: string;
-  description: string;
-  details: readonly ProjectDetail[];
-  images: readonly ProjectShowcaseImage[];
-};
-
 export type ProjectsShowcaseContent = {
   title: string;
   allProjectsHref: string;
-  projects: readonly ProjectShowcaseItem[];
+  projects: readonly Project[];
 };

@@ -1,0 +1,144 @@
+.footer {
+  padding-block: clamp(44px, 5vw, 64px);
+  background: var(--color-footer);
+  color: var(--color-on-footer);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.75fr) minmax(0, 2.4fr) minmax(180px, 0.85fr);
+  align-items: start;
+  gap: clamp(32px, 4vw, 64px);
+}
+
+.brandColumn,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.brand {
+  color: var(--color-on-footer);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.06em;
+}
+
+.location {
+  margin-top: 20px;
+  color: rgb(244 247 250 / 68%);
+  font-size: 14px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.8fr;
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.navigationGroup {
+  min-width: 0;
+}
+
+.groupTitle {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--color-primary-accent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.linkList {
+  display: grid;
+  gap: 9px;
+}
+
+.linkList a,
+.linkList span {
+  width: fit-content;
+  color: rgb(244 247 250 / 78%);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.linkList span[aria-disabled="true"] {
+  color: rgb(244 247 250 / 48%);
+}
+
+.contacts {
+  gap: 16px;
+}
+
+.phone {
+  color: var(--color-on-footer);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.phone[aria-disabled="true"] {
+  cursor: default;
+}
+
+.messengers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  color: rgb(244 247 250 / 68%);
+  font-size: 13px;
+}
+
+.messengers span[aria-disabled="true"] {
+  cursor: default;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .brand:hover,
+  .linkList a:hover,
+  a.phone:hover,
+  .messengers a:hover {
+    color: var(--color-primary-accent);
+  }
+}
+
+@media (max-width: 1023px) {
+  .inner {
+    grid-template-columns: minmax(140px, 0.55fr) minmax(0, 1.8fr);
+  }
+
+  .contacts {
+    grid-column: 1;
+  }
+
+  .navigation {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner,
+  .navigation {
+    grid-template-columns: 1fr;
+  }
+
+  .inner {
+    gap: 36px;
+  }
+
+  .navigation {
+    grid-column: auto;
+    grid-row: auto;
+    gap: 28px;
+  }
+
+  .contacts {
+    grid-column: auto;
+  }
+}
