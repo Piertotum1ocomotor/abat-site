@@ -15,9 +15,16 @@
 }
 
 .item {
+  min-width: 0;
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+
+.item a,
+.item span {
+  overflow-wrap: anywhere;
 }
 
 .item a {
