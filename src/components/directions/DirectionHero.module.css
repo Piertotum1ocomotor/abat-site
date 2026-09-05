@@ -46,6 +46,10 @@
   text-wrap: balance;
 }
 
+.compactTitle {
+  font-size: clamp(38px, 3.8vw, 52px);
+}
+
 .lead {
   max-width: 660px;
   margin: clamp(20px, 2.3vw, 28px) 0 0;
@@ -153,6 +157,10 @@
   .title {
     margin-top: 17px;
     font-size: clamp(36px, 11vw, 48px);
+  }
+
+  .compactTitle {
+    font-size: clamp(32px, 8.4vw, 38px);
   }
 
   .lead {

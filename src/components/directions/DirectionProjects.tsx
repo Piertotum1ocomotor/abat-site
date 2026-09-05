@@ -9,17 +9,19 @@ type DirectionProjectsProps = {
   title: string;
   projects: readonly Project[];
   allProjectsHref: string;
+  sectionId?: string;
 };
 
 export function DirectionProjects({
   title,
   projects,
   allProjectsHref,
+  sectionId = "postroennye-angary",
 }: DirectionProjectsProps) {
   return (
     <section
       className={styles.section}
-      id="postroennye-angary"
+      id={sectionId}
       aria-labelledby="direction-projects-title"
     >
       <div className="container">
