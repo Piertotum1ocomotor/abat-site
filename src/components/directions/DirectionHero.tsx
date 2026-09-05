@@ -6,6 +6,7 @@ type DirectionHeroProps = {
   eyebrow: string;
   title: string;
   lead: string;
+  compactTitle?: boolean;
   cta?: {
     label: string;
     href: string;
@@ -22,6 +23,7 @@ export function DirectionHero({
   eyebrow,
   title,
   lead,
+  compactTitle = false,
   cta,
   image,
 }: DirectionHeroProps) {
@@ -30,7 +32,11 @@ export function DirectionHero({
       <div className={`container ${styles.layout}`}>
         <div className={styles.content}>
           <span className={styles.eyebrow}>{eyebrow}</span>
-          <h1 className={styles.title}>{title}</h1>
+          <h1
+            className={`${styles.title} ${compactTitle ? styles.compactTitle : ""}`}
+          >
+            {title}
+          </h1>
           <p className={styles.lead}>{lead}</p>
           {cta ? (
             <a className={`${styles.cta} ${styles.mobileCta}`} href={cta.href}>
