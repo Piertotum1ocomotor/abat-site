@@ -31,6 +31,13 @@
   text-wrap: balance;
 }
 
+.wallRoofCopy .headingAccent,
+.framePanelCopy .headingAccent,
+.openingsCopy .headingAccent,
+.designCopy .headingAccent {
+  display: none;
+}
+
 /* Facts */
 
 .factsSection {
@@ -133,9 +140,10 @@
   position: absolute;
   top: 54px;
   bottom: 54px;
-  left: clamp(31px, 3vw, 43px);
+  left: calc(clamp(24px, 3vw, 38px) + 14px);
   width: 2px;
   background: var(--color-primary);
+  transform: translateX(-50%);
   content: "";
 }
 
@@ -730,7 +738,7 @@
   }
 
   .envelopeSequence::before {
-    left: 35px;
+    left: 36px;
   }
 
   .envelopeStep {
@@ -768,12 +776,18 @@
   }
 
   .relationArrow {
-    width: auto;
+    width: 100%;
     height: 42px;
     border: 0;
     border-top: 1px solid rgb(255 255 255 / 20%);
     border-bottom: 1px solid rgb(255 255 255 / 20%);
-    transform: rotate(90deg);
+    font-size: 0;
+  }
+
+  .relationArrow::before {
+    font-size: 24px;
+    line-height: 1;
+    content: "↓";
   }
 
   .openingsList {
@@ -821,6 +835,29 @@
   .processStep p {
     grid-column: 2;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 767px) {
+  .systemRelation > div {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    column-gap: 14px;
+  }
+
+  .systemRelation > div > span {
+    justify-self: center;
+  }
+
+  .relationArrow {
+    height: 30px;
+    padding: 0 22px;
+    grid-template-columns: 34px minmax(0, 1fr);
+  }
+
+  .relationArrow::before {
+    grid-column: 1;
+    justify-self: center;
   }
 }
 
