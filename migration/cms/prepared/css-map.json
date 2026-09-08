@@ -1,0 +1,203 @@
+[
+  {
+    "source": "src/components/layout/Footer.module.css",
+    "target": "siteCSS",
+    "paths": []
+  },
+  {
+    "source": "src/components/layout/Header.module.css",
+    "target": "siteCSS",
+    "paths": []
+  },
+  {
+    "source": "src/components/projects/ProjectGallery.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "source": "src/components/sections/ProjectsShowcase.module.css",
+    "target": "home/pageCSS",
+    "paths": [
+      "/"
+    ]
+  },
+  {
+    "source": "src/components/layout/Breadcrumbs.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "source": "src/components/layout/PageIntro.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/proekty",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "source": "src/components/sections/ContactCTA.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "source": "src/app/proekty/[slug]/ProjectPage.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "source": "src/components/sections/Advantages.module.css",
+    "target": "home/pageCSS",
+    "paths": [
+      "/"
+    ]
+  },
+  {
+    "source": "src/components/sections/DirectionsServices.module.css",
+    "target": "home/pageCSS",
+    "paths": [
+      "/"
+    ]
+  },
+  {
+    "source": "src/components/sections/Hero.module.css",
+    "target": "home/pageCSS",
+    "paths": [
+      "/"
+    ]
+  },
+  {
+    "source": "src/components/sections/TurnkeyProcess.module.css",
+    "target": "home/pageCSS",
+    "paths": [
+      "/"
+    ]
+  },
+  {
+    "source": "src/components/directions/DirectionHero.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/bystrovozvodimye-zdaniya",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley"
+    ]
+  },
+  {
+    "source": "src/components/directions/DirectionProjects.module.css",
+    "target": "siteCSS",
+    "paths": [
+      "/bystrovozvodimye-zdaniya",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley"
+    ]
+  },
+  {
+    "source": "src/app/bystrovozvodimye-zdaniya/PrefabricatedBuildingsPage.module.css",
+    "target": "bystrovozvodimye-zdaniya/pageCSS",
+    "paths": [
+      "/bystrovozvodimye-zdaniya"
+    ]
+  },
+  {
+    "source": "src/components/projects/ProjectsList.module.css",
+    "target": "proekty/pageCSS",
+    "paths": [
+      "/proekty"
+    ]
+  },
+  {
+    "source": "src/app/proekty/ProjectsPage.module.css",
+    "target": "proekty/pageCSS",
+    "paths": [
+      "/proekty"
+    ]
+  },
+  {
+    "source": "src/app/promyshlennye-zdaniya-i-proizvodstvennye-ceha/IndustrialBuildingsPage.module.css",
+    "target": "promyshlennye-zdaniya-i-proizvodstvennye-ceha/pageCSS",
+    "paths": [
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha"
+    ]
+  },
+  {
+    "source": "src/app/stroitelstvo-angarov/AngarsPage.module.css",
+    "target": "stroitelstvo-angarov/pageCSS",
+    "paths": [
+      "/stroitelstvo-angarov"
+    ]
+  },
+  {
+    "source": "src/app/stroitelstvo-skladov/WarehousesPage.module.css",
+    "target": "stroitelstvo-skladov/pageCSS",
+    "paths": [
+      "/stroitelstvo-skladov"
+    ]
+  },
+  {
+    "source": "src/app/zdaniya-iz-metallokonstrukciy/MetalBuildingsPage.module.css",
+    "target": "zdaniya-iz-metallokonstrukciy/pageCSS",
+    "paths": [
+      "/zdaniya-iz-metallokonstrukciy"
+    ]
+  },
+  {
+    "source": "src/app/zdaniya-iz-sendvich-paneley/SandwichPanelBuildingsPage.module.css",
+    "target": "zdaniya-iz-sendvich-paneley/pageCSS",
+    "paths": [
+      "/zdaniya-iz-sendvich-paneley"
+    ]
+  }
+]

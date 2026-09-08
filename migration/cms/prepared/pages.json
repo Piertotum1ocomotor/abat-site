@@ -1,0 +1,296 @@
+[
+  {
+    "source": "src/app/page.tsx",
+    "expectedPath": "/",
+    "h1": "Проектируем и строим здания из металлоконструкций",
+    "fields": {
+      "title": "Проектируем и строим здания из металлоконструкций",
+      "slug": "home",
+      "pageType": "home",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Абат — металлоконструкции",
+        "metaDescription": "Проектирование, изготовление, доставка и монтаж металлоконструкций."
+      }
+    },
+    "files": {
+      "html": "pages/home.html",
+      "pageCSS": "pages/home.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/bystrovozvodimye-zdaniya/page.tsx",
+    "expectedPath": "/bystrovozvodimye-zdaniya",
+    "h1": "Строительство быстровозводимых зданий под ключ",
+    "fields": {
+      "title": "Строительство быстровозводимых зданий под ключ",
+      "slug": "bystrovozvodimye-zdaniya",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство быстровозводимых зданий под ключ | Абат",
+        "metaDescription": "Строительство быстровозводимых зданий из металлоконструкций и сэндвич-панелей в Москве и Санкт-Петербурге. Проектирование, изготовление и монтаж."
+      }
+    },
+    "files": {
+      "html": "pages/bystrovozvodimye-zdaniya.html",
+      "pageCSS": "pages/bystrovozvodimye-zdaniya.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/page.tsx",
+    "expectedPath": "/proekty",
+    "h1": "Построенные объекты",
+    "fields": {
+      "title": "Построенные объекты",
+      "slug": "proekty",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Построенные объекты | Абат",
+        "metaDescription": "Построенные объекты из металлоконструкций: ангары, промышленные здания и крановые системы."
+      }
+    },
+    "files": {
+      "html": "pages/proekty.html",
+      "pageCSS": "pages/proekty.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/promyshlennye-zdaniya-i-proizvodstvennye-ceha/page.tsx",
+    "expectedPath": "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+    "h1": "Строительство промышленных зданий и производственных цехов",
+    "fields": {
+      "title": "Строительство промышленных зданий и производственных цехов",
+      "slug": "promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство промышленных зданий и производственных цехов | Абат",
+        "metaDescription": "Строительство промышленных и производственных зданий в Москве и Санкт-Петербурге. Проектирование, фундамент, металлоконструкции, монтаж и инженерные работы."
+      }
+    },
+    "files": {
+      "html": "pages/promyshlennye-zdaniya-i-proizvodstvennye-ceha.html",
+      "pageCSS": "pages/promyshlennye-zdaniya-i-proizvodstvennye-ceha.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/stroitelstvo-angarov/page.tsx",
+    "expectedPath": "/stroitelstvo-angarov",
+    "h1": "Строительство ангаров под ключ",
+    "fields": {
+      "title": "Строительство ангаров под ключ",
+      "slug": "stroitelstvo-angarov",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство ангаров под ключ из металлоконструкций | Абат",
+        "metaDescription": "Строительство ангаров под ключ из металлоконструкций и сэндвич-панелей в Москве и Санкт-Петербурге. Проектирование, фундамент, изготовление и монтаж."
+      }
+    },
+    "files": {
+      "html": "pages/stroitelstvo-angarov.html",
+      "pageCSS": "pages/stroitelstvo-angarov.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/stroitelstvo-skladov/page.tsx",
+    "expectedPath": "/stroitelstvo-skladov",
+    "h1": "Строительство складов под ключ",
+    "fields": {
+      "title": "Строительство складов под ключ",
+      "slug": "stroitelstvo-skladov",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство складов под ключ из металлоконструкций | Абат",
+        "metaDescription": "Строительство складов под ключ из металлоконструкций и сэндвич-панелей в Москве, Московской области и Санкт-Петербурге. Проектирование, фундамент, изготовление и монтаж."
+      }
+    },
+    "files": {
+      "html": "pages/stroitelstvo-skladov.html",
+      "pageCSS": "pages/stroitelstvo-skladov.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/zdaniya-iz-metallokonstrukciy/page.tsx",
+    "expectedPath": "/zdaniya-iz-metallokonstrukciy",
+    "h1": "Строительство зданий из металлоконструкций",
+    "fields": {
+      "title": "Строительство зданий из металлоконструкций",
+      "slug": "zdaniya-iz-metallokonstrukciy",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство зданий из металлоконструкций | Абат",
+        "metaDescription": "Строительство зданий из металлоконструкций в Москве и Санкт-Петербурге. Проектирование, изготовление и монтаж металлических каркасов и ограждающих конструкций."
+      }
+    },
+    "files": {
+      "html": "pages/zdaniya-iz-metallokonstrukciy.html",
+      "pageCSS": "pages/zdaniya-iz-metallokonstrukciy.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/zdaniya-iz-sendvich-paneley/page.tsx",
+    "expectedPath": "/zdaniya-iz-sendvich-paneley",
+    "h1": "Строительство зданий из сэндвич-панелей",
+    "fields": {
+      "title": "Строительство зданий из сэндвич-панелей",
+      "slug": "zdaniya-iz-sendvich-paneley",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Строительство зданий из сэндвич-панелей | Абат",
+        "metaDescription": "Строительство зданий из сэндвич-панелей в Москве и Санкт-Петербурге. Металлический каркас, монтаж стен и кровли, окна, ворота и проектирование."
+      }
+    },
+    "files": {
+      "html": "pages/zdaniya-iz-sendvich-paneley.html",
+      "pageCSS": "pages/zdaniya-iz-sendvich-paneley.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/zdanie-stolovoy-s-ofisami",
+    "h1": "Здание столовой с офисными помещениями",
+    "fields": {
+      "title": "Здание столовой с офисными помещениями",
+      "slug": "proekty/zdanie-stolovoy-s-ofisami",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Здание столовой с офисными помещениями | Абат",
+        "metaDescription": "Двухэтажное здание размером 10 × 12 м со столовой и офисными помещениями. Металлический каркас, бетонное перекрытие и ограждающие конструкции из сэндвич-панелей."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/zdanie-stolovoy-s-ofisami.html",
+      "pageCSS": "pages/proekty/zdanie-stolovoy-s-ofisami.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/angar-dlya-avtoservisa",
+    "h1": "Ангар для автосервиса (СТО)",
+    "fields": {
+      "title": "Ангар для автосервиса (СТО)",
+      "slug": "proekty/angar-dlya-avtoservisa",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Ангар для автосервиса (СТО) | Абат",
+        "metaDescription": "Ангар размером 60 × 24 м для размещения СТО. Монолитная плита, стены и кровля из PIR-сэндвич-панелей, предусмотрены отопление и инженерные коммуникации."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/angar-dlya-avtoservisa.html",
+      "pageCSS": "pages/proekty/angar-dlya-avtoservisa.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/kranovaya-estakada-5-tonn",
+    "h1": "Крановая эстакада грузоподъёмностью 5 тонн",
+    "fields": {
+      "title": "Крановая эстакада грузоподъёмностью 5 тонн",
+      "slug": "proekty/kranovaya-estakada-5-tonn",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Крановая эстакада грузоподъёмностью 5 тонн | Абат",
+        "metaDescription": "Восстановление и модернизация отдельно стоящей крановой эстакады грузоподъёмностью 5 тонн с выполнением конструкторских расчётов."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/kranovaya-estakada-5-tonn.html",
+      "pageCSS": "pages/proekty/kranovaya-estakada-5-tonn.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/kranovyy-put-silovye-mashiny",
+    "h1": "Крановый путь на заводе «Силовые машины»",
+    "fields": {
+      "title": "Крановый путь на заводе «Силовые машины»",
+      "slug": "proekty/kranovyy-put-silovye-mashiny",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Крановый путь на заводе «Силовые машины» | Абат",
+        "metaDescription": "Устройство кранового пути в условиях действующего производства и строительство помещения для класса по обучению сборке турбин."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/kranovyy-put-silovye-mashiny.html",
+      "pageCSS": "pages/proekty/kranovyy-put-silovye-mashiny.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/promyshlennoe-zdanie-2880",
+    "h1": "Промышленное здание площадью 2 880 м²",
+    "fields": {
+      "title": "Промышленное здание площадью 2 880 м²",
+      "slug": "proekty/promyshlennoe-zdanie-2880",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Промышленное здание площадью 2 880 м² | Абат",
+        "metaDescription": "Двухэтажное промышленное здание площадью 2 880 м². Выполнен комплекс работ от разработки проектного решения до ввода объекта в эксплуатацию."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/promyshlennoe-zdanie-2880.html",
+      "pageCSS": "pages/proekty/promyshlennoe-zdanie-2880.css"
+    },
+    "website": null
+  },
+  {
+    "source": "src/app/proekty/[slug]/page.tsx",
+    "expectedPath": "/proekty/angar-dlya-avtoremontnyh-masterskih",
+    "h1": "Ангар для авторемонтных мастерских",
+    "fields": {
+      "title": "Ангар для авторемонтных мастерских",
+      "slug": "proekty/angar-dlya-avtoremontnyh-masterskih",
+      "pageType": "regular",
+      "contentMode": "code",
+      "_status": "draft",
+      "seo": {
+        "metaTitle": "Ангар для авторемонтных мастерских | Абат",
+        "metaDescription": "Ангар размером 24 × 30 м для ремонта легковой и грузовой техники с двумя торцевыми въездами и смотровыми ямами."
+      }
+    },
+    "files": {
+      "html": "pages/proekty/angar-dlya-avtoremontnyh-masterskih.html",
+      "pageCSS": "pages/proekty/angar-dlya-avtoremontnyh-masterskih.css"
+    },
+    "website": null
+  }
+]

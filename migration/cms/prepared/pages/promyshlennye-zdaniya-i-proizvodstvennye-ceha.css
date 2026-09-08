@@ -1,0 +1,587 @@
+.abat-IndustrialBuildingsPage-page {
+  min-width: 0;
+  background: var(--color-background);
+}
+
+.abat-IndustrialBuildingsPage-section,
+.abat-IndustrialBuildingsPage-factsSection {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.abat-IndustrialBuildingsPage-sectionHeading {
+  max-width: 940px;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.abat-IndustrialBuildingsPage-headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-IndustrialBuildingsPage-sectionTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+/* Key competencies */
+
+.abat-IndustrialBuildingsPage-factsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-IndustrialBuildingsPage-fact {
+  min-width: 0;
+  min-height: 172px;
+  padding: clamp(20px, 2.2vw, 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.abat-IndustrialBuildingsPage-fact + .abat-IndustrialBuildingsPage-fact {
+  border-left: 1px solid var(--color-border);
+}
+
+.abat-IndustrialBuildingsPage-factNumber,
+.abat-IndustrialBuildingsPage-taskFactors > li > span,
+.abat-IndustrialBuildingsPage-inputGrid > li > span,
+.abat-IndustrialBuildingsPage-systemGrid > li > span,
+.abat-IndustrialBuildingsPage-processNumber {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.abat-IndustrialBuildingsPage-factTitle {
+  margin-top: 16px;
+  color: var(--color-text);
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.abat-IndustrialBuildingsPage-factDescription {
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Production task */
+
+.abat-IndustrialBuildingsPage-taskPanel {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.22fr);
+  overflow: hidden;
+  border-radius: var(--radius-container);
+  background: var(--color-secondary-hover);
+}
+
+.abat-IndustrialBuildingsPage-taskIntro {
+  min-width: 0;
+  padding: clamp(34px, 4.2vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.abat-IndustrialBuildingsPage-taskLabel {
+  color: var(--color-primary-accent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.abat-IndustrialBuildingsPage-taskIntro h2 {
+  margin: 18px 0 0;
+  color: var(--color-on-secondary);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.abat-IndustrialBuildingsPage-taskIntro p {
+  margin: 22px 0 0;
+  color: rgb(255 255 255 / 72%);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.68;
+}
+
+.abat-IndustrialBuildingsPage-taskFactors {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border-left: 1px solid rgb(255 255 255 / 20%);
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-taskFactors li {
+  min-width: 0;
+  padding: clamp(22px, 2.5vw, 32px);
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 18px;
+}
+
+.abat-IndustrialBuildingsPage-taskFactors li + li {
+  border-top: 1px solid rgb(255 255 255 / 20%);
+}
+
+.abat-IndustrialBuildingsPage-taskFactors h3 {
+  margin: 0;
+  color: var(--color-on-secondary);
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.abat-IndustrialBuildingsPage-taskFactors p {
+  margin: 8px 0 0;
+  color: rgb(255 255 255 / 70%);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Production buildings */
+
+.abat-IndustrialBuildingsPage-buildingLayout {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: clamp(30px, 4vw, 56px);
+  align-items: stretch;
+}
+
+.abat-IndustrialBuildingsPage-buildingMedia,
+.abat-IndustrialBuildingsPage-structuresMedia {
+  position: relative;
+  min-width: 0;
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface-muted);
+}
+
+.abat-IndustrialBuildingsPage-buildingImage,
+.abat-IndustrialBuildingsPage-structuresImage {
+  object-fit: cover;
+}
+
+.abat-IndustrialBuildingsPage-buildingImage {
+  object-position: center 42%;
+}
+
+.abat-IndustrialBuildingsPage-buildingContent {
+  min-width: 0;
+  padding-block: clamp(10px, 2vw, 24px);
+  display: flex;
+  flex-direction: column;
+}
+
+.abat-IndustrialBuildingsPage-buildingContent > p,
+.abat-IndustrialBuildingsPage-structuresContent > p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.68;
+}
+
+.abat-IndustrialBuildingsPage-buildingContent > p + p {
+  margin-top: 14px;
+}
+
+.abat-IndustrialBuildingsPage-buildingTypes {
+  margin: auto 0 0;
+  padding: 30px 0 0;
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-buildingTypes li {
+  padding: 16px 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+/* Project inputs */
+
+.abat-IndustrialBuildingsPage-inputGrid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-border);
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-inputGrid li {
+  min-width: 0;
+  min-height: 200px;
+  padding: clamp(22px, 2.5vw, 32px);
+  background: var(--color-surface);
+}
+
+.abat-IndustrialBuildingsPage-inputGrid h3,
+.abat-IndustrialBuildingsPage-systemGrid h3,
+.abat-IndustrialBuildingsPage-processFlow h3 {
+  margin: 18px 0 0;
+  color: var(--color-text);
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-weight: 800;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.abat-IndustrialBuildingsPage-inputGrid p,
+.abat-IndustrialBuildingsPage-systemGrid p,
+.abat-IndustrialBuildingsPage-processFlow p {
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Complete building system */
+
+.abat-IndustrialBuildingsPage-systemGrid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-border);
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-systemGrid li {
+  min-width: 0;
+  min-height: 260px;
+  padding: clamp(22px, 2vw, 28px);
+  background: var(--color-surface);
+}
+
+/* Industrial design */
+
+.abat-IndustrialBuildingsPage-designPanel {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(300px, 0.75fr) minmax(0, 1.25fr);
+  overflow: hidden;
+  border-radius: var(--radius-container);
+  background: var(--color-secondary-hover);
+}
+
+.abat-IndustrialBuildingsPage-designCopy {
+  padding: clamp(30px, 4vw, 52px);
+}
+
+.abat-IndustrialBuildingsPage-designCopy p {
+  margin: 0;
+  color: rgb(255 255 255 / 76%);
+  font-size: clamp(15px, 1.2vw, 17px);
+  line-height: 1.68;
+}
+
+.abat-IndustrialBuildingsPage-designCopy p + p {
+  margin-top: 14px;
+}
+
+.abat-IndustrialBuildingsPage-designCodes {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-left: 1px solid rgb(255 255 255 / 20%);
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-designCodes li {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-on-secondary);
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.abat-IndustrialBuildingsPage-designCodes li + li {
+  border-left: 1px solid rgb(255 255 255 / 20%);
+}
+
+/* Industrial metal structures */
+
+.abat-IndustrialBuildingsPage-structuresLayout {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-IndustrialBuildingsPage-structuresContent {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 52px);
+  display: flex;
+  flex-direction: column;
+}
+
+.abat-IndustrialBuildingsPage-structuresList {
+  margin: auto 0 0;
+  padding: 30px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-structuresList li {
+  min-width: 0;
+  padding: 14px 12px 14px 0;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.4;
+}
+
+.abat-IndustrialBuildingsPage-structuresList li:nth-child(even) {
+  padding-right: 0;
+  padding-left: 12px;
+  border-left: 1px solid var(--color-border);
+}
+
+.abat-IndustrialBuildingsPage-structuresMedia {
+  min-height: 560px;
+  border: 0;
+  border-left: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.abat-IndustrialBuildingsPage-structuresImage {
+  object-position: center;
+}
+
+/* Process */
+
+.abat-IndustrialBuildingsPage-processFlow {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+  list-style: none;
+}
+
+.abat-IndustrialBuildingsPage-processFlow li {
+  min-width: 0;
+  min-height: 246px;
+  padding: clamp(22px, 2vw, 28px);
+  border-top: 4px solid var(--color-primary);
+}
+
+.abat-IndustrialBuildingsPage-processFlow li + li {
+  border-left: 1px solid var(--color-border);
+}
+
+@media (max-width: 1099px) {
+  .abat-IndustrialBuildingsPage-systemGrid,
+  .abat-IndustrialBuildingsPage-processFlow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .abat-IndustrialBuildingsPage-inputGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-IndustrialBuildingsPage-designPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-IndustrialBuildingsPage-designCodes {
+    min-height: 104px;
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-processFlow li:nth-child(4) {
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-processFlow li:nth-child(n + 4) {
+    border-top-width: 5px;
+  }
+}
+
+@media (max-width: 899px) {
+  .abat-IndustrialBuildingsPage-factsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-IndustrialBuildingsPage-fact:nth-child(3) {
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-fact:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .abat-IndustrialBuildingsPage-taskPanel,
+  .abat-IndustrialBuildingsPage-buildingLayout,
+  .abat-IndustrialBuildingsPage-structuresLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-IndustrialBuildingsPage-taskFactors {
+    border-top: 1px solid rgb(255 255 255 / 20%);
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-buildingMedia {
+    min-height: 420px;
+  }
+
+  .abat-IndustrialBuildingsPage-buildingContent {
+    padding-block: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-buildingTypes {
+    margin-top: 14px;
+  }
+
+  .abat-IndustrialBuildingsPage-structuresMedia {
+    min-height: 420px;
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .abat-IndustrialBuildingsPage-headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .abat-IndustrialBuildingsPage-sectionTitle,
+  .abat-IndustrialBuildingsPage-taskIntro h2 {
+    font-size: clamp(28px, 8vw, 34px);
+  }
+
+  .abat-IndustrialBuildingsPage-factsGrid,
+  .abat-IndustrialBuildingsPage-inputGrid,
+  .abat-IndustrialBuildingsPage-systemGrid,
+  .abat-IndustrialBuildingsPage-processFlow {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-IndustrialBuildingsPage-fact {
+    min-height: 0;
+    padding: 20px 22px;
+  }
+
+  .abat-IndustrialBuildingsPage-fact + .abat-IndustrialBuildingsPage-fact,
+  .abat-IndustrialBuildingsPage-fact:nth-child(3) {
+    border-top: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-factTitle {
+    margin-top: 13px;
+  }
+
+  .abat-IndustrialBuildingsPage-taskIntro {
+    padding: 30px 22px;
+  }
+
+  .abat-IndustrialBuildingsPage-taskFactors li {
+    padding: 22px;
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-IndustrialBuildingsPage-buildingMedia,
+  .abat-IndustrialBuildingsPage-structuresMedia {
+    min-height: 310px;
+  }
+
+  .abat-IndustrialBuildingsPage-inputGrid li,
+  .abat-IndustrialBuildingsPage-systemGrid li,
+  .abat-IndustrialBuildingsPage-processFlow li {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .abat-IndustrialBuildingsPage-designCopy,
+  .abat-IndustrialBuildingsPage-structuresContent {
+    padding: 26px 22px;
+  }
+
+  .abat-IndustrialBuildingsPage-designCodes {
+    min-height: 82px;
+    grid-template-columns: repeat(5, minmax(58px, 1fr));
+    overflow-x: auto;
+  }
+
+  .abat-IndustrialBuildingsPage-designCodes li {
+    font-size: 21px;
+  }
+
+  .abat-IndustrialBuildingsPage-structuresList {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-IndustrialBuildingsPage-structuresList li:nth-child(even) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .abat-IndustrialBuildingsPage-processFlow li + li,
+  .abat-IndustrialBuildingsPage-processFlow li:nth-child(4) {
+    border-top-width: 4px;
+    border-left: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .abat-IndustrialBuildingsPage-designCodes {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .abat-IndustrialBuildingsPage-designCodes li {
+    font-size: 18px;
+  }
+}

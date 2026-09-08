@@ -1,0 +1,683 @@
+.abat-WarehousesPage-page {
+  min-width: 0;
+  background: var(--color-background);
+}
+
+.abat-WarehousesPage-section {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.abat-WarehousesPage-sectionHeading {
+  max-width: 900px;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.abat-WarehousesPage-headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-WarehousesPage-sectionTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+/* Warehouse facts */
+
+.abat-WarehousesPage-factsSection {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.abat-WarehousesPage-factsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-WarehousesPage-fact {
+  min-width: 0;
+  min-height: 164px;
+  padding: clamp(18px, 1.8vw, 22px) clamp(22px, 2.4vw, 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.abat-WarehousesPage-fact + .abat-WarehousesPage-fact {
+  border-left: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-factNumber {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.abat-WarehousesPage-factTitle {
+  margin-top: 16px;
+  color: var(--color-text);
+  font-size: clamp(18px, 1.6vw, 23px);
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.abat-WarehousesPage-factDescription {
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* The task shapes the building */
+
+.abat-WarehousesPage-taskLayout {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-WarehousesPage-taskIntro {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 52px);
+  background: var(--color-secondary-hover);
+}
+
+.abat-WarehousesPage-taskIntro .abat-WarehousesPage-sectionHeading {
+  margin-bottom: 24px;
+}
+
+.abat-WarehousesPage-taskIntro .abat-WarehousesPage-headingAccent {
+  background: var(--color-primary-accent);
+}
+
+.abat-WarehousesPage-taskIntro .abat-WarehousesPage-sectionTitle {
+  color: var(--color-on-secondary);
+}
+
+.abat-WarehousesPage-taskIntro > p {
+  margin: 0;
+  color: rgb(255 255 255 / 80%);
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.7;
+}
+
+.abat-WarehousesPage-taskGrid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.abat-WarehousesPage-taskCell {
+  min-width: 0;
+  min-height: 220px;
+  padding: clamp(24px, 2.8vw, 36px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-taskCell:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-taskCell:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.abat-WarehousesPage-taskCode {
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.12em;
+}
+
+.abat-WarehousesPage-taskCell h3 {
+  margin: 18px 0 0;
+  color: var(--color-text);
+  font-size: clamp(19px, 1.6vw, 23px);
+  font-weight: 800;
+  line-height: 1.28;
+  text-wrap: balance;
+}
+
+.abat-WarehousesPage-taskCell p {
+  margin: 12px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Frame and panels */
+
+.abat-WarehousesPage-materialsGrid {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  align-items: stretch;
+  gap: 20px;
+}
+
+.abat-WarehousesPage-materialCard {
+  min-width: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-WarehousesPage-materialMedia {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.abat-WarehousesPage-frameCard .abat-WarehousesPage-materialMedia {
+  aspect-ratio: 16 / 8.7;
+}
+
+.abat-WarehousesPage-panelCard .abat-WarehousesPage-materialMedia {
+  aspect-ratio: 4 / 3;
+}
+
+.abat-WarehousesPage-materialImage {
+  object-fit: cover;
+}
+
+.abat-WarehousesPage-panelCard .abat-WarehousesPage-materialImage {
+  object-position: center 42%;
+}
+
+.abat-WarehousesPage-materialContent {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 38px);
+}
+
+.abat-WarehousesPage-materialLabel {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.abat-WarehousesPage-materialContent h3 {
+  margin: 13px 0 0;
+  color: var(--color-text);
+  font-size: clamp(23px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.abat-WarehousesPage-materialContent p {
+  max-width: 720px;
+  margin: 16px 0 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Prefabricated building */
+
+.abat-WarehousesPage-prefabricatedCard {
+  min-width: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  align-items: stretch;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+}
+
+.abat-WarehousesPage-prefabricatedContent {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 52px);
+}
+
+.abat-WarehousesPage-prefabricatedContent .abat-WarehousesPage-sectionHeading {
+  margin-bottom: 22px;
+}
+
+.abat-WarehousesPage-prefabricatedText {
+  color: var(--color-text-muted);
+  font-size: clamp(15px, 1.25vw, 17px);
+  line-height: 1.7;
+}
+
+.abat-WarehousesPage-prefabricatedText p {
+  margin: 0;
+}
+
+.abat-WarehousesPage-prefabricatedText p + p {
+  margin-top: 16px;
+}
+
+.abat-WarehousesPage-prefabricatedMedia {
+  position: relative;
+  min-width: 0;
+  min-height: 420px;
+  overflow: hidden;
+  background: var(--color-surface-muted);
+}
+
+.abat-WarehousesPage-prefabricatedImage {
+  object-fit: cover;
+}
+
+/* Included work */
+
+.abat-WarehousesPage-technicalList {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+  list-style: none;
+}
+
+.abat-WarehousesPage-technicalItem {
+  min-width: 0;
+  min-height: 132px;
+  padding: clamp(22px, 2.5vw, 32px);
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-technicalItem:nth-child(odd) {
+  border-right: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-technicalItem:last-child {
+  grid-column: 1 / -1;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.abat-WarehousesPage-technicalNumber {
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+}
+
+.abat-WarehousesPage-technicalItem h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(18px, 1.55vw, 22px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.abat-WarehousesPage-technicalItem p {
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+/* Project design */
+
+.abat-WarehousesPage-designCard {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--radius-container);
+  background: var(--color-secondary-hover);
+}
+
+.abat-WarehousesPage-designText {
+  min-width: 0;
+  padding: clamp(30px, 4vw, 52px);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  column-gap: clamp(34px, 5vw, 72px);
+}
+
+.abat-WarehousesPage-designText .abat-WarehousesPage-sectionHeading {
+  grid-row: 1 / span 2;
+  margin-bottom: 0;
+}
+
+.abat-WarehousesPage-designText .abat-WarehousesPage-headingAccent {
+  background: var(--color-primary-accent);
+}
+
+.abat-WarehousesPage-designText .abat-WarehousesPage-sectionTitle {
+  color: var(--color-on-secondary);
+}
+
+.abat-WarehousesPage-designText p {
+  margin: 0;
+  color: rgb(255 255 255 / 80%);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.abat-WarehousesPage-designText p + p {
+  margin-top: 14px;
+}
+
+.abat-WarehousesPage-designSections {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  list-style: none;
+}
+
+.abat-WarehousesPage-designSections li {
+  min-width: 0;
+  min-height: 88px;
+  display: grid;
+  place-items: center;
+  color: var(--color-on-secondary);
+  font-size: clamp(22px, 2vw, 28px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.abat-WarehousesPage-designSections li + li {
+  border-left: 1px solid rgb(255 255 255 / 20%);
+}
+
+/* Construction stages */
+
+.abat-WarehousesPage-stagesGrid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface);
+  list-style: none;
+}
+
+.abat-WarehousesPage-stage {
+  position: relative;
+  min-width: 0;
+  min-height: 250px;
+  padding: clamp(22px, 2.2vw, 30px);
+}
+
+.abat-WarehousesPage-stage + .abat-WarehousesPage-stage {
+  border-left: 1px solid var(--color-border);
+}
+
+.abat-WarehousesPage-stageNumber {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.abat-WarehousesPage-stage h3 {
+  margin: 24px 0 0;
+  color: var(--color-text);
+  font-size: clamp(18px, 1.45vw, 21px);
+  font-weight: 800;
+  line-height: 1.3;
+  text-wrap: balance;
+}
+
+.abat-WarehousesPage-stage p {
+  margin: 12px 0 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1199px) {
+  .abat-WarehousesPage-materialsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-WarehousesPage-frameCard .abat-WarehousesPage-materialMedia,
+  .abat-WarehousesPage-panelCard .abat-WarehousesPage-materialMedia {
+    aspect-ratio: 16 / 10;
+  }
+
+  .abat-WarehousesPage-stagesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-WarehousesPage-stage,
+  .abat-WarehousesPage-stage + .abat-WarehousesPage-stage {
+    min-height: 210px;
+    border-bottom: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-stage:nth-child(even) {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .abat-WarehousesPage-stage:last-child {
+    grid-column: 1 / -1;
+    min-height: 0;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 899px) {
+  .abat-WarehousesPage-factsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-WarehousesPage-fact:nth-child(3) {
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-fact:nth-child(n + 3) {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .abat-WarehousesPage-taskLayout,
+  .abat-WarehousesPage-materialsGrid,
+  .abat-WarehousesPage-prefabricatedCard {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-WarehousesPage-taskIntro > p {
+    max-width: 720px;
+  }
+
+  .abat-WarehousesPage-taskCell {
+    min-height: 190px;
+  }
+
+  .abat-WarehousesPage-frameCard .abat-WarehousesPage-materialMedia,
+  .abat-WarehousesPage-panelCard .abat-WarehousesPage-materialMedia {
+    aspect-ratio: 16 / 9;
+  }
+
+  .abat-WarehousesPage-prefabricatedMedia {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .abat-WarehousesPage-designText {
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .abat-WarehousesPage-designText .abat-WarehousesPage-sectionHeading {
+    grid-row: auto;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .abat-WarehousesPage-sectionHeading {
+    margin-bottom: 26px;
+  }
+
+  .abat-WarehousesPage-headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .abat-WarehousesPage-sectionTitle {
+    font-size: clamp(28px, 8vw, 34px);
+  }
+
+  .abat-WarehousesPage-designSections {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .abat-WarehousesPage-designSections li {
+    min-height: 76px;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+  }
+
+  .abat-WarehousesPage-designSections li:nth-child(4) {
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-designSections li:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .abat-WarehousesPage-designSections li:last-child {
+    grid-column: 2 / 4;
+  }
+}
+
+@media (max-width: 599px) {
+  .abat-WarehousesPage-taskGrid,
+  .abat-WarehousesPage-technicalList,
+  .abat-WarehousesPage-stagesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-WarehousesPage-taskCell,
+  .abat-WarehousesPage-taskCell:nth-child(odd),
+  .abat-WarehousesPage-taskCell:nth-last-child(-n + 2) {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .abat-WarehousesPage-taskCell:last-child {
+    border-bottom: 0;
+  }
+
+  .abat-WarehousesPage-technicalItem,
+  .abat-WarehousesPage-technicalItem:nth-child(odd),
+  .abat-WarehousesPage-technicalItem:last-child {
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .abat-WarehousesPage-technicalItem:last-child {
+    border-bottom: 0;
+  }
+
+  .abat-WarehousesPage-stage,
+  .abat-WarehousesPage-stage + .abat-WarehousesPage-stage,
+  .abat-WarehousesPage-stage:nth-child(even),
+  .abat-WarehousesPage-stage:last-child {
+    grid-column: auto;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--color-border);
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-stage:last-child {
+    border-bottom: 0;
+  }
+
+  .abat-WarehousesPage-designSections {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .abat-WarehousesPage-designSections li,
+  .abat-WarehousesPage-designSections li:nth-child(4),
+  .abat-WarehousesPage-designSections li:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+  }
+
+  .abat-WarehousesPage-designSections li:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-designSections li:last-child {
+    grid-column: 1 / -1;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 499px) {
+  .abat-WarehousesPage-factsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .abat-WarehousesPage-fact,
+  .abat-WarehousesPage-fact + .abat-WarehousesPage-fact,
+  .abat-WarehousesPage-fact:nth-child(3),
+  .abat-WarehousesPage-fact:nth-child(n + 3) {
+    min-height: 0;
+    border-top: 0;
+    border-left: 0;
+  }
+
+  .abat-WarehousesPage-fact + .abat-WarehousesPage-fact {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .abat-WarehousesPage-taskIntro,
+  .abat-WarehousesPage-prefabricatedContent,
+  .abat-WarehousesPage-designText {
+    padding: 26px 22px;
+  }
+
+  .abat-WarehousesPage-taskCell,
+  .abat-WarehousesPage-materialContent,
+  .abat-WarehousesPage-technicalItem,
+  .abat-WarehousesPage-stage {
+    padding: 22px;
+  }
+
+  .abat-WarehousesPage-technicalItem {
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 12px;
+  }
+}

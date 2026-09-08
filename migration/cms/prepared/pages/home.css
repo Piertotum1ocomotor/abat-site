@@ -1,0 +1,2238 @@
+.abat-ProjectsShowcase-section {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.abat-ProjectsShowcase-heading {
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.abat-ProjectsShowcase-headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-ProjectsShowcase-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.abat-ProjectsShowcase-showcase {
+  min-width: 0;
+  height: clamp(440px, 34vw, 460px);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 32%) minmax(0, 68%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-secondary-hover);
+}
+
+.abat-ProjectsShowcase-infoPanel {
+  min-width: 0;
+  padding: clamp(26px, 2.4vw, 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-secondary-hover);
+  color: var(--color-on-secondary);
+}
+
+.abat-ProjectsShowcase-numberRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.abat-ProjectsShowcase-projectNumber {
+  color: var(--color-on-secondary);
+  font-size: clamp(62px, 6vw, 86px);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.055em;
+}
+
+.abat-ProjectsShowcase-progress {
+  padding-top: 4px;
+  color: rgb(255 255 255 / 58%);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.abat-ProjectsShowcase-projectDetails {
+  min-width: 0;
+}
+
+.abat-ProjectsShowcase-projectTitle {
+  max-width: 330px;
+  margin: 0;
+  color: var(--color-on-secondary);
+  font-size: clamp(24px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.15;
+  text-wrap: pretty;
+}
+
+.abat-ProjectsShowcase-projectTitle::after {
+  width: 42px;
+  height: 3px;
+  margin-top: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary-accent);
+  content: "";
+}
+
+.abat-ProjectsShowcase-summary {
+  margin: 18px 0 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.abat-ProjectsShowcase-details {
+  margin: 16px 0 0;
+  display: grid;
+  gap: 7px;
+}
+
+.abat-ProjectsShowcase-detail {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 10px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.abat-ProjectsShowcase-detail dt {
+  color: rgb(255 255 255 / 58%);
+}
+
+.abat-ProjectsShowcase-detail dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-on-secondary);
+  font-weight: 700;
+}
+
+.abat-ProjectsShowcase-mediaPanel {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-text);
+}
+
+.abat-ProjectsShowcase-mainImageButton {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  touch-action: pan-y;
+}
+
+.abat-ProjectsShowcase-mainImageButton::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 34%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgb(7 22 39 / 58%), transparent);
+  content: "";
+}
+
+.abat-ProjectsShowcase-mainImage {
+  object-fit: cover;
+  transition: transform 420ms var(--motion-easing);
+}
+
+.abat-ProjectsShowcase-nextProjectButton,
+.abat-ProjectsShowcase-lightboxArrow,
+.abat-ProjectsShowcase-lightboxClose {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgb(255 255 255 / 44%);
+  border-radius: 50%;
+  background: rgb(16 35 61 / 78%);
+  color: #ffffff;
+  backdrop-filter: blur(5px);
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    background-color var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
+}
+
+.abat-ProjectsShowcase-nextProjectButton {
+  position: absolute;
+  top: 50%;
+  right: clamp(18px, 2.4vw, 32px);
+  z-index: 3;
+  width: 56px;
+  height: 56px;
+  padding: 15px;
+  transform: translateY(-50%);
+}
+
+.abat-ProjectsShowcase-nextProjectButton .abat-inline-icon,
+.abat-ProjectsShowcase-lightboxArrow .abat-inline-icon,
+.abat-ProjectsShowcase-allProjectsLink .abat-inline-icon {
+  width: 100%;
+  height: auto;
+}
+
+.abat-ProjectsShowcase-thumbnails {
+  position: absolute;
+  bottom: clamp(18px, 2.2vw, 28px);
+  left: clamp(18px, 2.4vw, 32px);
+  right: clamp(18px, 2.4vw, 32px);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: rgb(255 255 255 / 54%) transparent;
+  scrollbar-width: thin;
+}
+
+.abat-ProjectsShowcase-thumbnailButton {
+  position: relative;
+  width: clamp(66px, 7.2vw, 92px);
+  aspect-ratio: 16 / 9;
+  flex: 0 0 auto;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid rgb(255 255 255 / 62%);
+  border-radius: var(--radius-image);
+  background: var(--color-secondary-hover);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
+  opacity: 0.76;
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    opacity var(--motion-fast) var(--motion-easing);
+}
+
+.abat-ProjectsShowcase-thumbnailButtonActive {
+  border-color: var(--color-primary-accent);
+  opacity: 1;
+}
+
+.abat-ProjectsShowcase-thumbnailImage {
+  object-fit: cover;
+}
+
+.abat-ProjectsShowcase-allProjectsRow {
+  margin-top: clamp(20px, 2.3vw, 28px);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.abat-ProjectsShowcase-allProjectsLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-secondary-hover);
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.abat-ProjectsShowcase-allProjectsLink .abat-inline-icon {
+  width: 26px;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.abat-ProjectsShowcase-lightboxBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  padding: clamp(16px, 3vw, 40px);
+  display: grid;
+  place-items: center;
+  background: rgb(4 12 21 / 94%);
+}
+
+.abat-ProjectsShowcase-lightboxContent {
+  width: min(100%, 1440px);
+  height: min(92vh, 900px);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 14px;
+  color: #ffffff;
+}
+
+.abat-ProjectsShowcase-lightboxHeader {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: rgb(255 255 255 / 78%);
+  font-size: 14px;
+}
+
+.abat-ProjectsShowcase-lightboxClose {
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  flex: 0 0 auto;
+}
+
+.abat-ProjectsShowcase-lightboxClose .abat-inline-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.abat-ProjectsShowcase-lightboxImageFrame {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.abat-ProjectsShowcase-lightboxImage {
+  object-fit: contain;
+}
+
+.abat-ProjectsShowcase-lightboxArrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  padding: 14px;
+  transform: translateY(-50%);
+}
+
+.abat-ProjectsShowcase-lightboxArrowPrevious {
+  left: 10px;
+}
+
+.abat-ProjectsShowcase-lightboxArrowNext {
+  right: 10px;
+}
+
+.abat-ProjectsShowcase-arrowLeft {
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .abat-ProjectsShowcase-mainImageButton:hover .abat-ProjectsShowcase-mainImage {
+    transform: scale(1.025);
+  }
+
+  .abat-ProjectsShowcase-nextProjectButton:hover,
+  .abat-ProjectsShowcase-lightboxArrow:hover,
+  .abat-ProjectsShowcase-lightboxClose:hover {
+    border-color: var(--color-primary-accent);
+    background: var(--color-secondary-hover);
+  }
+
+  .abat-ProjectsShowcase-nextProjectButton:hover {
+    transform: translateY(-50%) translateX(2px);
+  }
+
+  .abat-ProjectsShowcase-thumbnailButton:hover {
+    opacity: 1;
+  }
+
+  .abat-ProjectsShowcase-allProjectsLink:hover {
+    color: var(--color-primary);
+  }
+
+  .abat-ProjectsShowcase-allProjectsLink:hover .abat-inline-icon {
+    transform: translateX(4px);
+  }
+}
+
+.abat-ProjectsShowcase-mainImageButton:focus-visible,
+.abat-ProjectsShowcase-nextProjectButton:focus-visible,
+.abat-ProjectsShowcase-thumbnailButton:focus-visible,
+.abat-ProjectsShowcase-lightboxArrow:focus-visible,
+.abat-ProjectsShowcase-lightboxClose:focus-visible {
+  outline: 3px solid var(--color-primary-accent);
+  outline-offset: -4px;
+}
+
+.abat-ProjectsShowcase-allProjectsLink:focus-visible {
+  outline-color: var(--color-primary);
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .abat-ProjectsShowcase-showcase {
+    height: clamp(390px, 46vw, 440px);
+    grid-template-columns: minmax(0, 38%) minmax(0, 62%);
+  }
+
+  .abat-ProjectsShowcase-infoPanel {
+    padding: clamp(22px, 2.6vw, 30px);
+  }
+
+  .abat-ProjectsShowcase-projectNumber {
+    font-size: clamp(54px, 7vw, 72px);
+  }
+
+  .abat-ProjectsShowcase-projectTitle {
+    font-size: clamp(22px, 2.5vw, 27px);
+  }
+
+  .abat-ProjectsShowcase-projectTitle::after {
+    margin-top: 14px;
+  }
+
+  .abat-ProjectsShowcase-summary {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .abat-ProjectsShowcase-details {
+    margin-top: 2px;
+    gap: 4px;
+  }
+
+  .abat-ProjectsShowcase-detail {
+    font-size: 12px;
+  }
+
+  .abat-ProjectsShowcase-nextProjectButton {
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 767px) {
+  .abat-ProjectsShowcase-heading {
+    margin-bottom: 26px;
+  }
+
+  .abat-ProjectsShowcase-headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .abat-ProjectsShowcase-title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .abat-ProjectsShowcase-showcase {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(260px, 54vw);
+  }
+
+  .abat-ProjectsShowcase-infoPanel {
+    min-height: 226px;
+    padding: 22px;
+    display: grid;
+    grid-template-columns: minmax(90px, 0.32fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 22px;
+  }
+
+  .abat-ProjectsShowcase-numberRow {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .abat-ProjectsShowcase-projectNumber {
+    font-size: clamp(58px, 12vw, 78px);
+  }
+
+  .abat-ProjectsShowcase-progress {
+    padding: 0;
+  }
+
+  .abat-ProjectsShowcase-projectTitle {
+    font-size: clamp(22px, 5vw, 28px);
+  }
+
+  .abat-ProjectsShowcase-projectTitle::after {
+    margin-top: 12px;
+  }
+
+  .abat-ProjectsShowcase-summary {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .abat-ProjectsShowcase-details {
+    margin-top: 12px;
+    gap: 5px;
+  }
+
+  .abat-ProjectsShowcase-detail {
+    font-size: 12px;
+  }
+
+  .abat-ProjectsShowcase-nextProjectButton {
+    right: 16px;
+    width: 48px;
+    height: 48px;
+    padding: 13px;
+  }
+
+  .abat-ProjectsShowcase-thumbnails {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+
+  .abat-ProjectsShowcase-thumbnailButton {
+    width: clamp(62px, 17vw, 86px);
+  }
+
+  .abat-ProjectsShowcase-allProjectsRow {
+    justify-content: flex-start;
+  }
+
+  .abat-ProjectsShowcase-lightboxBackdrop {
+    padding: 12px;
+  }
+
+  .abat-ProjectsShowcase-lightboxContent {
+    height: 94vh;
+  }
+
+  .abat-ProjectsShowcase-lightboxHeader {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .abat-ProjectsShowcase-lightboxArrow {
+    width: 46px;
+    height: 46px;
+    padding: 12px;
+  }
+
+  .abat-ProjectsShowcase-lightboxArrowPrevious {
+    left: 4px;
+  }
+
+  .abat-ProjectsShowcase-lightboxArrowNext {
+    right: 4px;
+  }
+}
+
+@media (max-width: 499px) {
+  .abat-ProjectsShowcase-showcase {
+    grid-template-rows: auto minmax(248px, 68vw);
+  }
+
+  .abat-ProjectsShowcase-infoPanel {
+    min-height: 234px;
+    padding: 20px;
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .abat-ProjectsShowcase-projectNumber {
+    font-size: 58px;
+  }
+
+  .abat-ProjectsShowcase-projectTitle {
+    font-size: 22px;
+  }
+
+  .abat-ProjectsShowcase-summary {
+    font-size: 12px;
+  }
+
+  .abat-ProjectsShowcase-detail {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .abat-ProjectsShowcase-detail dt {
+    display: none;
+  }
+
+  .abat-ProjectsShowcase-nextProjectButton {
+    top: 42%;
+    width: 44px;
+    height: 44px;
+    padding: 11px;
+  }
+
+  .abat-ProjectsShowcase-thumbnailButton {
+    width: clamp(58px, 18vw, 72px);
+  }
+}
+
+@media (max-width: 379px) {
+  .abat-ProjectsShowcase-infoPanel {
+    padding: 18px;
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-ProjectsShowcase-projectNumber {
+    font-size: 52px;
+  }
+
+  .abat-ProjectsShowcase-projectTitle {
+    font-size: 20px;
+  }
+}
+
+.abat-Advantages-section {
+  width: 100%;
+  padding-bottom: var(--section-gap);
+}
+
+.abat-Advantages-heading {
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.abat-Advantages-headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-Advantages-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.abat-Advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 0.82fr)) minmax(0, 1.36fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.abat-Advantages-numericCard,
+.abat-Advantages-detailCard {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: var(--radius-container);
+}
+
+.abat-Advantages-numericCard {
+  min-height: 390px;
+  grid-row: span 2;
+  isolation: isolate;
+  background: linear-gradient(
+    145deg,
+    var(--color-secondary-hover) 0%,
+    var(--color-secondary) 100%
+  );
+  color: var(--color-on-secondary);
+}
+
+.abat-Advantages-numericArtwork {
+  position: absolute;
+  inset: auto -24% -10% -24%;
+  z-index: 0;
+  height: 82%;
+  opacity: 0.32;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 22%, #000 100%);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000 22%,
+    #000 100%
+  );
+}
+
+.abat-Advantages-numericArtwork img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.abat-Advantages-numericContent {
+  position: relative;
+  z-index: 1;
+  min-height: 390px;
+  padding: clamp(26px, 2.6vw, 34px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.abat-Advantages-value {
+  color: #ffffff;
+  font-size: clamp(64px, 6vw, 88px);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.abat-Advantages-numericTitle {
+  margin: 8px 0 0;
+  color: #ffffff;
+  font-size: clamp(20px, 1.7vw, 24px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.abat-Advantages-cardAccent {
+  width: 42px;
+  height: 3px;
+  margin-top: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary-accent);
+}
+
+.abat-Advantages-numericDescription {
+  max-width: 270px;
+  margin: 14px 0 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.abat-Advantages-detailCard {
+  min-height: 187px;
+  padding: clamp(24px, 2.5vw, 32px);
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(20px, 2.2vw, 28px);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.abat-Advantages-detailVisual {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-card);
+  background: var(--color-secondary-soft);
+}
+
+.abat-Advantages-detailIcon {
+  width: 46px;
+  height: 46px;
+  display: block;
+  background: var(--color-secondary);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.abat-Advantages-detailContent {
+  min-width: 0;
+}
+
+.abat-Advantages-detailTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.abat-Advantages-detailDescription {
+  max-width: 460px;
+  margin: 10px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .abat-Advantages-numericCard,
+  .abat-Advantages-numericContent {
+    min-height: 324px;
+  }
+
+  .abat-Advantages-numericContent {
+    padding: 24px;
+  }
+
+  .abat-Advantages-numericArtwork {
+    inset-inline: -25%;
+    height: 88%;
+  }
+
+  .abat-Advantages-detailCard {
+    min-height: 0;
+    padding: 22px;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .abat-Advantages-detailVisual {
+    width: 58px;
+    height: 58px;
+  }
+
+  .abat-Advantages-detailIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .abat-Advantages-detailTitle {
+    font-size: 20px;
+  }
+
+  .abat-Advantages-detailDescription {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .abat-Advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .abat-Advantages-numericCard,
+  .abat-Advantages-numericContent {
+    min-height: 300px;
+  }
+
+  .abat-Advantages-numericCard {
+    grid-row: auto;
+  }
+
+  .abat-Advantages-numericContent {
+    padding: 24px;
+  }
+
+  .abat-Advantages-numericArtwork {
+    inset: auto -24% -12% -24%;
+    height: 86%;
+  }
+
+  .abat-Advantages-detailCard {
+    min-height: 180px;
+    padding: 20px;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .abat-Advantages-detailVisual {
+    width: 52px;
+    height: 52px;
+  }
+
+  .abat-Advantages-detailIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .abat-Advantages-detailTitle {
+    font-size: 20px;
+  }
+
+  .abat-Advantages-detailDescription {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 599px) {
+  .abat-Advantages-heading {
+    margin-bottom: 26px;
+  }
+
+  .abat-Advantages-headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .abat-Advantages-title {
+    font-size: clamp(28px, 5vw, 30px);
+  }
+
+  .abat-Advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .abat-Advantages-numericCard {
+    min-height: 250px;
+  }
+
+  .abat-Advantages-numericContent {
+    min-height: 250px;
+    padding: 22px;
+  }
+
+  .abat-Advantages-numericArtwork {
+    inset: auto -10% -12% auto;
+    width: min(96%, 520px);
+    height: 76%;
+  }
+
+  .abat-Advantages-value {
+    font-size: clamp(60px, 15vw, 76px);
+  }
+
+  .abat-Advantages-numericTitle {
+    font-size: 20px;
+  }
+
+  .abat-Advantages-cardAccent {
+    margin-top: 14px;
+  }
+
+  .abat-Advantages-numericDescription {
+    max-width: min(68%, 390px);
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .abat-Advantages-detailCard {
+    min-height: 128px;
+    padding: 20px;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .abat-Advantages-detailVisual {
+    width: 56px;
+    height: 56px;
+  }
+
+  .abat-Advantages-detailIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .abat-Advantages-detailTitle {
+    font-size: 20px;
+  }
+
+  .abat-Advantages-detailDescription {
+    margin-top: 7px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 499px) {
+  .abat-Advantages-numericCard,
+  .abat-Advantages-numericContent {
+    min-height: 228px;
+  }
+
+  .abat-Advantages-numericContent {
+    padding: 20px;
+  }
+
+  .abat-Advantages-numericArtwork {
+    inset: auto -14% -16% auto;
+    width: 110%;
+    height: 82%;
+    opacity: 0.33;
+  }
+
+  .abat-Advantages-value {
+    font-size: clamp(58px, 15vw, 68px);
+  }
+
+  .abat-Advantages-numericTitle {
+    margin-top: 6px;
+    font-size: 19px;
+  }
+
+  .abat-Advantages-cardAccent {
+    margin-top: 12px;
+  }
+
+  .abat-Advantages-numericDescription {
+    max-width: 68%;
+    margin-top: 10px;
+  }
+
+  .abat-Advantages-detailCard {
+    min-height: 120px;
+    padding: 18px;
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .abat-Advantages-detailVisual {
+    width: 54px;
+    height: 54px;
+  }
+
+  .abat-Advantages-detailIcon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .abat-Advantages-detailTitle {
+    font-size: 19px;
+  }
+}
+
+.abat-DirectionsServices-section {
+  width: 100%;
+  padding-block: var(--section-gap);
+}
+
+.abat-DirectionsServices-heading {
+  max-width: 760px;
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.abat-DirectionsServices-headingAccent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 16px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-DirectionsServices-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.abat-DirectionsServices-description {
+  max-width: 680px;
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* Directions */
+
+.abat-DirectionsServices-directionsGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  grid-template-rows: repeat(2, minmax(198px, 1fr)) auto;
+  gap: 16px;
+}
+
+.abat-DirectionsServices-directionCard {
+  position: relative;
+  min-width: 0;
+  min-height: 198px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: var(--radius-container);
+  background: var(--color-secondary);
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    transform var(--motion-normal) var(--motion-easing),
+    box-shadow var(--motion-normal) var(--motion-easing);
+}
+
+a.abat-DirectionsServices-directionCard {
+  cursor: pointer;
+}
+
+.abat-DirectionsServices-directionCard_primary {
+  min-height: 412px;
+  grid-row: span 2;
+}
+
+.abat-DirectionsServices-directionCard_secondary {
+  min-height: 198px;
+}
+
+.abat-DirectionsServices-directionCard_accent {
+  min-height: 148px;
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    115deg,
+    var(--color-secondary-hover) 0%,
+    var(--color-secondary) 100%
+  );
+}
+
+.abat-DirectionsServices-directionCard_accent::before,
+.abat-DirectionsServices-directionCard_accent::after {
+  position: absolute;
+  right: -3%;
+  z-index: 1;
+  width: 46%;
+  pointer-events: none;
+  content: "";
+}
+
+.abat-DirectionsServices-directionCard_accent::before {
+  top: -45%;
+  height: 190%;
+  opacity: 0.2;
+  transform: skewX(-18deg);
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 32px,
+    rgb(215 229 241 / 72%) 32px 35px,
+    transparent 35px 68px
+  );
+}
+
+.abat-DirectionsServices-directionCard_accent::after {
+  inset-block: -40%;
+  height: 180%;
+  opacity: 0.14;
+  background:
+    repeating-linear-gradient(
+      38deg,
+      transparent 0 54px,
+      rgb(255 255 255 / 78%) 54px 58px,
+      transparent 58px 112px
+    ),
+    repeating-linear-gradient(
+      142deg,
+      transparent 0 70px,
+      rgb(215 229 241 / 66%) 70px 73px,
+      transparent 73px 140px
+    );
+}
+
+.abat-DirectionsServices-directionCardPlaceholder {
+  cursor: default;
+}
+
+.abat-DirectionsServices-directionImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.abat-DirectionsServices-directionImage img {
+  object-fit: cover;
+  transition: transform 420ms var(--motion-easing);
+}
+
+.abat-DirectionsServices-directionCard_primary .abat-DirectionsServices-directionImage img {
+  object-position: 52% center;
+}
+
+.abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionImage img {
+  object-position: center;
+}
+
+.abat-DirectionsServices-directionOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(7 22 39 / 82%) 0%,
+    rgb(7 22 39 / 62%) 44%,
+    rgb(7 22 39 / 23%) 78%,
+    rgb(7 22 39 / 8%) 100%
+  );
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionOverlay {
+  background: linear-gradient(
+    100deg,
+    rgb(16 35 61 / 18%) 0%,
+    rgb(16 35 61 / 2%) 100%
+  );
+}
+
+.abat-DirectionsServices-directionContent {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 470px);
+  min-height: 100%;
+  padding: clamp(24px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.abat-DirectionsServices-directionCard_primary .abat-DirectionsServices-directionContent {
+  justify-content: flex-end;
+  padding: clamp(28px, 3.5vw, 42px);
+}
+
+.abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionContent {
+  justify-content: flex-end;
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+  width: 100%;
+  max-width: none;
+  min-height: 148px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  align-items: center;
+  column-gap: 22px;
+  row-gap: 6px;
+}
+
+.abat-DirectionsServices-directionIconCircle {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--color-secondary-hover);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 14%);
+}
+
+.abat-DirectionsServices-directionIconCircle img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionIconCircle {
+  grid-row: 1 / 3;
+  margin: 0;
+  background: rgb(255 255 255 / 14%);
+  box-shadow: none;
+}
+
+.abat-DirectionsServices-directionTitle {
+  max-width: 430px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(23px, 2vw, 31px);
+  font-weight: 800;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionTitle {
+  font-size: clamp(20px, 1.7vw, 26px);
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionTitle {
+  align-self: end;
+}
+
+.abat-DirectionsServices-directionDescription {
+  max-width: 430px;
+  margin: 10px 0 0;
+  color: rgb(255 255 255 / 84%);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionDescription {
+  grid-column: 2;
+  align-self: start;
+  margin-top: 0;
+}
+
+.abat-DirectionsServices-directionLinkText {
+  margin-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionLinkText {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  margin: 0;
+  align-self: center;
+}
+
+.abat-DirectionsServices-directionArrow {
+  width: 22px;
+  display: inline-flex;
+  transition: transform var(--motion-fast) var(--motion-easing);
+}
+
+.abat-DirectionsServices-directionArrow .abat-inline-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* Компактные фото-карточки без потери содержимого */
+
+@media (min-width: 1100px) {
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionContent {
+    padding: 26px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionIconCircle {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 14px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionIconCircle img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionTitle {
+    font-size: clamp(20px, 1.55vw, 23px);
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionDescription {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionLinkText {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+}
+
+/* Services */
+
+.abat-DirectionsServices-servicesBlock {
+  margin-top: clamp(36px, 4vw, 52px);
+  scroll-margin-top: 96px;
+}
+
+.abat-DirectionsServices-servicesHeading {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.abat-DirectionsServices-servicesTitle {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(23px, 2vw, 28px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.abat-DirectionsServices-servicesAccent {
+  width: 44px;
+  height: 3px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.abat-DirectionsServices-servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.abat-DirectionsServices-serviceCard {
+  min-width: 0;
+  min-height: 96px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 22px;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    border-color var(--motion-fast) var(--motion-easing),
+    box-shadow var(--motion-fast) var(--motion-easing),
+    transform var(--motion-fast) var(--motion-easing);
+}
+
+.abat-DirectionsServices-serviceImageIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.abat-DirectionsServices-serviceMaskIcon {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: var(--color-secondary);
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.abat-DirectionsServices-serviceTitle {
+  min-width: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.abat-DirectionsServices-serviceArrow {
+  width: 20px;
+  display: inline-flex;
+  color: var(--color-secondary);
+  transition:
+    transform var(--motion-fast) var(--motion-easing),
+    color var(--motion-fast) var(--motion-easing);
+}
+
+.abat-DirectionsServices-serviceArrow .abat-inline-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* Hover */
+
+@media (hover: hover) and (pointer: fine) {
+  a.abat-DirectionsServices-directionCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgb(16 35 61 / 14%);
+  }
+
+  a.abat-DirectionsServices-directionCard:hover .abat-DirectionsServices-directionImage img {
+    transform: scale(1.025);
+  }
+
+  a.abat-DirectionsServices-directionCard:hover .abat-DirectionsServices-directionArrow {
+    transform: translateX(4px);
+  }
+
+  .abat-DirectionsServices-serviceCard:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 22px rgb(16 35 61 / 8%);
+    transform: translateY(-2px);
+  }
+
+  .abat-DirectionsServices-serviceCard:hover .abat-DirectionsServices-serviceArrow {
+    color: var(--color-primary);
+    transform: translateX(3px);
+  }
+}
+
+/* Keyboard focus */
+
+a.abat-DirectionsServices-directionCard:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.abat-DirectionsServices-serviceCard:focus-visible {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgb(196 81 7 / 16%);
+}
+
+/* Tablet */
+
+@media (max-width: 1099px) {
+  .abat-DirectionsServices-directionsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_primary {
+    min-height: 344px;
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary {
+    min-height: 220px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent {
+    min-height: 140px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+    min-height: 140px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionContent {
+    padding: 22px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionIconCircle {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 12px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionIconCircle img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionTitle {
+    font-size: 21px;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionDescription {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionLinkText {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+
+  .abat-DirectionsServices-servicesGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/*
+ * На небольших планшетах длинный заголовок синей карточки
+ * уже не помещается в горизонтальную desktop-композицию.
+ */
+
+@media (max-width: 820px) {
+  .abat-DirectionsServices-directionCard_accent {
+    min-height: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+    width: 100%;
+    min-height: 210px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionIconCircle {
+    margin: 0 0 18px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionTitle {
+    align-self: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionDescription {
+    margin-top: 10px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionLinkText {
+    margin-top: 18px;
+    align-self: auto;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .abat-DirectionsServices-section {
+    padding-block: var(--section-gap);
+  }
+
+  .abat-DirectionsServices-heading {
+    margin-bottom: 26px;
+  }
+
+  .abat-DirectionsServices-headingAccent {
+    width: 44px;
+    margin-bottom: 14px;
+  }
+
+  .abat-DirectionsServices-title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .abat-DirectionsServices-description {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+
+  .abat-DirectionsServices-directionsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .abat-DirectionsServices-directionCard_primary,
+  .abat-DirectionsServices-directionCard_secondary,
+  .abat-DirectionsServices-directionCard_accent {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_primary,
+  .abat-DirectionsServices-directionCard_secondary {
+    min-height: 300px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent {
+    min-height: auto;
+  }
+
+  .abat-DirectionsServices-directionContent,
+  .abat-DirectionsServices-directionCard_primary .abat-DirectionsServices-directionContent,
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionContent {
+    min-height: inherit;
+    padding: 24px;
+    justify-content: flex-end;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+    width: 100%;
+    min-height: 210px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .abat-DirectionsServices-directionCard_accent::before,
+  .abat-DirectionsServices-directionCard_accent::after {
+    right: -14%;
+    width: 58%;
+    opacity: 0.08;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionIconCircle {
+    margin: 0 0 18px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionTitle {
+    align-self: auto;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionDescription {
+    margin-top: 10px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionLinkText {
+    margin-top: 18px;
+    align-self: auto;
+  }
+
+  .abat-DirectionsServices-directionIconCircle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 16px;
+  }
+
+  .abat-DirectionsServices-directionIconCircle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .abat-DirectionsServices-directionTitle,
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionTitle {
+    font-size: 24px;
+  }
+
+  .abat-DirectionsServices-directionDescription,
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionDescription {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionLinkText {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+
+  .abat-DirectionsServices-servicesBlock {
+    margin-top: 36px;
+  }
+
+  .abat-DirectionsServices-servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .abat-DirectionsServices-serviceCard {
+    min-height: 84px;
+    padding: 15px 16px;
+  }
+}
+
+/* Narrow mobile */
+
+@media (max-width: 379px) {
+  .abat-DirectionsServices-directionContent,
+  .abat-DirectionsServices-directionCard_primary .abat-DirectionsServices-directionContent,
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionContent,
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+    padding: 20px;
+  }
+
+  .abat-DirectionsServices-directionCard_primary,
+  .abat-DirectionsServices-directionCard_secondary {
+    min-height: 290px;
+  }
+
+  .abat-DirectionsServices-directionCard_accent .abat-DirectionsServices-directionContent {
+    min-height: 220px;
+  }
+
+  .abat-DirectionsServices-directionTitle,
+  .abat-DirectionsServices-directionCard_secondary .abat-DirectionsServices-directionTitle {
+    font-size: 22px;
+  }
+
+  .abat-DirectionsServices-serviceCard {
+    grid-template-columns: 40px minmax(0, 1fr) 20px;
+    gap: 12px;
+  }
+
+  .abat-DirectionsServices-serviceImageIcon,
+  .abat-DirectionsServices-serviceMaskIcon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.abat-Hero-hero {
+  width: 100%;
+  overflow: clip;
+  background: var(--color-background);
+}
+
+.abat-Hero-banner {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  min-height: clamp(500px, 58svh, 620px);
+  display: flex;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-surface-muted);
+}
+
+.abat-Hero-withoutImage {
+  min-height: auto;
+}
+
+.abat-Hero-image {
+  z-index: 0;
+  object-fit: cover;
+  object-position: 60% center;
+}
+
+.abat-Hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgb(238 244 248 / 96%) 0%,
+    rgb(238 244 248 / 94%) 20%,
+    rgb(238 244 248 / 88%) 31%,
+    rgb(238 244 248 / 74%) 40%,
+    rgb(238 244 248 / 54%) 48%,
+    rgb(238 244 248 / 34%) 56%,
+    rgb(238 244 248 / 17%) 64%,
+    rgb(238 244 248 / 6%) 72%,
+    rgb(238 244 248 / 0%) 80%
+  );
+}
+
+.abat-Hero-contentContainer {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.abat-Hero-content {
+  width: min(100%, 700px);
+  min-width: 0;
+  padding-block: clamp(56px, 7vw, 84px);
+}
+
+.abat-Hero-eyebrow {
+  margin: 0 0 16px;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.abat-Hero-title {
+  max-width: 680px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(32px, calc(2.2vw + 14px), 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.abat-Hero-description {
+  max-width: 640px;
+  margin: 24px 0 0;
+  color: var(--color-text-muted);
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 1.6;
+}
+
+.abat-Hero-highlights {
+  max-width: 680px;
+  margin: 26px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  list-style: none;
+}
+
+.abat-Hero-highlight {
+  position: relative;
+  min-width: 0;
+  padding-left: 14px;
+  color: var(--color-secondary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.abat-Hero-highlight::before {
+  position: absolute;
+  top: 0.18em;
+  bottom: 0.18em;
+  left: 0;
+  width: 3px;
+  min-height: 1em;
+  content: "";
+  background: var(--color-primary);
+  border-radius: var(--radius-button);
+}
+
+/* Описание немного контрастнее от планшета и выше */
+
+@media (min-width: 768px) {
+  .abat-Hero-description {
+    color: color-mix(in srgb, var(--color-text) 45%, var(--color-text-muted));
+  }
+}
+
+/* Планшеты и компактные desktop-экраны */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .abat-Hero-banner {
+    min-height: clamp(440px, 50svh, 510px);
+  }
+
+  .abat-Hero-image {
+    object-position: 64% center;
+  }
+
+  .abat-Hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgb(238 244 248 / 97%) 0%,
+      rgb(238 244 248 / 95%) 28%,
+      rgb(238 244 248 / 91%) 42%,
+      rgb(238 244 248 / 82%) 53%,
+      rgb(238 244 248 / 66%) 63%,
+      rgb(238 244 248 / 46%) 72%,
+      rgb(238 244 248 / 26%) 81%,
+      rgb(238 244 248 / 10%) 90%,
+      rgb(238 244 248 / 0%) 100%
+    );
+  }
+
+  .abat-Hero-content {
+    width: min(100%, 640px);
+    padding-block: 50px;
+  }
+
+  .abat-Hero-highlights {
+    gap: 12px;
+  }
+
+  .abat-Hero-highlight {
+    padding-left: 12px;
+    font-size: 16px;
+  }
+}
+
+/* Телефоны */
+
+@media (max-width: 767px) {
+  .abat-Hero-banner {
+    min-height: clamp(470px, 64svh, 560px);
+  }
+
+  .abat-Hero-image {
+    object-position: 68% 28%;
+    transform: scale(1.12);
+    transform-origin: 68% 28%;
+  }
+
+  .abat-Hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgb(238 244 248 / 90%) 0%,
+      rgb(238 244 248 / 80%) 42%,
+      rgb(238 244 248 / 48%) 68%,
+      rgb(238 244 248 / 10%) 92%,
+      rgb(238 244 248 / 0%) 100%
+    );
+  }
+
+  .abat-Hero-contentContainer {
+    align-items: flex-start;
+  }
+
+  .abat-Hero-content {
+    width: 100%;
+    padding-block: 40px 44px;
+  }
+
+  .abat-Hero-description {
+    margin-top: 20px;
+    color: color-mix(in srgb, var(--color-text) 76%, var(--color-text-muted));
+  }
+
+  .abat-Hero-highlights {
+    margin-top: 22px;
+    gap: 8px;
+  }
+
+  .abat-Hero-highlight {
+    padding-left: 9px;
+    font-size: 16px;
+  }
+
+  .abat-Hero-highlight::before {
+    width: 2px;
+  }
+}
+
+.abat-TurnkeyProcess-section {
+  width: 100%;
+  padding-top: var(--section-gap);
+}
+
+.abat-TurnkeyProcess-card {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: clamp(36px, 4vw, 64px);
+}
+
+.abat-TurnkeyProcess-intro {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 154px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.abat-TurnkeyProcess-illustration {
+  width: 154px;
+  height: 154px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abat-TurnkeyProcess-illustration img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.abat-TurnkeyProcess-introContent {
+  min-width: 0;
+}
+
+.abat-TurnkeyProcess-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(24px, 2vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.abat-TurnkeyProcess-description {
+  max-width: 430px;
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Этапы на desktop */
+
+.abat-TurnkeyProcess-steps {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+  list-style: none;
+}
+
+.abat-TurnkeyProcess-stepItem {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.abat-TurnkeyProcess-step {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 68px auto;
+  justify-items: center;
+  align-items: start;
+  gap: 12px;
+  text-align: center;
+}
+
+.abat-TurnkeyProcess-stepIcon {
+  width: 62px;
+  height: 62px;
+  align-self: center;
+  object-fit: contain;
+}
+
+.abat-TurnkeyProcess-stepLabel {
+  max-width: 160px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* Стрелки строго между четырьмя равными колонками */
+
+.abat-TurnkeyProcess-arrow {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: clamp(20px, 2vw, 28px);
+  color: var(--color-secondary);
+  transform: translateX(50%);
+}
+
+.abat-TurnkeyProcess-arrow .abat-inline-icon {
+  width: 100%;
+  height: auto;
+}
+
+/* Компактный desktop и планшеты */
+
+@media (max-width: 1099px) {
+  .abat-TurnkeyProcess-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .abat-TurnkeyProcess-intro {
+    max-width: 720px;
+  }
+
+  .abat-TurnkeyProcess-description {
+    max-width: 540px;
+  }
+
+  .abat-TurnkeyProcess-steps {
+    padding-top: 28px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .abat-TurnkeyProcess-stepLabel {
+    max-width: 170px;
+  }
+}
+
+/* Телефоны */
+
+@media (max-width: 767.98px) {
+  .abat-TurnkeyProcess-card {
+    gap: 20px;
+  }
+
+  .abat-TurnkeyProcess-intro {
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-TurnkeyProcess-illustration {
+    width: 116px;
+    height: 116px;
+  }
+
+  .abat-TurnkeyProcess-title {
+    font-size: 23px;
+  }
+
+  .abat-TurnkeyProcess-description {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  /*
+   * На мобильном каждый li состоит из:
+   * этапа + стрелки под ним.
+   * Никакого absolute positioning.
+   */
+  .abat-TurnkeyProcess-steps {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .abat-TurnkeyProcess-stepItem {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+  }
+
+  .abat-TurnkeyProcess-step {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 66px minmax(0, 1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: start;
+    gap: 18px;
+    text-align: left;
+  }
+
+  .abat-TurnkeyProcess-stepIcon {
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+  }
+
+  .abat-TurnkeyProcess-stepLabel {
+    max-width: none;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  /*
+   * Стрелка находится в нормальном потоке.
+   * Отступы сверху и снизу дают одинаковый воздух
+   * между соседними этапами.
+   */
+  .abat-TurnkeyProcess-arrow {
+    position: static;
+    width: 22px;
+    margin: 15px 0 15px 22px;
+    transform: rotate(90deg);
+  }
+}
+
+/* Узкие телефоны */
+
+@media (max-width: 479px) {
+  .abat-TurnkeyProcess-intro {
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-TurnkeyProcess-illustration {
+    width: 116px;
+    height: 116px;
+  }
+
+  .abat-TurnkeyProcess-step {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .abat-TurnkeyProcess-arrow {
+    margin-left: 21px;
+  }
+}
+
+/* Очень узкие телефоны */
+
+@media (max-width: 379px) {
+  .abat-TurnkeyProcess-intro {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-TurnkeyProcess-illustration {
+    width: 100px;
+    height: 100px;
+  }
+
+  .abat-TurnkeyProcess-title {
+    font-size: 21px;
+  }
+
+  .abat-TurnkeyProcess-step {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .abat-TurnkeyProcess-stepIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .abat-TurnkeyProcess-arrow {
+    width: 20px;
+    margin: 15px 0 15px 20px;
+  }
+}
+
+.abat-icon-c7a111d53e9d{width:24px;aspect-ratio:24/16;mask-image:url("/api/media/file/abat-inline-c7a111d53e9d.png");-webkit-mask-image:url("/api/media/file/abat-inline-c7a111d53e9d.png")}
+.abat-icon-3e8692c4f823{width:24px;aspect-ratio:24/16;mask-image:url("/api/media/file/abat-inline-3e8692c4f823.png");-webkit-mask-image:url("/api/media/file/abat-inline-3e8692c4f823.png")}
+.abat-style-287113b1b220{mask-image:url("/api/media/file/abat-pane-w-937bda294852.png");-webkit-mask-image:url("/api/media/file/abat-pane-w-937bda294852.png")}
+.abat-style-eb972c462721{mask-image:url("/api/media/file/abat-full-cycle-4686f5c237e8.png");-webkit-mask-image:url("/api/media/file/abat-full-cycle-4686f5c237e8.png")}
+.abat-style-f59f56dc8096{mask-image:url("/api/media/file/abat-geography-e785aa6c197f.png");-webkit-mask-image:url("/api/media/file/abat-geography-e785aa6c197f.png")}

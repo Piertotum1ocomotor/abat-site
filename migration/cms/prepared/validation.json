@@ -1,0 +1,50 @@
+{
+  "sourceCommit": "fb86902c65dbd9bb5fa6fbb4e46ffeba386ed670",
+  "cmsContractCommit": "c3e9ab75ab2a5bdeef03c6679ac3792a0e7ebc9b",
+  "contractHashes": {
+    "src/modules/pages/pageHtml.ts": "d03d178e5f4f",
+    "src/modules/styling/css.ts": "923d506a3744",
+    "src/modules/media/public.ts": "b0af2df4be61",
+    "src/lib/hostname.ts": "5daef65e6625"
+  },
+  "htmlFragmentsAccepted": 16,
+  "cssStylesheetsAccepted": 15,
+  "routes": [
+    "/",
+    "/bystrovozvodimye-zdaniya",
+    "/proekty",
+    "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+    "/stroitelstvo-angarov",
+    "/stroitelstvo-skladov",
+    "/zdaniya-iz-metallokonstrukciy",
+    "/zdaniya-iz-sendvich-paneley",
+    "/proekty/zdanie-stolovoy-s-ofisami",
+    "/proekty/angar-dlya-avtoservisa",
+    "/proekty/kranovaya-estakada-5-tonn",
+    "/proekty/kranovyy-put-silovye-mashiny",
+    "/proekty/promyshlennoe-zdanie-2880",
+    "/proekty/angar-dlya-avtoremontnyh-masterskih"
+  ],
+  "siteCSSCharacters": 43742,
+  "pageCSSCharacters": {
+    "/": 47358,
+    "/bystrovozvodimye-zdaniya": 14767,
+    "/proekty": 4478,
+    "/promyshlennye-zdaniya-i-proizvodstvennye-ceha": 13703,
+    "/stroitelstvo-angarov": 10114,
+    "/stroitelstvo-skladov": 15106,
+    "/zdaniya-iz-metallokonstrukciy": 15325,
+    "/zdaniya-iz-sendvich-paneley": 21190,
+    "/proekty/zdanie-stolovoy-s-ofisami": 0,
+    "/proekty/angar-dlya-avtoservisa": 0,
+    "/proekty/kranovaya-estakada-5-tonn": 0,
+    "/proekty/kranovyy-put-silovye-mashiny": 0,
+    "/proekty/promyshlennoe-zdanie-2880": 0,
+    "/proekty/angar-dlya-avtoremontnyh-masterskih": 0
+  },
+  "mediaFiles": 59,
+  "rasterizedSVGs": 16,
+  "unresolvedInternalLinkTargets": 0,
+  "knownFutureABATContentGaps": 6,
+  "note": "Offline structural validation only; no CMS server, suite, database, or production requests. Media URLs are proposed, unresolved references."
+}

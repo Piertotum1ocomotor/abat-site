@@ -1,0 +1,19 @@
+{
+  "collection": "layout-settings",
+  "fields": {
+    "header": {
+      "enabled": true,
+      "mode": "code"
+    },
+    "footer": {
+      "enabled": true,
+      "mode": "code"
+    }
+  },
+  "files": {
+    "header.html": "header.html",
+    "footer.html": "footer.html",
+    "siteCSS": "site.css"
+  },
+  "website": null
+}

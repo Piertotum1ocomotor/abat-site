@@ -1,0 +1,140 @@
+[
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/o-kompanii",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/kontakty",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/uslugi/proektirovanie",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/uslugi/izgotovlenie-metallokonstrukciy",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/uslugi/montazh-metallokonstrukciy",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  },
+  {
+    "severity": "INFO",
+    "classification": "known-future-abat-content-gap",
+    "migrationBlocker": false,
+    "href": "/uslugi/montazh-sendvich-paneley",
+    "problem": "Known future ABAT content gap: page not created yet",
+    "affectedPaths": [
+      "/",
+      "/bystrovozvodimye-zdaniya",
+      "/proekty",
+      "/promyshlennye-zdaniya-i-proizvodstvennye-ceha",
+      "/stroitelstvo-angarov",
+      "/stroitelstvo-skladov",
+      "/zdaniya-iz-metallokonstrukciy",
+      "/zdaniya-iz-sendvich-paneley",
+      "/proekty/zdanie-stolovoy-s-ofisami",
+      "/proekty/angar-dlya-avtoservisa",
+      "/proekty/kranovaya-estakada-5-tonn",
+      "/proekty/kranovyy-put-silovye-mashiny",
+      "/proekty/promyshlennoe-zdanie-2880",
+      "/proekty/angar-dlya-avtoremontnyh-masterskih"
+    ]
+  }
+]
