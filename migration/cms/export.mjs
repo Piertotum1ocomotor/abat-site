@@ -9,10 +9,12 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import * as jsxRuntime from 'react/jsx-runtime';
 import ts from 'typescript';
+import { preparePortableMedia } from './preserve-media.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(directory, '../..');
 const output = path.join(directory, 'prepared');
+const previousMedia = JSON.parse(fs.readFileSync(path.join(output, 'media.json'), 'utf8'));
 const args = process.argv.slice(2);
 if (args.length !== 2 || args[0] !== '--cms-contract') {
   throw new Error('Usage: pnpm exec node migration/cms/export.mjs --cms-contract /absolute/path/to/allowed-cms');
@@ -32,10 +34,11 @@ const write = (name, text) => {
 };
 const json = (name, value) => write(name, `${JSON.stringify(value, null, 2)}\n`);
 
-// Execute only four pure contract modules. Never load Payload, config, routes, or DB code.
+// Execute only allowlisted pure contract modules. Never load Payload, config, routes, or DB code.
 const contractFiles = new Set([
   'src/modules/pages/pageHtml.ts', 'src/modules/styling/css.ts',
   'src/modules/media/public.ts', 'src/lib/hostname.ts',
+  'src/modules/interactions/contract.ts', 'src/modules/forms/schema.ts',
 ]);
 const cmsRequire = createRequire(path.join(cmsRoot, 'package.json'));
 const contractCache = new Map();
@@ -59,6 +62,7 @@ function contract(name) {
 const { validateAndSerializePageHtml } = contract('src/modules/pages/pageHtml.ts');
 const { compileCustomCSS } = contract('src/modules/styling/css.ts');
 const { parseFragment, serialize } = cmsRequire('parse5');
+const { validManagedAttribute } = contract('src/modules/interactions/contract.ts');
 function renderFragment(element) {
   const fragment = parseFragment(renderToStaticMarkup(element));
   // React 19 adds resource hints for eager images; Code Mode accepts content only.
@@ -66,7 +70,18 @@ function renderFragment(element) {
     const attrs = Object.fromEntries((node.attrs || []).map(attr => [attr.name, attr.value]));
     return !(node.tagName === 'link' && attrs.rel === 'preload' && attrs.as === 'image' && attrs.href?.startsWith('/api/media/file/'));
   });
-  return validateAndSerializePageHtml(serialize(fragment));
+  const html = validateAndSerializePageHtml(serialize(fragment));
+  const check = node => {
+    if (node.tagName === 'script') throw new Error('Executable HTML rejected');
+    for (const { name, value } of node.attrs || []) {
+      if (/^on/i.test(name) || (name.startsWith('data-') && (!name.startsWith('data-cms-') || !validManagedAttribute(name, value, node.tagName)))) {
+        throw new Error(`Unsupported runtime attribute: ${name}`);
+      }
+    }
+    for (const child of node.childNodes || []) check(child);
+  };
+  check(parseFragment(html));
+  return html;
 }
 
 const media = new Map();
@@ -333,7 +348,8 @@ for (const page of pages) {
     }
   }
 }
-// Only write after every HTML/CSS fragment passed the real, unchanged CMS contract.
+const records = preparePortableMedia(previousMedia, [...media.values()].sort((a, b) => a.reference.localeCompare(b.reference)));
+// Only write after media identity and every HTML/CSS fragment passed validation.
 write('header.html', headerHTML + '\n');
 write('footer.html', footerHTML + '\n');
 write('site.css', siteCSS.replace(/[\r\n]+$/, '') + '\n');
@@ -350,7 +366,6 @@ fs.mkdirSync(path.join(output, 'assets'), { recursive: true });
 for (const [filename, job] of svgJobs) {
   await sharp(job.input, { density: 216 }).png().toFile(path.join(output, 'assets', filename));
 }
-const records = [...media.values()].sort((a, b) => a.reference.localeCompare(b.reference));
 // Reviewed decorative assets: administrative CMS Media.alt only, never rendered alt or SEO.
 const decorativeMediaAlt = {
   "/images/directions/angar.jpg": "Декоративное изображение ангара",

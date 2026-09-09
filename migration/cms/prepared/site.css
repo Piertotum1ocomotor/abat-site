@@ -2108,33 +2108,42 @@ a.abat-Header-mobilePhone:focus-visible {
 
 .abat-icon-a121fa1eca84{width:14px;aspect-ratio:14/14;mask-image:url("/api/media/file/abat-inline-a121fa1eca84.png");-webkit-mask-image:url("/api/media/file/abat-inline-a121fa1eca84.png")}
 .abat-icon-2d6bb1ef4f1f{width:18px;aspect-ratio:18/18;mask-image:url("/api/media/file/abat-inline-2d6bb1ef4f1f.png");-webkit-mask-image:url("/api/media/file/abat-inline-2d6bb1ef4f1f.png")}
-/* Applied after source CSS. The CMS scopes these rules to the tenant. */
+/* Applied after source CSS. CMS owns state; source modules own layout. */
 .abat-image-fill { position: absolute; inset: 0; width: 100%; height: 100%; color: transparent; }
 .abat-inline-icon { display: block; flex-shrink: 0; background-color: currentColor; mask-repeat: no-repeat; mask-position: center; mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; -webkit-mask-size: contain; }
-.abat-showcase-track { display: flex; overflow-x: auto; gap: 24px; scroll-snap-type: x mandatory; scroll-behavior: smooth; }
-.abat-showcase-track > article { flex: 0 0 100%; scroll-snap-align: start; height: auto; min-height: 460px; }
-.abat-showcase-links { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-.abat-showcase-links a { display: grid; place-items: center; min-width: 44px; min-height: 44px; border: 1px solid var(--color-border); border-radius: var(--radius-button); }
-.abat-ProjectsShowcase-infoPanel { gap: 24px; }
-.abat-ProjectGallery-mainImageButton, .abat-ProjectsShowcase-mainImageButton { display: block; }
-.abat-ProjectGallery-thumbnailButton, .abat-ProjectsShowcase-thumbnailButton { display: block; opacity: 1; }
 :scope > .public-header { position: sticky; top: 0; z-index: 30; }
 .abat-Header-header { position: static; }
+[data-cms-item][data-cms-active="false"] { display: none; }
+[data-cms-modal="true"][data-cms-open="false"] { visibility: hidden; pointer-events: none; }
+[data-cms-modal="true"][data-cms-open="true"] { visibility: visible; }
+[data-cms-swipe="true"] { touch-action: pan-y pinch-zoom; }
+.abat-photo-presentation { position: absolute; inset: 0; pointer-events: none; }
+.abat-photo-presentation * { pointer-events: none; }
+.abat-Header-dialog { position: fixed; inset: 0; z-index: 1000; background: var(--color-overlay); }
+.abat-Header-dialog[data-cms-open="false"] .abat-Header-mobilePanel { opacity: 0; transform: translateX(24px); transition: none; }
+.abat-Header-dialog[data-cms-open="true"] .abat-Header-mobilePanel { opacity: 1; transform: translateX(0); transition: opacity var(--motion-normal) var(--motion-easing), transform var(--motion-normal) var(--motion-easing); }
+.abat-ProjectsShowcase-thumbnailButton[data-cms-active="true"] { border-color: var(--color-primary-accent); opacity: 1; }
+.abat-ProjectGallery-thumbnailButton[data-cms-active="true"] { border-color: var(--color-primary); box-shadow: 0 0 0 2px var(--color-background); opacity: 1; }
+/* CSS geometry reproduces the source arrow/close strokes without new media assets. */
+.abat-arrow { position: relative; display: block; width: 100%; aspect-ratio: 28 / 20; flex-shrink: 0; }
+.abat-arrow > span { position: absolute; left: 7.1429%; top: calc(50% - 1px); width: 82.1429%; height: 2px; border-radius: 2px; background: currentColor; }
+.abat-arrow::before, .abat-arrow::after { position: absolute; right: 10.7143%; top: calc(50% - 1px); width: 40.4061%; height: 2px; border-radius: 2px; background: currentColor; transform-origin: right center; content: ""; }
+.abat-arrow::before { transform: rotate(45deg); }
+.abat-arrow::after { transform: rotate(-45deg); }
+.abat-arrow-left { transform: rotate(180deg); }
+.abat-close-icon { position: relative; display: block; width: 100%; aspect-ratio: 1; }
+.abat-close-icon::before, .abat-close-icon::after { position: absolute; left: 8.75%; top: calc(50% - 0.9px); width: 82.5%; height: 1.8px; border-radius: 2px; background: currentColor; content: ""; }
+.abat-close-icon::before { transform: rotate(45deg); }
+.abat-close-icon::after { transform: rotate(-45deg); }
+.abat-ProjectsShowcase-allProjectsLink .abat-arrow { width: 26px; transition: transform var(--motion-fast) var(--motion-easing); }
+@media (hover: hover) and (pointer: fine) {
+  .abat-ProjectsShowcase-allProjectsLink:hover .abat-arrow { transform: translateX(4px); }
+}
 @media (max-width: 1199px) {
   :scope > .public-header { position: static; }
-  .abat-Header-primaryInner { display: flex; flex-wrap: wrap; padding-block: 18px; }
-  .abat-mobile-menu { width: 100%; margin: 0; padding-top: 16px; border-top: 1px solid rgb(255 255 255 / 25%); color: white; }
-  .abat-menu-groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-  .abat-menu-groups h2 { margin: 0 0 8px; font-size: 16px; color: inherit; }
-  .abat-menu-groups a, .abat-menu-groups span { display: block; padding-block: 10px; font-size: 14px; line-height: 1.4; }
-  .abat-menu-contacts { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; font-size: 13px; }
-}
-@media (max-width: 767px) {
-  .abat-showcase-track > article { min-height: 0; }
-}
-@media (max-width: 649px) {
-  .abat-menu-groups { grid-template-columns: 1fr; gap: 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .abat-showcase-track { scroll-behavior: auto; }
+  .abat-Header-dialog[data-cms-open="true"] .abat-Header-mobilePanel { transition: none; }
 }
+
+.abat-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }

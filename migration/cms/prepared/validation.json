@@ -1,11 +1,13 @@
 {
-  "sourceCommit": "fb86902c65dbd9bb5fa6fbb4e46ffeba386ed670",
-  "cmsContractCommit": "c3e9ab75ab2a5bdeef03c6679ac3792a0e7ebc9b",
+  "sourceCommit": "0bbe86e5094cf4ef0eeff72592b29d10c8469a3e",
+  "cmsContractCommit": "662b46a750362e124ee9564f835421406eb88224",
   "contractHashes": {
-    "src/modules/pages/pageHtml.ts": "d03d178e5f4f",
+    "src/modules/pages/pageHtml.ts": "a43132ef01fc",
     "src/modules/styling/css.ts": "923d506a3744",
     "src/modules/media/public.ts": "b0af2df4be61",
-    "src/lib/hostname.ts": "5daef65e6625"
+    "src/lib/hostname.ts": "5daef65e6625",
+    "src/modules/interactions/contract.ts": "f3beaf9cc69f",
+    "src/modules/forms/schema.ts": "52561486756a"
   },
   "htmlFragmentsAccepted": 16,
   "cssStylesheetsAccepted": 15,
@@ -25,7 +27,7 @@
     "/proekty/promyshlennoe-zdanie-2880",
     "/proekty/angar-dlya-avtoremontnyh-masterskih"
   ],
-  "siteCSSCharacters": 43742,
+  "siteCSSCharacters": 44953,
   "pageCSSCharacters": {
     "/": 47358,
     "/bystrovozvodimye-zdaniya": 14767,

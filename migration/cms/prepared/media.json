@@ -12,8 +12,7 @@
       ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -30,11 +29,10 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/01.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Крановая эстакада грузоподъёмностью 5 тонн"
+      "Крановая эстакада грузоподъёмностью 5 тонн",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -52,11 +50,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/01.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Крановый путь на заводе «Силовые машины»"
+      "Крановый путь на заводе «Силовые машины»",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -74,11 +71,10 @@
     "uploadFile": "public/images/projects/zdanie-stolovoy-s-ofisami/01.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Общий вид здания столовой с офисными помещениями"
+      "Общий вид здания столовой с офисными помещениями",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -96,12 +92,11 @@
     "uploadFile": "public/images/projects/angar-dlya-avtoservisa/01.webp",
     "transform": "none",
     "altTexts": [
-      "",
       "Общий вид ангара для размещения автосервиса",
+      "",
       "Тёплый ангар для автосервиса из сэндвич-панелей"
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -125,8 +120,7 @@
       ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -143,12 +137,11 @@
     "uploadFile": "public/images/projects/angar-dlya-avtoservisa/02.webp",
     "transform": "none",
     "altTexts": [
-      "",
       "Металлический каркас ангара для автосервиса",
+      "",
       "Металлический каркас здания на подготовленном основании"
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -166,11 +159,10 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/02.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Общий вид отдельно стоящей крановой эстакады"
+      "Общий вид отдельно стоящей крановой эстакады",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -189,12 +181,11 @@
     "transform": "none",
     "altTexts": [
       "Собранный металлический каркас ангара",
-      "",
-      "Металлический каркас ангара для авторемонтных мастерских"
+      "Металлический каркас ангара для авторемонтных мастерских",
+      ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -211,11 +202,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/02.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Конструкции кранового пути в производственном помещении"
+      "Конструкции кранового пути в производственном помещении",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -233,11 +223,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/02.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Общий вид металлического каркаса промышленного здания"
+      "Общий вид металлического каркаса промышленного здания",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -255,11 +244,10 @@
     "uploadFile": "public/images/projects/zdanie-stolovoy-s-ofisami/02.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Здание столовой с офисными помещениями с другого ракурса"
+      "Здание столовой с офисными помещениями с другого ракурса",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -277,11 +265,10 @@
     "uploadFile": "public/images/projects/zdanie-stolovoy-s-ofisami/03.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Металлический каркас здания столовой с офисными помещениями"
+      "Металлический каркас здания столовой с офисными помещениями",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -301,12 +288,11 @@
     "altTexts": [
       "Монтаж сэндвич-панелей на металлическом каркасе",
       "Монтаж стеновых панелей на металлический каркас",
-      "",
-      "Ограждающие конструкции ангара для ремонта техники"
+      "Ограждающие конструкции ангара для ремонта техники",
+      ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -323,11 +309,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/03.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Крановый путь в условиях действующего производства"
+      "Крановый путь в условиях действующего производства",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -345,14 +330,13 @@
     "uploadFile": "public/images/projects/angar-dlya-avtoservisa/03.webp",
     "transform": "none",
     "altTexts": [
-      "",
       "Стены и каркас ангара для автосервиса",
+      "",
       "Монтаж сэндвич-панелей на металлическом каркасе ангара",
       "Монтаж ограждающих конструкций здания",
       "Стеновые конструкции и металлический каркас здания"
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -370,11 +354,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/03.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Металлический каркас промышленного здания"
+      "Металлический каркас промышленного здания",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -392,12 +375,11 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/03.webp",
     "transform": "none",
     "altTexts": [
-      "",
       "Крановый путь отдельно стоящей эстакады",
+      "",
       "Металлические конструкции крановой эстакады"
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -415,11 +397,10 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/04.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Крановый путь и подъёмный кран у эстакады"
+      "Крановый путь и подъёмный кран у эстакады",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -437,11 +418,10 @@
     "uploadFile": "public/images/projects/angar-dlya-avtoservisa/04.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Металлические конструкции кровли ангара для автосервиса"
+      "Металлические конструкции кровли ангара для автосервиса",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -459,11 +439,10 @@
     "uploadFile": "public/images/projects/angar-dlya-avtoremontnyh-masterskih/04.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Смотровые ямы в ангаре для авторемонтных мастерских"
+      "Смотровые ямы в ангаре для авторемонтных мастерских",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -481,11 +460,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/04.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Помещение для класса в производственном цехе"
+      "Помещение для класса в производственном цехе",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -504,12 +482,11 @@
     "transform": "none",
     "altTexts": [
       "Фермы, балки и колонны металлического каркаса здания",
-      "",
-      "Фермы и балки каркаса промышленного здания"
+      "Фермы и балки каркаса промышленного здания",
+      ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -526,11 +503,10 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/05.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Опора крановой эстакады на бетонном основании"
+      "Опора крановой эстакады на бетонном основании",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -552,8 +528,7 @@
       ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -570,11 +545,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/05.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Металлические конструкции кранового пути"
+      "Металлические конструкции кранового пути",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -592,11 +566,10 @@
     "uploadFile": "public/images/projects/kranovaya-estakada-5-tonn/06.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Опоры крановой эстакады и подъёмный кран"
+      "Опоры крановой эстакады и подъёмный кран",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -614,11 +587,10 @@
     "uploadFile": "public/images/projects/kranovyy-put-silovye-mashiny/06.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Металлические элементы в производственном помещении"
+      "Металлические элементы в производственном помещении",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -637,12 +609,11 @@
     "transform": "none",
     "altTexts": [
       "Внутреннее пространство строящегося промышленного здания",
-      "",
-      "Внутреннее пространство промышленного здания"
+      "Внутреннее пространство промышленного здания",
+      ""
     ],
     "usages": [
-      "image",
-      "full-size link"
+      "image"
     ],
     "cmsMediaId": null,
     "cmsFilename": null,
@@ -659,11 +630,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/07.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Точечные фундаменты промышленного здания"
+      "Точечные фундаменты промышленного здания",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -681,11 +651,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/08.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Армирование точечных фундаментов промышленного здания"
+      "Армирование точечных фундаментов промышленного здания",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -703,11 +672,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/09.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Арматурный каркас точечного фундамента"
+      "Арматурный каркас точечного фундамента",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
@@ -725,11 +693,10 @@
     "uploadFile": "public/images/projects/promyshlennoe-zdanie-2880/10.webp",
     "transform": "none",
     "altTexts": [
-      "",
-      "Трёхмерная модель металлического каркаса промышленного здания"
+      "Трёхмерная модель металлического каркаса промышленного здания",
+      ""
     ],
     "usages": [
-      "full-size link",
       "image"
     ],
     "cmsMediaId": null,
