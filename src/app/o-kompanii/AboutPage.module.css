@@ -1,0 +1,345 @@
+.page {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.hero,
+.introSection,
+.competenciesSection,
+.projectsTransition,
+.gallerySection {
+  padding-bottom: var(--section-gap);
+}
+
+.hero {
+  padding-top: clamp(24px, 3vw, 40px);
+}
+
+.heroLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(30px, 5vw, 70px);
+  align-items: center;
+}
+
+.heroContent {
+  min-width: 0;
+}
+
+.kicker {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.kicker::after,
+.accent {
+  width: 52px;
+  height: 3px;
+  margin-top: 15px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+  content: "";
+}
+
+.accent {
+  margin: 0 0 17px;
+}
+
+.heroContent h1 {
+  margin: 20px 0 0;
+  font-size: clamp(42px, 5vw, 68px);
+  font-weight: 800;
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.heroContent p {
+  max-width: 590px;
+  margin: 22px 0 0;
+  color: var(--color-text-muted);
+  font-size: clamp(16px, 1.35vw, 18px);
+  line-height: 1.68;
+}
+
+.heroMedia {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-container);
+  background: var(--color-surface-muted);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.introLayout,
+.geographyLayout,
+.projectsLayout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.65fr) minmax(0, 1.35fr);
+  gap: clamp(34px, 7vw, 100px);
+}
+
+.introLayout h2,
+.sectionHeading h2,
+.geographyLayout h2,
+.projectsLayout h2 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.introCopy {
+  max-width: 750px;
+}
+
+.introCopy p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.introCopy p + p {
+  margin-top: 16px;
+}
+
+.factsSection {
+  margin-bottom: var(--section-gap);
+  padding-block: 30px;
+  color: var(--color-on-secondary);
+  background: var(--color-footer);
+}
+
+.factsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.fact {
+  min-width: 0;
+  padding: 14px 24px;
+  border-left: 1px solid rgb(255 255 255 / 20%);
+}
+
+.fact:last-child {
+  border-right: 1px solid rgb(255 255 255 / 20%);
+}
+
+.fact strong,
+.fact span {
+  display: block;
+}
+
+.fact strong {
+  color: var(--color-primary-accent);
+  font-size: clamp(23px, 2.2vw, 32px);
+  line-height: 1.15;
+}
+
+.fact span {
+  margin-top: 8px;
+  color: rgb(255 255 255 / 72%);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.sectionHeading {
+  max-width: 760px;
+  margin-bottom: 30px;
+}
+
+.sectionHeading p,
+.projectsLayout p {
+  margin: 12px 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.competencyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.competencyGrid a {
+  min-height: 150px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: space-between;
+  gap: 24px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-secondary);
+  background: var(--color-surface);
+}
+
+.competencyGrid a > span:first-child {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.competencyGrid a > span:last-child {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--color-text-muted);
+}
+
+.competencyGrid strong {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.textLink,
+.projectsLayout > a {
+  min-height: 44px;
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.geographySection {
+  margin-bottom: var(--section-gap);
+  padding-block: clamp(34px, 4vw, 50px);
+  background: var(--color-secondary-soft);
+}
+
+.geographyLayout {
+  align-items: center;
+}
+
+.geographyLayout .kicker::after {
+  display: none;
+}
+
+.regions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgb(53 95 134 / 28%);
+}
+
+.regions p {
+  min-height: 78px;
+  margin: 0;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(53 95 134 / 28%);
+  color: var(--color-secondary-hover);
+  font-weight: 800;
+}
+
+.regions p:first-child {
+  border-right: 1px solid rgb(53 95 134 / 28%);
+}
+
+.projectsLayout {
+  padding: clamp(28px, 4vw, 48px);
+  align-items: end;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.projectsLayout > a {
+  margin: 0;
+  justify-self: end;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .competencyGrid a:hover,
+  .textLink:hover,
+  .projectsLayout > a:hover {
+    color: var(--color-primary-hover);
+  }
+}
+
+@media (max-width: 1023px) {
+  .factsGrid,
+  .competencyGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fact:nth-child(3) {
+    border-top: 1px solid rgb(255 255 255 / 20%);
+  }
+
+  .fact:nth-child(4) {
+    border-top: 1px solid rgb(255 255 255 / 20%);
+  }
+}
+
+@media (max-width: 767px) {
+  .heroLayout,
+  .introLayout,
+  .geographyLayout,
+  .projectsLayout,
+  .regions {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(38px, 11vw, 50px);
+  }
+
+  .heroMedia {
+    aspect-ratio: 4 / 3;
+  }
+
+  .factsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .fact {
+    padding: 15px 4px;
+    border-right: 0;
+    border-bottom: 1px solid rgb(255 255 255 / 20%);
+    border-left: 0;
+  }
+
+  .fact:last-child {
+    border-right: 0;
+    border-bottom: 0;
+  }
+
+  .competencyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .competencyGrid a {
+    min-height: 106px;
+  }
+
+  .regions p:first-child {
+    border-right: 0;
+  }
+
+  .projectsLayout {
+    gap: 24px;
+  }
+
+  .projectsLayout > a {
+    justify-self: start;
+  }
+}

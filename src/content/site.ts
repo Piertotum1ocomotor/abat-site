@@ -59,7 +59,7 @@ export const siteConfig: SiteConfig = {
   headerSecondaryNavigation: [
     {
       label: "Услуги",
-      href: "/#uslugi",
+      href: "/uslugi",
     },
     {
       label: "Построенные объекты",
@@ -88,5 +88,8 @@ export const siteConfig: SiteConfig = {
     ],
   },
 
-  contacts: {},
+  contacts: {
+    email: "",
+    address: "",
+  },
 };
