@@ -1,0 +1,311 @@
+.page {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.scopeSection,
+.detailSection,
+.applicationsSection {
+  padding-bottom: var(--section-gap);
+}
+
+.sectionHeading {
+  max-width: 900px;
+  margin-bottom: clamp(28px, 3vw, 42px);
+}
+
+.accent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.sectionHeading > .accent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+}
+
+.sectionHeading h2,
+.sequenceHeading h2,
+.wallLayout h2,
+.detailCopy h2 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.sectionHeading p,
+.wallCopy p,
+.detailCopy p {
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.68;
+}
+
+.scopeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.scopeGrid article {
+  min-height: 230px;
+  padding: 24px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.scopeGrid article > span,
+.sequenceHeading > span,
+.detailCopy > span {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.scopeGrid h3 {
+  margin: 58px 0 0;
+  font-size: 21px;
+}
+
+.scopeGrid p {
+  margin: 9px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.sequenceSection {
+  margin-bottom: var(--section-gap);
+  padding-block: clamp(40px, 5vw, 64px);
+  color: var(--color-on-secondary);
+  background: var(--color-footer);
+}
+
+.sequenceHeading > span {
+  margin-bottom: 12px;
+  display: block;
+  color: var(--color-primary-accent);
+}
+
+.sequence {
+  margin: clamp(30px, 4vw, 46px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  border-left: 1px solid rgb(255 255 255 / 20%);
+}
+
+.sequence li {
+  min-height: 150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  border-right: 1px solid rgb(255 255 255 / 20%);
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+.sequence li > span {
+  color: var(--color-primary-accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.sequence strong {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.wallSection {
+  margin-bottom: var(--section-gap);
+}
+
+.wallLayout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 0.58fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.wallMedia {
+  position: relative;
+  grid-column: 2;
+  min-width: 0;
+  min-height: clamp(330px, 38vw, 520px);
+}
+
+.wallContent {
+  grid-column: 1;
+  grid-row: 1;
+  padding: clamp(28px, 5vw, 64px);
+  align-self: center;
+}
+
+.wallCopy p {
+  max-width: 680px;
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.wallCopy a {
+  margin-top: 24px;
+  display: inline-flex;
+  gap: 8px;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.detailLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(260px, 0.42fr);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.detailReversed {
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 0.58fr);
+}
+
+.detailReversed .detailMedia {
+  grid-column: 2;
+}
+
+.detailReversed .detailCopy {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.detailMedia {
+  position: relative;
+  min-height: clamp(330px, 38vw, 520px);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.detailCopy {
+  padding: clamp(28px, 5vw, 64px);
+  align-self: center;
+}
+
+.detailCopy > span {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.applicationLinks {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.applicationLinks a {
+  min-height: 160px;
+  padding: 22px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: space-between;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  color: var(--color-secondary);
+  background: var(--color-surface);
+}
+
+.applicationLinks a > span:first-child {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.applicationLinks a > span:last-child {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--color-text-muted);
+}
+
+.applicationLinks strong {
+  grid-column: 1 / -1;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1023px) {
+  .scopeGrid,
+  .applicationLinks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sequence {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .scopeGrid,
+  .sequence,
+  .wallLayout,
+  .detailLayout,
+  .detailReversed,
+  .applicationLinks {
+    grid-template-columns: 1fr;
+  }
+
+  .wallMedia {
+    grid-column: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .wallContent {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 26px 20px;
+  }
+
+  .scopeGrid article {
+    min-height: 170px;
+  }
+
+  .scopeGrid h3 {
+    margin-top: 34px;
+  }
+
+  .sequence li {
+    min-height: 110px;
+  }
+
+  .detailReversed .detailMedia,
+  .detailReversed .detailCopy {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .detailMedia {
+    min-height: 280px;
+  }
+
+  .applicationLinks a {
+    min-height: 112px;
+  }
+}

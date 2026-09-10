@@ -1,0 +1,376 @@
+.page {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.systemSection,
+.siteSection,
+.applicationsSection {
+  padding-bottom: var(--section-gap);
+}
+
+.systemLayout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.32fr) minmax(0, 0.68fr);
+  gap: clamp(34px, 5vw, 72px);
+}
+
+.systemIntro h2,
+.assemblyHeading h2,
+.siteHeading h2,
+.executionLead h2,
+.applicationsHeading h2 {
+  margin: 0;
+  font-size: clamp(30px, 3vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.systemIntro p,
+.applicationsHeading p {
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.68;
+}
+
+.accent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 18px;
+  display: block;
+  border-radius: 999px;
+  background: var(--color-primary);
+}
+
+.systemIntro > a {
+  margin-top: 24px;
+  display: inline-flex;
+  gap: 8px;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.frameRegister {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.frameRegister article {
+  min-height: 190px;
+  padding: 22px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+}
+
+.frameRegister article:nth-child(-n + 3) {
+  grid-column: span 2;
+}
+
+.frameRegister article:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.frameRegister article > span,
+.assemblyHeading > span,
+.executionLead > span {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.frameRegister h3 {
+  margin: 42px 0 0;
+  font-size: 21px;
+}
+
+.frameRegister p {
+  margin: 8px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.assemblySection {
+  margin-bottom: var(--section-gap);
+  padding-block: clamp(40px, 5vw, 64px);
+  background: var(--color-secondary-soft);
+}
+
+.assemblyHeading > span {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.assemblyFlow {
+  position: relative;
+  margin: clamp(32px, 4vw, 50px) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  list-style: none;
+}
+
+.assemblyFlow::before {
+  position: absolute;
+  top: 22px;
+  right: 8%;
+  left: 2%;
+  height: 2px;
+  background: var(--color-border);
+  content: "";
+}
+
+.assemblyFlow li {
+  position: relative;
+}
+
+.stepNumber {
+  position: relative;
+  z-index: 1;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  background: var(--color-secondary-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.assemblyFlow h3 {
+  margin: 22px 0 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.assemblyFlow p {
+  margin: 9px 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.siteHeading {
+  margin-bottom: clamp(28px, 3vw, 40px);
+}
+
+.siteGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.siteGrid figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+}
+
+.siteMedia {
+  position: relative;
+  min-height: clamp(300px, 34vw, 480px);
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  background: var(--color-surface-muted);
+}
+
+.image {
+  object-fit: contain;
+}
+
+.siteGrid figcaption {
+  padding: 20px 22px;
+  display: grid;
+  gap: 6px;
+  flex: 1;
+}
+
+.siteGrid figcaption strong {
+  font-size: 18px;
+}
+
+.siteGrid figcaption span {
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.executionSection {
+  margin-bottom: var(--section-gap);
+  padding-block: clamp(38px, 5vw, 60px);
+  color: var(--color-on-secondary);
+  background: var(--color-footer);
+}
+
+.executionLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.48fr) minmax(0, 0.52fr);
+  gap: clamp(34px, 6vw, 80px);
+  align-items: center;
+}
+
+.executionLead > span {
+  margin-bottom: 12px;
+  display: block;
+  color: var(--color-primary-accent);
+}
+
+.executionFacts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.executionFacts p {
+  margin: 0;
+  padding: 24px;
+  border-left: 2px solid var(--color-primary);
+  background: rgb(255 255 255 / 5%);
+}
+
+.executionFacts strong,
+.executionFacts span {
+  display: block;
+}
+
+.executionFacts strong {
+  color: var(--color-primary-accent);
+  font-size: clamp(26px, 3vw, 38px);
+}
+
+.executionFacts span {
+  margin-top: 8px;
+  color: rgb(255 255 255 / 72%);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.applicationsHeading {
+  margin-bottom: 30px;
+}
+
+.applicationsHeading .accent {
+  width: 52px;
+  height: 3px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+}
+
+.directionLinks {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.directionLinks a {
+  min-height: 150px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: space-between;
+  gap: 22px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-secondary);
+  background: var(--color-surface);
+}
+
+.directionLinks a > span:first-child {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.directionLinks a > span:last-child {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--color-text-muted);
+}
+
+.directionLinks strong {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+@media (max-width: 1023px) {
+  .systemLayout,
+  .executionLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .assemblyFlow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .assemblyFlow::before {
+    display: none;
+  }
+
+  .directionLinks {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .frameRegister,
+  .siteGrid,
+  .executionFacts,
+  .directionLinks {
+    grid-template-columns: 1fr;
+  }
+
+  .frameRegister article:nth-child(n) {
+    grid-column: auto;
+    min-height: 150px;
+  }
+
+  .frameRegister h3 {
+    margin-top: 28px;
+  }
+
+  .assemblyFlow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .assemblyFlow::before {
+    top: 20px;
+    bottom: 20px;
+    left: 22px;
+    width: 2px;
+    height: auto;
+    display: block;
+  }
+
+  .assemblyFlow li {
+    min-height: 142px;
+    padding-left: 70px;
+  }
+
+  .stepNumber {
+    position: absolute;
+    left: 0;
+  }
+
+  .assemblyFlow h3 {
+    margin-top: 0;
+  }
+
+  .directionLinks a {
+    min-height: 108px;
+  }
+}
