@@ -21,9 +21,9 @@ function Step({ owner, direction, className, label }: { owner: string; direction
   return <button type="button" className={className} data-cms-selection-action={direction} data-cms-target={owner} aria-label={label}><Arrow left={direction === "previous"} /></button>;
 }
 
-export function MobileNavigation({ homeLink, navigation, services, secondaryNavigation, contacts }: {
+export function MobileNavigation({ homeLink, navigation, services, secondaryNavigation, contacts, locations }: {
   homeLink: NavigationItem; navigation: readonly NavigationItem[]; services: readonly NavigationItem[];
-  secondaryNavigation: readonly NavigationItem[]; contacts: HeaderContacts;
+  secondaryNavigation: readonly NavigationItem[]; contacts: HeaderContacts; locations: readonly string[];
 }) {
   const link = (item: NavigationItem, className: string) => item.isPlaceholder
     ? <span key={item.label} className={`${className} ${header.mobilePlaceholderLink}`} aria-disabled="true">{item.label}</span>
@@ -52,7 +52,7 @@ export function MobileNavigation({ homeLink, navigation, services, secondaryNavi
           <div className={header.mobileStandaloneLinks}>{secondaryNavigation.map(item => link(item, header.mobileStandaloneLink))}</div>
         </nav>
         <div className={header.mobileContacts}>
-          <span className={header.mobileLocation}>{contacts.location}</span>
+          <span className={header.mobileLocation}>{locations.join(" · ")}</span>
           <div className={header.mobileMessengers}>{contacts.messengers.map(item => item.href ? <a key={item.label} href={item.href}>{item.label}</a> : <span key={item.label} aria-disabled="true">{item.label}</span>)}</div>
         </div>
       </div>
