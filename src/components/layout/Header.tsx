@@ -37,7 +37,11 @@ export function Header() {
                 />
               </svg>
 
-              <span>{siteConfig.headerContacts.location}</span>
+              <span className={styles.locationCities}>
+                {siteConfig.contacts.locations?.map((location) => (
+                  <span key={location}>{location}</span>
+                ))}
+              </span>
             </span>
 
             <div className={styles.utilityContacts}>
@@ -55,18 +59,29 @@ export function Header() {
                 )}
               </div>
 
-              {siteConfig.headerContacts.phoneHref ? (
-                <a
-                  href={siteConfig.headerContacts.phoneHref}
-                  className={styles.phone}
-                >
-                  {siteConfig.headerContacts.phone}
-                </a>
-              ) : (
-                <span className={styles.phone} aria-disabled="true">
-                  {siteConfig.headerContacts.phone}
-                </span>
-              )}
+              <div className={styles.desktopContactStack}>
+                {siteConfig.headerContacts.phoneHref ? (
+                  <a
+                    href={siteConfig.headerContacts.phoneHref}
+                    className={styles.phone}
+                  >
+                    {siteConfig.headerContacts.phone}
+                  </a>
+                ) : (
+                  <span className={styles.phone} aria-disabled="true">
+                    {siteConfig.headerContacts.phone}
+                  </span>
+                )}
+
+                {siteConfig.contacts.email ? (
+                  <a
+                    href={`mailto:${siteConfig.contacts.email}`}
+                    className={styles.desktopEmail}
+                  >
+                    {siteConfig.contacts.email}
+                  </a>
+                ) : null}
+              </div>
             </div>
           </div>
         </div>
@@ -114,6 +129,8 @@ export function Header() {
               (item) => item.label !== "Услуги",
             )}
             contacts={siteConfig.headerContacts}
+            email={siteConfig.contacts.email}
+            locations={siteConfig.contacts.locations ?? []}
           />
         </div>
       </header>

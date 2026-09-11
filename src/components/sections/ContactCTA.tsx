@@ -43,7 +43,7 @@ function ContactRow({
 }
 
 export function ContactCTA() {
-  const { headerContacts } = siteConfig;
+  const { contacts, headerContacts } = siteConfig;
   const telegram = headerContacts.messengers.find(
     (messenger) => messenger.label === "Telegram",
   );
@@ -82,7 +82,7 @@ export function ContactCTA() {
               </p>
             </div>
 
-            <span className={styles.location}>
+            <div className={styles.location}>
               <svg
                 width="18"
                 height="18"
@@ -103,8 +103,14 @@ export function ContactCTA() {
                   strokeWidth="1.8"
                 />
               </svg>
-              {headerContacts.location}
-            </span>
+              <span>
+                {contacts.locations?.map((location) => (
+                  <span className={styles.locationLine} key={location}>
+                    {location}
+                  </span>
+                ))}
+              </span>
+            </div>
           </div>
 
           <div className={styles.contactPanel} aria-label="Способы связи">

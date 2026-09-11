@@ -13,6 +13,8 @@ type MobileNavigationProps = {
   services: readonly NavigationItem[];
   secondaryNavigation: readonly NavigationItem[];
   contacts: HeaderContacts;
+  email?: string;
+  locations: readonly string[];
 };
 
 type MobileSubmenuItemProps = {
@@ -49,6 +51,8 @@ export function MobileNavigation({
   services,
   secondaryNavigation,
   contacts,
+  email,
+  locations,
 }: MobileNavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -143,15 +147,23 @@ export function MobileNavigation({
       >
         <div className={styles.mobilePanel}>
           <div className={styles.mobilePanelHeader}>
-            {contacts.phoneHref ? (
-              <a href={contacts.phoneHref} className={styles.mobilePhone}>
-                {contacts.phone}
-              </a>
-            ) : (
-              <span className={styles.mobilePhone} aria-disabled="true">
-                {contacts.phone}
-              </span>
-            )}
+            <div className={styles.mobileContactStack}>
+              {contacts.phoneHref ? (
+                <a href={contacts.phoneHref} className={styles.mobilePhone}>
+                  {contacts.phone}
+                </a>
+              ) : (
+                <span className={styles.mobilePhone} aria-disabled="true">
+                  {contacts.phone}
+                </span>
+              )}
+
+              {email ? (
+                <a href={`mailto:${email}`} className={styles.mobileEmail}>
+                  {email}
+                </a>
+              ) : null}
+            </div>
 
             <button
               type="button"
@@ -235,7 +247,13 @@ export function MobileNavigation({
           </nav>
 
           <div className={styles.mobileContacts}>
-            <span className={styles.mobileLocation}>{contacts.location}</span>
+            <div className={styles.mobileLocations}>
+              {locations.map((location) => (
+                <span className={styles.mobileLocation} key={location}>
+                  {location}
+                </span>
+              ))}
+            </div>
 
             <div className={styles.mobileMessengers}>
               {contacts.messengers.map((messenger) =>

@@ -17,7 +17,6 @@ export type HeaderMessenger = {
 };
 
 export type HeaderContacts = {
-  location: string;
   phone: string;
   phoneHref?: string;
   messengers: readonly HeaderMessenger[];
@@ -27,6 +26,7 @@ export type ContactInfo = {
   phone?: string;
   email?: string;
   address?: string;
+  locations?: readonly string[];
   workHours?: string;
 };
 

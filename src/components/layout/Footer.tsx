@@ -18,7 +18,7 @@ function FooterLink({ item }: FooterLinkProps) {
 }
 
 export function Footer() {
-  const { headerContacts } = siteConfig;
+  const { contacts, headerContacts } = siteConfig;
 
   return (
     <footer className={styles.footer}>
@@ -31,7 +31,13 @@ export function Footer() {
           >
             АБАТ
           </Link>
-          <span className={styles.location}>{headerContacts.location}</span>
+          <div className={styles.locations}>
+            {contacts.locations?.map((location) => (
+              <span className={styles.location} key={location}>
+                {location}
+              </span>
+            ))}
+          </div>
         </div>
 
         <nav className={styles.navigation} aria-label="Навигация в подвале">
@@ -73,6 +79,12 @@ export function Footer() {
               {headerContacts.phone}
             </span>
           )}
+
+          {contacts.email ? (
+            <a href={`mailto:${contacts.email}`} className={styles.email}>
+              {contacts.email}
+            </a>
+          ) : null}
 
           <div className={styles.messengers} aria-label="Мессенджеры">
             {headerContacts.messengers.map((messenger) =>

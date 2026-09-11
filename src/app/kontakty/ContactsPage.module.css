@@ -114,6 +114,13 @@
   display: block;
 }
 
+.cityList {
+  padding-block: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .geographySection {
   margin-bottom: var(--section-gap);
   padding-block: clamp(34px, 4vw, 50px);

@@ -26,8 +26,14 @@
   letter-spacing: 0.06em;
 }
 
-.location {
+.locations {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.location {
   color: rgb(244 247 250 / 68%);
   font-size: 14px;
 }
@@ -86,6 +92,14 @@
   cursor: default;
 }
 
+.email {
+  margin-top: -10px;
+  color: rgb(244 247 250 / 82%);
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
 .messengers {
   display: flex;
   flex-wrap: wrap;
@@ -102,6 +116,7 @@
   .brand:hover,
   .linkList a:hover,
   a.phone:hover,
+  .email:hover,
   .messengers a:hover {
     color: var(--color-primary-accent);
   }
