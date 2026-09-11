@@ -76,7 +76,6 @@ export const siteConfig: SiteConfig = {
   ],
 
   headerContacts: {
-    location: "Санкт-Петербург",
     phone: "+7 (***) ***-**-**",
     messengers: [
       {
@@ -89,7 +88,8 @@ export const siteConfig: SiteConfig = {
   },
 
   contacts: {
-    email: "",
+    email: "test@абат.ру",
     address: "",
+    locations: ["Москва", "Санкт-Петербург"],
   },
 };

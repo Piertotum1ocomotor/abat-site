@@ -97,6 +97,10 @@
   color: var(--color-secondary);
 }
 
+.locationLine {
+  display: block;
+}
+
 .contactPanel {
   min-width: 0;
   display: grid;

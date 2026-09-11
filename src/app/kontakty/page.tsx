@@ -90,8 +90,18 @@ export default function ContactsPage() {
               </dd>
             </div>
             <div className={styles.contactRow}>
-              <dt>Адрес</dt>
-              <dd>{contacts.address ? <span>{contacts.address}</span> : <span />}</dd>
+              <dt>Города</dt>
+              <dd>
+                {contacts.locations?.length ? (
+                  <span className={styles.cityList}>
+                    {contacts.locations.map((location) => (
+                      <span key={location}>{location}</span>
+                    ))}
+                  </span>
+                ) : (
+                  <span />
+                )}
+              </dd>
             </div>
           </dl>
         </div>
