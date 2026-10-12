@@ -1,0 +1,52 @@
+.abat-auto { color:#10233d; background:#f4f7fa; font-size:16px; line-height:1.6; }
+.abat-auto * { box-sizing:border-box; }
+.abat-auto-wrap { width:100%; max-width:1280px; padding-left:clamp(16px,3vw,40px); padding-right:clamp(16px,3vw,40px); margin-left:auto; margin-right:auto; }
+.abat-auto h1 { font-size:clamp(32px,calc(2.2vw + 14px),44px); font-weight:700; line-height:1.16; letter-spacing:-.025em; margin:0 0 24px; }
+.abat-auto h2 { font-size:clamp(26px,calc(1.4vw + 16px),36px); line-height:1.25; letter-spacing:-.02em; margin:0 0 24px; }
+.abat-auto h3 { font-size:clamp(18px,calc(.6vw + 16px),22px); line-height:1.4; font-weight:600; margin:0 0 16px; }
+.abat-auto p { margin:0 0 16px; }
+.abat-auto a:not(.abat-auto-button):not(.abat-auto-secondary) { color:#355f86; text-decoration:underline; text-underline-offset:4px; }
+.abat-auto a:focus-visible,.abat-auto summary:focus-visible { outline:2px solid #355f86; outline-offset:4px; }
+.abat-auto-crumbs { padding-top:24px; padding-bottom:24px; font-size:14px; color:#5b6b7a; }
+.abat-auto-crumbs ol { list-style:none; padding:0; margin:0; display:flex; gap:16px; flex-wrap:wrap; }
+.abat-auto-crumbs li+li::before { content:"/"; padding-right:16px; }
+.abat-auto-hero { display:grid; gap:32px; padding-top:24px; padding-bottom:clamp(56px,6vw,80px); align-items:center; }
+.abat-auto-eyebrow { color:#355f86; font-size:14px; font-weight:600; letter-spacing:.05em; }
+.abat-auto-lead { font-size:clamp(17px,calc(.35vw + 15px),18px); line-height:1.65; }
+.abat-auto-hero figure { margin:0; min-width:0; }
+.abat-auto img { display:block; max-width:100%; width:100%; height:auto; object-fit:cover; aspect-ratio:4/3; border-radius:4px; }
+.abat-auto figcaption { padding-top:8px; font-size:14px; color:#5b6b7a; }
+.abat-auto-actions { display:flex; flex-wrap:wrap; gap:16px; margin-top:24px; }
+.abat-auto-button,.abat-auto-secondary { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:12px 24px; border-radius:4px; text-align:center; text-decoration:none; font-weight:600; }
+.abat-auto-button { background:#c45107; color:#fff; border:1px solid #c45107; }
+.abat-auto-button:hover { background:#a14000; }
+.abat-auto-secondary { border:1px solid #355f86; color:#355f86; }
+.abat-auto-secondary:hover { background:#d7e5f1; }
+.abat-auto-section { padding-top:clamp(56px,6vw,80px); padding-bottom:clamp(56px,6vw,80px); scroll-margin-top:80px; }
+.abat-auto-soft { background:#eef4f8; }
+.abat-auto-measure { max-width:72ch; }
+.abat-auto-grid { display:grid; gap:24px; margin-top:32px; }
+.abat-auto-card { background:#fff; border:1px solid #cbd5de; border-radius:8px; padding:24px; min-width:0; }
+.abat-auto-card p:last-child { margin-bottom:0; }
+.abat-auto ul { margin:0 0 16px; padding-left:24px; }
+.abat-auto li { margin-bottom:8px; }
+.abat-auto-links a { display:inline-block; padding-top:8px; padding-bottom:8px; }
+.abat-auto-project { overflow:hidden; background:#fff; border:1px solid #cbd5de; border-radius:8px; min-width:0; }
+.abat-auto-project img { border-radius:0; }
+.abat-auto-project>div { padding:24px; }
+.abat-auto-project a { display:inline-block; padding-top:8px; padding-bottom:8px; }
+.abat-auto-note { padding:24px; border-left:4px solid #e66a25; background:#eef4f8; margin-top:24px !important; }
+.abat-auto-steps { list-style:none; margin:32px 0 0; padding:0; display:grid; gap:24px; }
+.abat-auto-steps li { display:flex; align-items:flex-start; gap:16px; margin:0; }
+.abat-auto-steps span { color:#c45107; font-size:22px; font-weight:700; }
+.abat-auto details { border-top:1px solid #cbd5de; padding:16px 0; }
+.abat-auto details:last-child { border-bottom:1px solid #cbd5de; }
+.abat-auto summary { cursor:pointer; min-height:44px; padding:8px 0; font-weight:600; }
+.abat-auto details p { padding-top:16px; }
+.abat-auto-contact { align-self:start; }
+.abat-auto-email { display:block; padding:16px 0; overflow-wrap:anywhere; }
+.abat-auto-related { display:flex; gap:24px; flex-wrap:wrap; padding-top:32px; padding-bottom:32px; }
+.abat-auto-related a { padding:8px 0; }
+@media(min-width:768px) { .abat-auto-grid,.abat-auto-steps { grid-template-columns:repeat(2,minmax(0,1fr)); } .abat-auto-card { padding:32px; } }
+@media(min-width:1024px) { .abat-auto-hero { grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px; } }
+@media(max-width:767px) { .abat-auto-actions { display:grid; } .abat-auto-button,.abat-auto-secondary { width:100%; } }
